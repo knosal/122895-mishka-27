@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Вячеслав Кносаль](https://up.htmlacademy.ru/adaptive/27/user/122895).
-* Наставник: `Неизвестно`.
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/nyukalopavel)..
 
 ---
 

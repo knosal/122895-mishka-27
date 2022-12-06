@@ -8,13 +8,13 @@
     "stylelint-config-htmlacademy": "^0.1.11"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cli",
+    "editorconfig": "editorconfig",
     "stylelint": "stylelint .",
     "lint": "npm run editorconfig",
     "build": "echo 'Build task'",
     "start": "echo 'Start task'"
   },
-  "editorconfig-cli": [
+  "editorconfig": [
     "*.json",
     "source/*.html"
   ],

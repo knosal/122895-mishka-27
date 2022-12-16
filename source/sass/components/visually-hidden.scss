@@ -1,0 +1,5 @@
+@use "./global/bootstrap.scss";
+
+.visually-hidden {
+  @include bootstrap.visually-hidden;
+}

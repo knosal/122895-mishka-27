@@ -1,1 +1,14 @@
-// Начните писать стили здесь
+@use "global/bootstrap.scss";
+@use "components/visually-hidden.scss";
+
+li {
+  @include bootstrap.list-reset;
+}
+
+a {
+  @include bootstrap.link-reset;
+}
+
+button {
+  @include bootstrap.input-button;
+}

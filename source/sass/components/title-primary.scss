@@ -1,0 +1,6 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.title-primary {
+  @include bootstrap.title-primary;
+}

@@ -1,8 +1,12 @@
+//@charset 'utf-8';
 //global
-@use "global/bootstrap.scss";
 @use "global/fonts.scss";
+@use "global/bootstrap.scss";
 //общие
+@use "components/page.scss";
 @use "components/visually-hidden.scss";
+@use "components/container.scss";
+@use "components/wrapper.scss";
 @use "components/icon-card.scss";
 @use "components/button-primary.scss";
 @use "components/title-primary.scss";
@@ -39,14 +43,28 @@
 @use "components/modal.scss";
 /*-----------------------------------*/
 
-li {
+button {
+  padding: 0;
+  outline: 0;
+  border: 0;
+  background-color: rgba(#ffffff, 1);
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+ul {
   @include bootstrap.list-reset;
+}
+
+li {
+  @include bootstrap.item-reset;
 }
 
 a {
   @include bootstrap.link-reset;
-}
-
-button {
-  @include bootstrap.input-button;
 }

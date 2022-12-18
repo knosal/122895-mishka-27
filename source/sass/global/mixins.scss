@@ -1,3 +1,5 @@
+@use "../global/fonts.scss";
+
 @mixin visually-hidden {
   position: absolute;
   width: 1;
@@ -14,6 +16,9 @@
 @mixin list-reset {
   margin: 0;
   padding: 0;
+}
+
+@mixin item-reset {
   list-style-type: none;
 }
 
@@ -23,6 +28,24 @@
   cursor: pointer;
 }
 
-@mixin input-button {
-  cursor: pointer;
+@mixin container {
+  margin: 0 auto;
+  width: 320px;
+  outline: 1px solid rgba(#000000, 0.2);
 }
+
+@mixin wrapper {
+  margin: 0 auto;
+  width: 260px;
+  outline: 1px solid rgba(#cf8a3a, 0.2);
+}
+
+@mixin title-primary {
+  font-family: "OpenSans-bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+}
+

@@ -1,0 +1,21 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.main-header {
+  @include bootstrap.container;
+
+  &__wrapper {
+    @include bootstrap.wrapper;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 0;
+  }
+
+  &__link-logo {
+    margin: 0 auto;
+  }
+  background-color: rgba(#ffffff, 1);
+}

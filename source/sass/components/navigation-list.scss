@@ -1,0 +1,31 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.navigation-list {
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding-top: 28.5px;
+    padding-bottom: 27.5px;
+    padding-left: 46px;
+    background-color: rgba(#ffffff, 1);
+    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 17px;
+    font-family: "OpenSans-bold", sans-serif;
+    line-height: 24px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+  }
+}

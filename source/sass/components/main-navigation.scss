@@ -1,0 +1,31 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.main-navigation {
+  &__toogle {
+    &:hover ~ .main-navigation__wrapper {
+      display: block;
+      z-index: 10;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: none;
+
+    @include bootstrap.wrapper;
+  }
+
+  &__toogle {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+  }
+
+  &__list {
+    position: absolute;
+    top: 22px;
+    width: 100%;
+  }
+}

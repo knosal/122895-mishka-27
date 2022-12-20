@@ -14,16 +14,21 @@
         <img class="main-header__logo-icon" src="img/svg/logo-mobile-icon.svg" width="86" height="35" alt="Логотип сайта 'Мишка'">
       </a>
       <nav class="main-navigation">
-        <button class="main-navigation__toogle button-primary" type="button">
+        <button class="main-navigation__toogle " type="button">
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 0H0V2H20V0Z" fill="#231F20"/>
+            <path d="M20 6H0V8H20V6Z" fill="#231F20"/>
+            <path d="M20 12H0V14H20V12Z" fill="#231F20"/>
+            </svg>
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-navigation__wrapper">
-          <ul class="main-navigation__list navigation-list">
+        <div class="main-navigation__wrapper" tabindex="0">
+          <ul class="main-navigation__list navigation-list" tabindex="0">
             <li class="navigation-list__item">
-              <a href="catalog.html">Каталог товаров</a>
+              <a class="navigation-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="navigation-list__item">
-              <a href="#">Вязание на заказ</a>
+              <a class="navigation-list__link" href="#">Вязание на заказ</a>
             </li>
             <li class="navigation-list__item">
               <a class="navigation-list__link" href="#">
@@ -51,6 +56,7 @@
       </nav>
     </div>
   </header>
+
 
   <main class="main-container">
     <section class="catalog">
@@ -184,8 +190,8 @@
       <p class="main-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__image" width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-            <path fill="#2E368F"
+          <svg class="copyright__image" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <path fill="#63D1BB"
               d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
           </svg>
         </a>
@@ -196,36 +202,36 @@
   <div class="modal modal--close">
     <div class="modal__wrapper">
       <h2 class="visually-hidden">Корзина</h2>
-      <span class="modal__title title-primary">Добавить в корзину</span>
-      <div class="modal__size-wrapper">
-        <form class="modal__form form" action="#" method="get">
-          <fieldset class="form__group">
-            <legend class="form__legend form__legend--color">Выберите размер:</legend>
-            <ul class="form__list form__list--current">
-              <li class="form__item item-control">
-                <label class="form__item-title">
-                  <input class="item-control__radio visually-hidden input-radio" type="radio" name="размер" checked>
-                  <span class="item-control__text">S</span>
-                </label>
-              </li>
-              <li class="form__item item-control">
-                <label class="form__item-title">
-                  <input class="item-control__radio visually-hidden input-radio" type="radio" name="размер">
-                  <span class="item-control__text">M</span>
-                </label>
-              </li>
-              <li class="form__item item-control">
-                <label class="form__item-title">
-                  <input class="item-control__radio visually-hidden input-radio" type="radio" name="размер">
-                  <span class="item-control__text">L</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="modal__button button-primary button-primary--color" type="submit">
-            Напишите нам
-          </button>
-        </form>
+      <div class="modal__inner">
+        <span class="modal__title title-primary">Добавить в корзину</span>
+        <div class="modal__size-wrapper">
+          <form class="modal__form" action="#" method="get">
+            <fieldset class="modal__form-group">
+              <legend class="modal__form-legend">Выберите размер:</legend>
+              <ul class="modal__form-list">
+                <li class="modal__form-item modal__form-item--current">
+                  <label class="modal__form-title">
+                    <input class="modal__input item-control__radio input-radio" type="radio" name="размер" checked>
+                    <span class="modal__input-text item-control__text">S</span>
+                  </label>
+                </li>
+                <li class="modal__form-item form__item item-control">
+                  <label class="modal__form-title">
+                    <input class="modal__input item-control__radio input-radio" type="radio" name="размер">
+                    <span class="modal__input-text item-control__text">M</span>
+                  </label>
+                </li>
+                <li class="modal__form-item form__item item-control">
+                  <label class="modal__form-title">
+                    <input class="modal__input item-control__radio input-radio" type="radio" name="размер">
+                    <span class="modal__input-text item-control__text">L</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="modal__button button-primary modal__button--color" type="submit">Добавить</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>

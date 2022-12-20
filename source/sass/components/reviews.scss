@@ -1,0 +1,56 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.reviews {
+  @include bootstrap.container;
+  position: relative;
+
+  &__wrapper {
+    @include bootstrap.wrapper;
+    height: 100%;
+    margin-bottom: 38px;
+    padding-bottom: 45px;
+  }
+
+  &__title {
+    @include bootstrap.title-primary;
+    position: relative;
+    margin-bottom: 14px;
+    font-size: 25px;
+  }
+
+  &__item {
+    margin: 0;
+    font-family: "Open Sans";
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  &__text {
+    margin-bottom: 33px;
+  }
+
+  &__author-info {
+    margin-bottom: 30px;
+  }
+
+  &__author-name {
+    margin-bottom: 30px;
+    font-family: "Open Sans Bold";
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+  }
+
+  &__arrow {
+    padding: 13px 0;
+    padding-left: 37px;
+    padding-right: 42px;
+    outline: 1px solid bootstrap.$colorLightGrey;
+  }
+}

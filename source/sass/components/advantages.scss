@@ -1,1 +1,69 @@
- 
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.advantages {
+  @include bootstrap.container;
+  position: relative;
+
+  &__wrapper {
+    @include bootstrap.wrapper;
+    height: 100%;
+    margin-bottom: 31px;
+    padding-bottom: 36px;
+  }
+
+  &__title {
+    @include bootstrap.title-primary;
+    position: relative;
+    margin: 0;
+    padding-top: 31px;
+    padding-bottom: 28px;
+    font-size: 25px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__item {
+    position: relative;
+    font-family: "Open Sans Bold";
+    font-size: 17px;
+    line-height: 20px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 55px;
+      height: 55px;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    &--flower::before {
+      background-image: url("../img/svg/flower-icon.svg");
+    }
+
+    &--bill::before {
+      background-image: url("../img/svg/bill-icon.svg");
+    }
+
+    &--heart::before {
+      background-image: url("../img/svg/heart-icon.svg");
+    }
+
+    &--tangle::before {
+      background-image: url("../img/svg/tangle-icon.svg");
+    }
+
+    &--rocket::before {
+      background-image: url("../img/svg/rocket-icon.svg");
+    }
+
+    &--gift::before {
+      background-image: url("../img/svg/gift-icon.svg");
+    }
+  }
+}

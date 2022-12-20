@@ -1,0 +1,69 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.featured {
+  @include bootstrap.container;
+  position: relative;
+
+  &__wrapper {
+    @include bootstrap.wrapper;
+    height: 100%;
+    margin-bottom: 31px;
+  }
+
+  &__title {
+    @include bootstrap.title-primary;
+    position: relative;
+    margin: 0;
+    margin-bottom: 41px;
+  }
+
+  &__subtitle {
+    position: absolute;
+    display: block;
+  }
+
+  &__description-text {
+    margin: 0;
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  &__description-list {
+    margin: 0;
+    margin-bottom: 41px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  &__description-inner {
+    display: flex;
+    padding: 14px 0;
+    border-bottom: 1px solid bootstrap.$colorLightGrey;
+  }
+
+  &__table-title {
+    width: 97px;
+
+    &::after {
+      content: ": ";
+    }
+  }
+
+  &__table-value {
+    margin: 0;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25.5px;
+    padding-bottom: 24.5px;
+    font-family: "Open Sans Bold";
+    font-size: 17px;
+    line-height: 24px;
+    color: bootstrap.$colorDarkgrey;
+  }
+}

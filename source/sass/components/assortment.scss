@@ -14,14 +14,15 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 373px;
+    margin-bottom: 31px;
   }
 
   &__title {
-    padding-top: 73px;
-    padding-bottom: 120px;
-
     @include bootstrap.wrapper;
     @include bootstrap.title-primary;
+    padding-top: 73px;
+    padding-bottom: 120px;
+    text-align: center;
   }
 
   &__item {
@@ -68,8 +69,7 @@
     display: block;
     padding: 0 30px;
     color: rgba(#ffffff, 1);
-    font-family: "OpenSans-bold", sans-serif;
-    font-weight: 700;
+    font-family: "Open Sans Bold", "Arial", sans-serif;
     font-size: 19px;
     line-height: 24px;
   }

@@ -1,5 +1,17 @@
 @use "../global/fonts.scss";
 
+@mixin container {
+  margin: 0 auto;
+  width: 320px;
+  outline: 1px solid rgba(#000000, 0.2);
+}
+
+@mixin wrapper {
+  margin: 0 auto;
+  width: 260px;
+  outline: 1px solid rgba(#cf8a3a, 0.2);
+}
+
 @mixin visually-hidden {
   position: absolute;
   width: 1;
@@ -28,24 +40,41 @@
   cursor: pointer;
 }
 
-@mixin container {
-  margin: 0 auto;
-  width: 320px;
-  outline: 1px solid rgba(#000000, 0.2);
+@mixin fieldset-reset {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
-@mixin wrapper {
-  margin: 0 auto;
-  width: 260px;
-  outline: 1px solid rgba(#cf8a3a, 0.2);
+@mixin paragraph-reset {
+  margin: 0;
+}
+
+@mixin button-reset {
+  width: 100%;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  background-color: rgba(#ffffff, 1);
+  cursor: pointer;
+}
+
+@mixin image-reset {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@mixin title-reset {
+  margin: 0;
 }
 
 @mixin title-primary {
-  font-family: "OpenSans-bold", "Arial", sans-serif;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
-  text-align: center;
 }
 

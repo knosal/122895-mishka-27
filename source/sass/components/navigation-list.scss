@@ -9,8 +9,9 @@
     display: flex;
     align-items: center;
     padding-top: 28.5px;
+    padding-right: 33px;
     padding-bottom: 27.5px;
-    padding-left: 46px;
+    padding-left: 76px;
     background-color: rgba(#ffffff, 1);
     box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
   }
@@ -18,14 +19,13 @@
   &__link {
     display: flex;
     align-items: center;
-    font-weight: 700;
+    font-family: "Open Sans Bold", "Arail", sans-serif;
     font-size: 17px;
-    font-family: "OpenSans-bold", sans-serif;
     line-height: 24px;
   }
 
   &__icon {
     position: absolute;
-    left: 0;
+    left: 30px;
   }
 }

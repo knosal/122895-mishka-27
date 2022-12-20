@@ -8,8 +8,8 @@
 @use "components/container.scss";
 @use "components/wrapper.scss";
 @use "components/icon-card.scss";
-@use "components/button-primary.scss";
 @use "components/title-primary.scss";
+@use "components/button-primary.scss";
 @use "components/main-container.scss";
 @use "components/section-wavy.scss";
 //header
@@ -26,7 +26,6 @@
 @use "components/subtitle.scss";
 @use "components/advantages.scss";
 @use "components/reviews.scss";
-@use "components/reviews-slider.scss";
 @use "components/contacts.scss";
 @use "components/map.scss";
 //catalog
@@ -43,18 +42,22 @@
 @use "components/modal.scss";
 /*-----------------------------------*/
 
+h1,
+h2,
+h3 {
+  @include bootstrap.title-reset;
+}
+
+p {
+  @include bootstrap.paragraph-reset;
+}
+
 button {
-  padding: 0;
-  outline: 0;
-  border: 0;
-  background-color: rgba(#ffffff, 1);
-  cursor: pointer;
+  @include bootstrap.button-reset;
 }
 
 img {
-  display: block;
-  max-width: 100%;
-  object-fit: contain;
+  @include bootstrap.image-reset;
 }
 
 ul {
@@ -68,3 +71,8 @@ li {
 a {
   @include bootstrap.link-reset;
 }
+
+fieldset {
+  @include bootstrap.fieldset-reset;
+}
+

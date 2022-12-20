@@ -1,0 +1,10 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.socials {
+  display: flex;
+
+  &__item:not(:last-of-type) {
+    padding-right: 31px;
+  }
+}

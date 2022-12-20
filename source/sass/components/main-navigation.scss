@@ -3,7 +3,18 @@
 
 .main-navigation {
   &__toogle {
-    &:hover ~ .main-navigation__wrapper {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+
+    &:focus-within,
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:focus-within ~ .main-navigation__wrapper,
+    &:active ~ .main-navigation__wrapper {
       display: block;
       z-index: 10;
     }
@@ -13,19 +24,12 @@
     position: relative;
     display: none;
 
-    @include bootstrap.wrapper;
-  }
-
-  &__toogle {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0, -50%);
+    @include bootstrap.container;
   }
 
   &__list {
     position: absolute;
-    top: 22px;
     width: 100%;
+    background-color: rgba(#ffffff, 1);;
   }
 }

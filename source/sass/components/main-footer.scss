@@ -3,4 +3,31 @@
 
 .main-footer {
   @include bootstrap.container;
+
+  background-color: bootstrap.$colorGrey;
+
+  &__wrapper {
+    @include bootstrap.wrapper;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 27.5px;
+    padding-bottom: 30.5px;
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
+  }
+
+  &__copyright {
+    padding-top: 29px;
+    padding-bottom: 32px;
+  }
+
 }

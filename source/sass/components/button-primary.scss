@@ -1,0 +1,14 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.button-primary {
+  display: block;
+  padding: 16px 0;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid bootstrap.$colorDarkgrey;
+  color: bootstrap.$colorDarkgrey;
+}

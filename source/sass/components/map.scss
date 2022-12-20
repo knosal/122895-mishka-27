@@ -1,0 +1,13 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.map {
+  position: relative;
+
+  &__mark {
+    position: absolute;
+    top: 42%;
+    right: 47%;
+    transform: translate(50%, -50%);
+  }
+}

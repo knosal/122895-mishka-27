@@ -1,0 +1,8 @@
+@use "../global/bootstrap.scss";
+@use "../global/fonts.scss";
+
+.form {
+  &__group {
+    @include bootstrap.fieldset-reset;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../abstracts/fonts.scss";
+
+@mixin container {
+  margin: 0 auto;
+  width: 320px;
+}
+
+@mixin wrapper {
+  margin: 0 auto;
+  width: 260px;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1;
+  height: 1;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin title-primary {
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}

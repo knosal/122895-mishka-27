@@ -1,0 +1,45 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+fieldset {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  outline: 0;
+  border: 0;
+  background-color: rgba(#ffffff, 1);
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}

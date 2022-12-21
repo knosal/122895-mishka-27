@@ -1,4 +1,4 @@
-@use "../global/bootstrap.scss";
+@use "../abstracts/bootstrap.scss";
 
 .visually-hidden {
   @include bootstrap.visually-hidden;

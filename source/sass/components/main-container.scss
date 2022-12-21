@@ -1,4 +1,4 @@
-@use "../global/bootstrap.scss";
+@use "../abstracts/bootstrap.scss";
 
 .main-container {
   @include bootstrap.container;

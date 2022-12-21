@@ -1,7 +1,7 @@
 //@charset 'utf-8';
 //global
-@use "global/fonts.scss";
-@use "global/bootstrap.scss";
+@use "abstracts/fonts.scss";
+@use "abstracts/bootstrap.scss";
 //общие
 @use "components/page.scss";
 @use "components/visually-hidden.scss";
@@ -41,37 +41,3 @@
 //modal
 @use "components/modal.scss";
 /*-----------------------------------*/
-
-h1,
-h2,
-h3 {
-  @include bootstrap.title-reset;
-}
-
-p {
-  @include bootstrap.paragraph-reset;
-}
-
-button {
-  @include bootstrap.button-reset;
-}
-
-img {
-  @include bootstrap.image-reset;
-}
-
-ul {
-  @include bootstrap.list-reset;
-}
-
-li {
-  @include bootstrap.item-reset;
-}
-
-a {
-  @include bootstrap.link-reset;
-}
-
-fieldset {
-  @include bootstrap.fieldset-reset;
-}

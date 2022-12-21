@@ -13,14 +13,14 @@
       opacity: 0.5;
     }
 
-    &:focus-within ~ .main-navigation__wrapper,
-    &:active ~ .main-navigation__wrapper {
+    &:focus-within ~ .main-navigation__inner-popover,
+    &:active ~ .main-navigation__inner-popover {
       display: block;
-      z-index: 10;
+      z-index: 5;
     }
   }
 
-  &__wrapper {
+  &__inner-popover {
     position: relative;
     display: none;
 

@@ -4,5 +4,75 @@
 .form {
   &__group {
     @include bootstrap.fieldset-reset;
+    margin-bottom: 10px;
+
+    &--radio {
+      margin-bottom: 30px;
+    }
+
+    &--checkbox {
+      margin-bottom: 33px;
+    }
+  }
+
+  &__group-inner {
+    margin-bottom: 25px;
+  }
+
+  &__legend {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    font-family: "Open Sans Bold", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 16px;
+    color: bootstrap.$colorGreen-primary;
+    text-transform: uppercase;
+
+    &--line::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 63px;
+      right: 0;
+      height: 50%;
+      border-top: 1px solid bootstrap.$colorGreen-line;
+      z-index: -1;
+    }
+
+    &--radio {
+      margin-bottom: 30px;
+    }
+
+    &--checkbox {
+      margin-bottom: 25px;
+    }
+
+    &--name {
+      margin-bottom: 29px;
+    }
+
+    &--other {
+      margin-bottom: 23px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  &__remark {
+    color: bootstrap.$colorDarkgrey;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__button {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 55px;
   }
 }

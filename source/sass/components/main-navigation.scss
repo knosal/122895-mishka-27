@@ -1,35 +1,33 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
 
-.main-navigation {
-  &__toogle {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0, -50%);
+.main-navigation__toogle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
 
-    &:focus-within,
-    &:hover {
-      opacity: 0.5;
-    }
-
-    &:focus-within ~ .main-navigation__inner-popover,
-    &:active ~ .main-navigation__inner-popover {
-      display: block;
-      z-index: 5;
-    }
+  &:focus-within,
+  &:hover,
+  &:active {
+    opacity: 0.5;
   }
 
-  &__inner-popover {
-    position: relative;
-    display: none;
-
-    @include bootstrap.container;
+  &:focus-within ~ .main-navigation__inner-popover,
+  &:active ~ .main-navigation__inner-popover {
+    display: block;
+    z-index: 5;
   }
+}
 
-  &__list {
-    position: absolute;
-    width: 100%;
-    background-color: rgba(#ffffff, 1);
-  }
+.main-navigation__inner-popover {
+  @include bootstrap.container;
+  position: relative;
+  display: none;
+}
+
+.main-navigation__list {
+  position: absolute;
+  width: 100%;
+  background-color: rgba(#ffffff, 1);
 }

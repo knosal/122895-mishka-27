@@ -1,31 +1,26 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
 
-.navigation-list {
+.navigation-list__item {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  padding-top: 28.5px;
+  padding-right: 33px;
+  padding-bottom: 27.5px;
+  padding-left: 76px;
+  background-color: rgba(#ffffff, 1);
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+}
 
-  &__item {
-    display: flex;
-    align-items: center;
-    padding-top: 28.5px;
-    padding-right: 33px;
-    padding-bottom: 27.5px;
-    padding-left: 76px;
-    background-color: rgba(#ffffff, 1);
-    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
-  }
+.navigation-list__link {
+  display: flex;
+  align-items: center;
+  font-family: "Open Sans Bold", "Arail", sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+}
 
-  &__link {
-    display: flex;
-    align-items: center;
-    font-family: "Open Sans Bold", "Arail", sans-serif;
-    font-size: 17px;
-    line-height: 24px;
-  }
-
-  &__icon {
-    position: absolute;
-    left: 30px;
-  }
+.navigation-list__icon {
+  position: absolute;
+  left: 30px;
 }

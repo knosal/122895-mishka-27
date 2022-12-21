@@ -2,72 +2,86 @@
 @use "../abstracts/fonts.scss";
 
 .featured {
-  @include bootstrap.container;
   position: relative;
+}
 
-  &__wrapper {
-    @include bootstrap.wrapper;
-    height: 100%;
-    margin-bottom: 31px;
+.featured__wrapper {
+  @include bootstrap.wrapper;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  margin-bottom: 31px;
+}
+
+.featured__title {
+  @include bootstrap.title-primary;
+  grid-column: span 3;
+  position: relative;
+  margin: 0;
+  margin-bottom: 41px;
+}
+
+.featured__subtitle {
+  position: absolute;
+  display: block;
+}
+
+.featured__description-wrapper {
+  grid-column: span 3;
+}
+
+.featured__description-text {
+  margin: 0;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.featured__description-list {
+  margin: 0;
+  margin-bottom: 41px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.featured__description-inner {
+  display: flex;
+  padding: 14px 0;
+  border-bottom: 1px solid bootstrap.$colorLightGrey;
+}
+
+.featured__table-title {
+  width: 97px;
+
+  &::after {
+    content: ": ";
   }
+}
 
-  &__title {
-    @include bootstrap.title-primary;
-    position: relative;
-    margin: 0;
-    margin-bottom: 41px;
-  }
+.featured__table-value {
+  margin: 0;
+}
 
-  &__subtitle {
-    position: absolute;
-    display: block;
-  }
+.featured__image-inner {
+  grid-column: auto;
+}
 
-  &__description-text {
-    margin: 0;
-    margin-bottom: 28px;
-    font-size: 15px;
-    line-height: 24px;
-  }
+.featured__price-inner {
+  grid-column: span 3;
+}
 
-  &__description-list {
-    margin: 0;
-    margin-bottom: 41px;
-    font-size: 15px;
-    line-height: 20px;
-  }
+.featured__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25.5px;
+  padding-bottom: 24.5px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+  color: bootstrap.$colorDarkgrey;
+}
 
-  &__description-inner {
-    display: flex;
-    padding: 14px 0;
-    border-bottom: 1px solid bootstrap.$colorLightGrey;
-  }
-
-  &__table-title {
-    width: 97px;
-
-    &::after {
-      content: ": ";
-    }
-  }
-
-  &__table-value {
-    margin: 0;
-  }
-
-  &__price {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 25.5px;
-    padding-bottom: 24.5px;
-    font-family: "Open Sans Bold", "Arial", sans-serif;
-    font-size: 17px;
-    line-height: 24px;
-    color: bootstrap.$colorDarkgrey;
-  }
-
-  &__button {
-    width: 100%;
-  }
+.featured__button {
+  width: 100%;
 }

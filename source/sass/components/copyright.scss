@@ -5,18 +5,19 @@
   display: flex;
   align-items: center;
   gap: 25px;
-
-  &__text {
-    font-size: 19px;
-    line-height: 18px;
-  }
-
-  &__link {
-    display: flex;
-    align-items: center;
-  }
-
-  &__image {
-    height: 34px;
-  }
 }
+
+.copyright__text {
+  font-size: 19px;
+  line-height: 18px;
+}
+
+.copyright__link {
+  display: flex;
+  align-items: center;
+}
+
+.copyright__image {
+  height: 34px;
+}
+

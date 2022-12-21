@@ -1,43 +1,45 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
 
-.product {
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    outline: 1px solid bootstrap.$colorLightGrey;
-  }
+.product__wrapper {
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid bootstrap.$colorLightGrey;
+}
 
-  &__info-inner {
-    padding-top: 27.5px;
-    padding-right: 28px;
-    padding-bottom: 25px;
-    padding-left: 28px;
-  }
+.product__link-image {
+  background-color: bootstrap.$colorLightGrey;
+}
 
-  &__title {
-    margin-bottom: 6px;
-    font-size: 17px;
-    line-height: 24px;
-  }
+.product__info-inner {
+  padding-top: 27.5px;
+  padding-right: 28px;
+  padding-bottom: 25px;
+  padding-left: 28px;
+}
 
-  &__description {
-    padding-bottom: 17.5px;
-    font-size: 13px;
-    line-height: 30px;
-  }
+.product__title {
+  margin-bottom: 6px;
+  font-size: 17px;
+  line-height: 24px;
+}
 
-  &__price-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 22.5px;
-    border-top: 1px solid bootstrap.$colorLightGrey;
-  }
+.product__description {
+  padding-bottom: 17.5px;
+  font-size: 13px;
+  line-height: 30px;
+}
 
-  &__price {
-    font-family: "Open Sans Bold", "Arail", sans-serif;
-    font-size: 15px;
-    line-height: 24px;
-  }
+.product__price-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 22.5px;
+  border-top: 1px solid bootstrap.$colorLightGrey;
+}
+
+.product__price {
+  font-family: "Open Sans Bold", "Arail", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
 }

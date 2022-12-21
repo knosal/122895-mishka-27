@@ -1,33 +1,29 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
 
-.order {
-  position: relative;
+.order__inner-title {
+  @include bootstrap.container;
+  background-color: bootstrap.$colorGrey;
+  margin-bottom: 17px;
+}
 
-  &__inner-title {
-    @include bootstrap.container;
-    background-color: bootstrap.$colorGrey;
-    margin-bottom: 17px;
-  }
+.order__title {
+  @include bootstrap.wrapper;
+  @include bootstrap.title-primary;
+  padding: 73px 0;
+  text-align: center;
+  font-size: 27px;
+}
 
-  &__title {
-    @include bootstrap.wrapper;
-    @include bootstrap.title-primary;
-    padding: 73px 0;
-    text-align: center;
-    font-size: 27px;
-  }
+.order__wrapper {
+  @include bootstrap.wrapper;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  &__wrapper {
-    @include bootstrap.wrapper;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  &__text {
-    font-size: 13px;
-    line-height: 24px;
-    margin-bottom: 29px;
-  }
+.order__text {
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 29px;
 }

@@ -3,11 +3,11 @@
 
 .map {
   position: relative;
+}
 
-  &__mark {
-    position: absolute;
-    top: 42%;
-    right: 47%;
-    transform: translate(50%, -50%);
-  }
+.map__mark {
+  position: absolute;
+  top: 42%;
+  right: 47%;
+  transform: translate(50%, -50%);
 }

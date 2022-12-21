@@ -15,62 +15,62 @@
     height: 38px;
     padding-left: 61px;
   }
+}
 
-  &__title {
-    display: block;
-    font-family: "Open Sans Bold", "Arial", sans-serif;
-    font-size: 17px;
-    line-height: 18px;
+.item-control__title {
+  display: block;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.item-control__icon {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  box-sizing: border-box;
+  border: 1px solid bootstrap.$colorDarkgrey;
+  cursor: pointer;
+
+  &--radio {
+    width: 42px;
+    height: 42px;
+    border-radius: 2px;
   }
 
-  &__icon {
-    position: absolute;
-    top: 3px;
-    left: 0;
-    box-sizing: border-box;
-    border: 1px solid bootstrap.$colorDarkgrey;
-    cursor: pointer;
-
-    &--radio {
-      width: 42px;
-      height: 42px;
-      border-radius: 2px;
-    }
-
-    &--checkbox {
-      width: 38px;
-      height: 38px;
-    }
+  &--checkbox {
+    width: 38px;
+    height: 38px;
   }
+}
 
-  &__input + &__icon {
-    top: 2px;
-  }
+.item-control__input + .item-control__icon {
+  top: 2px;
+}
 
-  &__input[type="radio"] + &__icon {
-    border-radius: 50%;
-  }
+.item-control__input[type="radio"] + .item-control__icon {
+  border-radius: 50%;
+}
 
-  &__input:checked + &__icon::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.item-control__input:checked + .item-control__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  &__input[type="radio"]:checked + &__icon--radio::before {
-    width: 18.3px;
-    height: 18.3px;
-    border-radius: 50%;
-    background-color: bootstrap.$colorGreen-primary;
-  }
+.item-control__input[type="radio"]:checked + .item-control__icon--radio::before {
+  width: 18.3px;
+  height: 18.3px;
+  border-radius: 50%;
+  background-color: bootstrap.$colorGreen-primary;
+}
 
-  &__input[type="checkbox"]:checked + &__icon--checkbox::before {
-    width: 23.2px;
-    height: 16.1px;
-    background-image: url("../img/svg/tick-icon.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+.item-control__input[type="checkbox"]:checked + .item-control__icon--checkbox::before {
+  width: 23.2px;
+  height: 16.1px;
+  background-image: url("../img/svg/tick-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
 }

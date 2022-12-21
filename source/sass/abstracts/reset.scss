@@ -1,10 +1,21 @@
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 ul {
   margin: 0;
   padding: 0;
 }
 
 li {
-  list-style-type: none;
+  list-style: none;
 }
 
 a {
@@ -13,37 +24,26 @@ a {
   cursor: pointer;
 }
 
-fieldset {
+.form__group {
   appearance: none;
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-p {
-  margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-button {
+.button-primary,
+.main-navigation__toogle,
+.reviews__arrow,
+.product__button-buy {
   padding: 0;
   outline: 0;
   border: 0;
   background-color: rgba(#ffffff, 1);
   cursor: pointer;
-}
-
-button > svg {
-  fill: currentColor;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  object-fit: contain;
-}
-
-h1,
-h2,
-h3 {
-  margin: 0;
 }

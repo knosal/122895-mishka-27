@@ -14,84 +14,90 @@
   &--close {
     display: none;
   }
+}
 
-  &__title {
-    @include bootstrap.title-primary;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 28px;
-    padding-bottom: 14px;
-    font-family: "Open Sans Bold", "Arial", sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 25px;
+.modal__title {
+  @include bootstrap.title-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 28px;
+  padding-bottom: 14px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.modal__wrapper {
+  @include bootstrap.container;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(#ffffff, 1);
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+}
+
+.modal__inner {
+  @include bootstrap.wrapper;
+}
+
+.modal__form-group {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.modal__form-legend {
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.modal__form-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal__form-item {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  width: 82px;
+  padding: 18px 0;
+  border: 1px solid;
+  border-color: rgba(bootstrap.$colorDarkgrey, 0.1);
+
+  &--current {
+    border: 1px solid bootstrap.$colorGreen-primary;
   }
+}
 
-  &__wrapper {
-    @include bootstrap.container;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(#ffffff, 1);
-    border: 1px solid #c6c6c6;
-    box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
-  }
+.modal__form-title {
+  display: flex;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
 
-  &__inner {
-    @include bootstrap.wrapper;
-  }
+.modal__input {
+  appearance: none;
+  margin: 0;
+}
 
-  &__form-legend {
-    text-align: center;
-    margin-bottom: 21px;
-  }
+.modal__button {
+  width: 100%;
+  margin-top: 31px;
+  margin-bottom: 46px;
+  font-size: 17px;
+  line-height: 16px;
 
-  &__form-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__form-item {
-    display: flex;
-    justify-content: center;
-    gap: 7px;
-    width: 82px;
-    padding: 18px 0;
-    border: 1px solid;
-    border-color: rgba(bootstrap.$colorDarkgrey, 0.1);
-
-    &--current {
-      border: 1px solid bootstrap.$colorGreen-primary;
-    }
-  }
-
-  &__form-title {
-    display: flex;
-    font-family: "Open Sans Bold", "Arial", sans-serif;
-    font-size: 17px;
-    line-height: 16px;
-    text-transform: uppercase;
-  }
-
-  &__input {
-    appearance: none;
-    margin: 0;
-  }
-
-  &__button {
-    width: 100%;
-    margin-top: 31px;
-    margin-bottom: 46px;
-    font-size: 17px;
-    line-height: 16px;
-
-    &--color {
-      color: rgba(#ffffff, 1);
-      border-color: bootstrap.$colorGreen-primary;
-      background-color: bootstrap.$colorGreen-primary;
-    }
+  &--color {
+    color: rgba(#ffffff, 1);
+    border-color: bootstrap.$colorGreen-primary;
+    background-color: bootstrap.$colorGreen-primary;
   }
 }

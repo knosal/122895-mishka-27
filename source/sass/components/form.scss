@@ -1,83 +1,82 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
 
-.form {
-  &__group {
-    margin-bottom: 10px;
+.form__group {
+  margin-bottom: 10px;
 
-    &--radio {
-      margin-bottom: 30px;
-    }
-
-    &--checkbox {
-      margin-bottom: 33px;
-    }
+  &--radio {
+    margin-bottom: 30px;
   }
 
-  &__group-inner {
+  &--checkbox {
+    margin-bottom: 33px;
+  }
+}
+
+.form__group-inner {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.form__item-title {
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.form__legend {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 16px;
+  color: bootstrap.$colorGreen-primary;
+  text-transform: uppercase;
+
+  &--line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 63px;
+    right: 0;
+    height: 50%;
+    border-top: 1px solid bootstrap.$colorGreen-line;
+    z-index: -1;
+  }
+
+  &--radio {
+    margin-bottom: 30px;
+  }
+
+  &--checkbox {
     margin-bottom: 25px;
   }
 
-  &__item-title {
-    font-family: "Open Sans Bold", "Arial", sans-serif;
-    font-size: 17px;
-    line-height: 18px;
+  &--name {
+    margin-bottom: 29px;
   }
 
-  &__legend {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    padding: 0;
-    font-family: "Open Sans Bold", "Arial", sans-serif;
-    font-size: 17px;
-    line-height: 16px;
-    color: bootstrap.$colorGreen-primary;
-    text-transform: uppercase;
-
-    &--line::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 63px;
-      right: 0;
-      height: 50%;
-      border-top: 1px solid bootstrap.$colorGreen-line;
-      z-index: -1;
-    }
-
-    &--radio {
-      margin-bottom: 30px;
-    }
-
-    &--checkbox {
-      margin-bottom: 25px;
-    }
-
-    &--name {
-      margin-bottom: 29px;
-    }
-
-    &--other {
-      margin-bottom: 23px;
-    }
+  &--other {
+    margin-bottom: 23px;
   }
+}
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-  }
+.form__list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
 
-  &__remark {
-    color: bootstrap.$colorDarkgrey;
-    font-size: 14px;
-    line-height: 16px;
-  }
+.form__remark {
+  color: bootstrap.$colorDarkgrey;
+  font-size: 14px;
+  line-height: 16px;
+}
 
-  &__button {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 55px;
-  }
+.form__button {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 55px;
 }

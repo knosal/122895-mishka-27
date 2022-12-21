@@ -1,77 +1,73 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
 
-.assortment {
-  position: relative;
+.assortment__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 373px;
+  margin-bottom: 31px;
   background-image: url("../img/handmade.jpg");
   background-color: bootstrap.$colorGrey;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
+}
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 373px;
-    margin-bottom: 31px;
+.assortment__title {
+  @include bootstrap.wrapper;
+  @include bootstrap.title-primary;
+  padding-top: 73px;
+  padding-bottom: 120px;
+  text-align: center;
+  font-size: 27px;
+}
+
+.assortment__item {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 31px;
+
+  &:nth-child(odd) {
+    background-color: bootstrap.$colorGreen-primary;
   }
 
-  &__title {
-    @include bootstrap.wrapper;
-    @include bootstrap.title-primary;
-    padding-top: 73px;
-    padding-bottom: 120px;
-    text-align: center;
-    font-size: 27px;
+  &:nth-child(even) {
+    background-color: rgba(86, 195, 178, 1);
   }
 
-  &__item {
-    position: relative;
-    padding-top: 24px;
-    padding-bottom: 31px;
-
-    &:nth-child(odd) {
-      background-color: bootstrap.$colorGreen-primary;
-    }
-
-    &:nth-child(even) {
-      background-color: rgba(86, 195, 178, 1);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      right: 0;
-      margin-right: 30px;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-      background-size: cover;
-    }
-
-    &:nth-child(1)::after {
-      margin-right: 39px;
-      width: 40px;
-      height: 62px;
-      background-image: url("../img/svg/interior-icon.svg");
-    }
-
-    &:nth-child(2)::after {
-      background-image: url("../img/svg/lego-icon.svg");
-      width: 60px;
-      height: 60px;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0;
+    margin-right: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
   }
 
-  &__link {
-    display: block;
-    padding: 0 30px;
-    color: rgba(#ffffff, 1);
-    font-family: "Open Sans Bold", "Arial", sans-serif;
-    font-size: 19px;
-    line-height: 24px;
+  &:nth-child(1)::after {
+    margin-right: 39px;
+    width: 40px;
+    height: 62px;
+    background-image: url("../img/svg/interior-icon.svg");
   }
+
+  &:nth-child(2)::after {
+    background-image: url("../img/svg/lego-icon.svg");
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.assortment__link {
+  display: block;
+  padding: 0 30px;
+  color: rgba(#ffffff, 1);
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 19px;
+  line-height: 24px;
 }

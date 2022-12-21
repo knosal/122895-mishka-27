@@ -1,64 +1,59 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
 
-.contacts {
-  position: relative;
+.contacts__wrapper {
+  @include bootstrap.wrapper;
+  height: 100%;
+  padding-top: 38px;
+  margin-bottom: 62px;
+}
+
+.contacts__title {
+  @include bootstrap.title-primary;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.contacts__address {
+  margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.contacts__address-list {
+  margin-bottom: 41px;
+}
+
+.contacts__address-inner {
   display: flex;
-  flex-direction: column;
+}
 
-  &__wrapper {
-    @include bootstrap.wrapper;
-    height: 100%;
-    margin-bottom: 62px;
+.contacts__address-inner:not(:last-of-type) {
+  padding-bottom: 40px;
+}
+
+.contacts__address-title {
+  width: 76px;
+
+  &::after {
+    content: ": ";
   }
+}
 
-  &__title {
-    @include bootstrap.title-primary;
-    margin-top: 38px;
-    margin-bottom: 30px;
-  }
+.contacts__address-value {
+  margin: 0;
+}
 
-  &__address {
-    margin: 0;
-    font-size: 14px;
-    line-height: 30px;
-  }
+.contacts__address-link {
+  border-bottom: 1px solid bootstrap.$colorGreen-primary;
+}
 
-  &__address-list {
-    margin-bottom: 41px;
-  }
+.contacts__map {
+  @include bootstrap.container;
+  margin-bottom: 42px;
+}
 
-  &__address-inner {
-    display: flex;
-  }
-
-  &__address-inner:not(:last-of-type) {
-    padding-bottom: 40px;
-  }
-
-  &__address-title {
-    width: 76px;
-
-    &::after {
-      content: ": ";
-    }
-  }
-
-  &__address-value {
-    margin: 0;
-  }
-
-  &__address-link {
-    border-bottom: 1px solid bootstrap.$colorGreen-primary;
-  }
-
-  &__map {
-    @include bootstrap.container;
-    margin-bottom: 42px;
-  }
-
-  &__feedback {
-    @include bootstrap.wrapper;
-    margin-bottom: 39px;
-  }
+.contacts__feedback {
+  @include bootstrap.wrapper;
+  margin-bottom: 39px;
 }

@@ -3,21 +3,19 @@
 
 .main-header {
   @include bootstrap.container;
-
   background-color: rgba(#ffffff, 1);
+}
 
-  &__wrapper {
-    @include bootstrap.wrapper;
+.main-header__wrapper {
+  @include bootstrap.wrapper;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+}
 
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__link-logo {
-    margin: 0 auto;
-    padding: 22px 0;
-  }
+.main-header__link-logo {
+  margin: 0 auto;
+  padding: 22px 0;
 }

@@ -3,13 +3,11 @@
 @mixin container {
   margin: 0 auto;
   width: 320px;
- // outline: 1px solid rgba(#000000, 0.2);
 }
 
 @mixin wrapper {
   margin: 0 auto;
   width: 260px;
- // outline: 1px solid rgba(#cf8a3a, 0.2);
 }
 
 @mixin visually-hidden {
@@ -76,4 +74,3 @@
   font-size: 25px;
   line-height: 30px;
 }
-

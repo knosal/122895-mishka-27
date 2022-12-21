@@ -1,2 +1,43 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
+
+.product {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid bootstrap.$colorLightGrey;
+  }
+
+  &__info-inner {
+    padding-top: 27.5px;
+    padding-right: 28px;
+    padding-bottom: 25px;
+    padding-left: 28px;
+  }
+
+  &__title {
+    margin-bottom: 6px;
+    font-size: 17px;
+    line-height: 24px;
+  }
+
+  &__description {
+    padding-bottom: 17.5px;
+    font-size: 13px;
+    line-height: 30px;
+  }
+
+  &__price-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 22.5px;
+    border-top: 1px solid bootstrap.$colorLightGrey;
+  }
+
+  &__price {
+    font-family: "Open Sans Bold", "Arail", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+  }
+}

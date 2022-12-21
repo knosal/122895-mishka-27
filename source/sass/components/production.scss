@@ -1,2 +1,76 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
+
+.production {
+  position: relative;
+
+  &__wrapper {
+    @include bootstrap.wrapper;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 58px;
+    border: 1px solid bootstrap.$colorLightGrey;
+  }
+
+  &__title {
+    @include bootstrap.title-primary;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 17px;
+    line-height: 24px;
+    margin-top: 22px;
+    margin-bottom: 24.5px;
+    padding-left: 91px;
+    order: 1;
+
+    &--icon::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 34px;
+      display: block;
+      width: 32px;
+      height: 22px;
+      background-image: url("../img/svg/videocamera-icon.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__info-inner {
+    order: 3;
+  }
+
+  &__description {
+    margin-left: 34px;
+    margin-bottom: 41px;
+    font-size: 13px;
+    line-height: 24px;
+    order: 2;
+  }
+
+  &__button {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+
+  &__video-inner {
+    position: relative;
+    order: 2;
+    margin-bottom: 35px;
+  }
+
+  &__video {
+    display: block;
+  }
+
+  &__video-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

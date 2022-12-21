@@ -18,6 +18,12 @@
     margin-bottom: 25px;
   }
 
+  &__item-title {
+    font-family: "Open Sans Bold", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
   &__legend {
     position: relative;
     display: inline-block;

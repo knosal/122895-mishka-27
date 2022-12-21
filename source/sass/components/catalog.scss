@@ -1,2 +1,40 @@
 @use "../abstracts/bootstrap.scss";
 @use "../abstracts/fonts.scss";
+
+.catalog {
+  position: relative;
+
+  &__inner-title {
+    @include bootstrap.container;
+    background-color: bootstrap.$colorGrey;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    @include bootstrap.wrapper;
+    @include bootstrap.title-primary;
+    padding: 73px 0;
+    text-align: center;
+    font-size: 27px;
+  }
+
+  &__wrapper {
+    @include bootstrap.wrapper;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 13px;
+    line-height: 24px;
+    margin-bottom: 29px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}

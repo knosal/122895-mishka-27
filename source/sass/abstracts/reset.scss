@@ -32,6 +32,10 @@ button {
   cursor: pointer;
 }
 
+button > svg {
+  fill: currentColor;
+}
+
 img {
   display: block;
   max-width: 100%;

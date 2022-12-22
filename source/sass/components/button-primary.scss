@@ -4,11 +4,11 @@
 .button-primary {
   display: block;
   padding: 16px 0;
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 18px;
   line-height: 20px;
   text-transform: uppercase;
   text-align: center;
-  border: 2px solid bootstrap.$colorDarkgrey;
-  color: bootstrap.$colorDarkgrey;
+  border: 2px solid bootstrap.$colorDarkGrey;
+  color: bootstrap.$colorDarkGrey;
 }

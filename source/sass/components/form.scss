@@ -19,7 +19,7 @@
 }
 
 .form__item-title {
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 17px;
   line-height: 18px;
 }
@@ -70,7 +70,7 @@
 }
 
 .form__remark {
-  color: bootstrap.$colorDarkgrey;
+  color: bootstrap.$colorDarkGrey;
   font-size: 14px;
   line-height: 16px;
 }

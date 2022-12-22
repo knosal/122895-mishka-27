@@ -21,7 +21,6 @@
 }
 
 .main-navigation__inner-popover {
-  @include bootstrap.container;
   position: relative;
   display: none;
 }
@@ -29,5 +28,5 @@
 .main-navigation__list {
   position: absolute;
   width: 100%;
-  background-color: rgba(#ffffff, 1);
+  background-color: bootstrap.$colorWhite;
 }

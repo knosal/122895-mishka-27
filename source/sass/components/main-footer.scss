@@ -2,7 +2,6 @@
 @use "../abstracts/fonts.scss";
 
 .main-footer {
-  @include bootstrap.container;
   background-color: bootstrap.$colorGrey;
 }
 

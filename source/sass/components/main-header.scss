@@ -3,7 +3,7 @@
 
 .main-header {
   @include bootstrap.container;
-  background-color: rgba(#ffffff, 1);
+  background-color: bootstrap.$colorWhite;
 }
 
 .main-header__wrapper {

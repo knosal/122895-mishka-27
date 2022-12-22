@@ -19,7 +19,7 @@
 
 .item-control__title {
   display: block;
-  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 17px;
   line-height: 18px;
 }
@@ -29,7 +29,7 @@
   top: 3px;
   left: 0;
   box-sizing: border-box;
-  border: 1px solid bootstrap.$colorDarkgrey;
+  border: 1px solid bootstrap.$colorDarkGrey;
   cursor: pointer;
 
   &--radio {

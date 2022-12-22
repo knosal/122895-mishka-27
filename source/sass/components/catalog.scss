@@ -2,7 +2,6 @@
 @use "../abstracts/fonts.scss";
 
 .catalog__inner-title {
-  @include bootstrap.container;
   background-color: bootstrap.$colorGrey;
   margin-bottom: 30px;
 }

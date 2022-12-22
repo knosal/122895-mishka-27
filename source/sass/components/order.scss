@@ -2,7 +2,6 @@
 @use "../abstracts/fonts.scss";
 
 .order__inner-title {
-  @include bootstrap.container;
   background-color: bootstrap.$colorGrey;
   margin-bottom: 17px;
 }

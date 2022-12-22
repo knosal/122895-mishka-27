@@ -3,8 +3,16 @@
 
 .page {
   height: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: bootstrap.$colorBlack;
+  background-color: bootstrap.$colorWhite;
 }
 
 .page__body {
-  font-family: "Open Sans", "Arial", sans-serif;
+  max-width: 320px;
+  margin: auto;
 }

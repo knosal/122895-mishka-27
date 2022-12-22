@@ -17,6 +17,7 @@
 }
 
 .advantages__list {
+  @include bootstrap.ul-reset;
   display: flex;
   flex-direction: column;
   gap: 25px;

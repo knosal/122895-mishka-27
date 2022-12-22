@@ -3,7 +3,10 @@
 
 .button-primary {
   display: block;
+
+  @include bootstrap.button-reset;
   padding: 16px 0;
+  font-family: bootstrap.$open-sans;
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;

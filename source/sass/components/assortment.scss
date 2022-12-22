@@ -23,6 +23,10 @@
   font-size: 27px;
 }
 
+.assortment__list {
+  @include bootstrap.ul-reset;
+}
+
 .assortment__item {
   position: relative;
   padding-top: 24px;
@@ -66,7 +70,7 @@
 .assortment__link {
   display: block;
   padding: 0 30px;
-  color: botstrap.$colorWhite;
+  color: bootstrap.$colorWhite;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;

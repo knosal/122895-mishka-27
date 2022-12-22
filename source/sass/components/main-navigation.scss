@@ -2,6 +2,7 @@
 @use "../abstracts/fonts.scss";
 
 .main-navigation__toogle {
+  @include bootstrap.button-reset;
   position: absolute;
   top: 50%;
   right: 0;
@@ -21,11 +22,13 @@
 }
 
 .main-navigation__inner-popover {
+  @include bootstrap.container;
   position: relative;
   display: none;
 }
 
 .main-navigation__list {
+  @include bootstrap.ul-reset;
   position: absolute;
   width: 100%;
   background-color: bootstrap.$colorWhite;

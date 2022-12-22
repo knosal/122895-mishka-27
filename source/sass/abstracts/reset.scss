@@ -1,4 +1,10 @@
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
 }
@@ -7,15 +13,7 @@ img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
+  display: block;
 }
 
 a {
@@ -24,26 +22,23 @@ a {
   cursor: pointer;
 }
 
-.form__group {
+@mixin button-reset {
+  padding: 0;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin fieldset-reset {
   appearance: none;
   margin: 0;
   padding: 0;
   border: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.button-primary,
-.main-navigation__toogle,
-.reviews__arrow,
-.product__button-buy {
-  padding: 0;
-  outline: 0;
-  border: 0;
-  background-color: rgba(#ffffff, 1);
-  cursor: pointer;
 }

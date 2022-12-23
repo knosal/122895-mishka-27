@@ -1,5 +1,4 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .main-footer {
   background-color: bootstrap.$colorGrey;
@@ -25,4 +24,5 @@
   gap: 25px;
   padding-top: 29px;
   padding-bottom: 32px;
+  color: bootstrap.$colorBlack;
 }

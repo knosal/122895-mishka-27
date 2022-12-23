@@ -1,5 +1,4 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .button-primary {
   display: block;
@@ -10,6 +9,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   border: 2px solid bootstrap.$colorDarkGrey;

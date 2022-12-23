@@ -1,5 +1,4 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .contacts__wrapper {
   @include bootstrap.wrapper;
@@ -9,8 +8,7 @@
 }
 
 .contacts__title {
-  @include bootstrap.title-primary;
-  margin: 0;
+  @include bootstrap.title-h2;
   margin-bottom: 30px;
 }
 
@@ -45,6 +43,7 @@
 }
 
 .contacts__address-link {
+  @include bootstrap.link-reset;
   border-bottom: 1px solid bootstrap.$colorGreen-primary;
 }
 

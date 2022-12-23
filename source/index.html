@@ -19,7 +19,7 @@
             <path d="M20 0H0V2H20V0Z" fill="#231F20"/>
             <path d="M20 6H0V8H20V6Z" fill="#231F20"/>
             <path d="M20 12H0V14H20V12Z" fill="#231F20"/>
-            </svg>
+          </svg>
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <div class="main-navigation__inner-popover">
@@ -59,42 +59,41 @@
 
   <main class="main-container">
     <h1 class="visually-hidden">Мишка</h1>
-    <section class="assortment">
-      <h2 class="visually-hidden">Наш ассортимент</h2>
+    <section class="main-container__assortment assortment">
       <div class="assortment__wrapper">
-        <h3 class="assortment__title">Милые штуки ручной<br> работы для дома</h3>
+        <h2 class="assortment__title">Милые штуки ручной<br> работы для дома</h2>
         <ul class="assortment__list">
-          <li class="assortment__item">
-            <a class="assortment__link" href="#">Предметы<br>интерьера</a>
-          </li>
-          <li class="assortment__item">
-            <a class="assortment__link" href="#">Детские<br>игрушки</a>
-          </li>
-        </ul>
       </div>
+
+        <li class="assortment__item assortment__item--interior">
+          <a class="assortment__link" href="#">Предметы<br>интерьера</a>
+        </li>
+        <li class="assortment__item assortment__item--lego">
+          <a class="assortment__link" href="#">Детские<br>игрушки</a>
+        </li>
+      </ul>
     </section>
 
-    <section class="featured section-wavy">
-      <h2 class="visually-hidden">Популярные товары</h2>
+    <section class="main-container__featured featured section-wavy">
       <div class="featured__wrapper">
-        <h3 class="featured__title title-primary">Вязаные корзинки
+        <h3 class="featured__title">Вязаные корзинки
           <span class="featured__subtitle subtitle">Товар недели</span>
         </h3>
-        <div class="featured__description-wrapper">
+        <div class="featured__description-inner">
           <p class="featured__description-text">
             Экологически чистая пряжа, ручная работа. Доступны в шести
             расцветках и трёх размерах.
           </p>
           <dl class="featured__description-list">
-            <div class="featured__description-inner">
+            <div class="featured__description-list-inner">
               <dt class="featured__table-title">Цвет</dt>
               <dd class="featured__table-value">тиффани/серый</dd>
             </div>
-            <div class="featured__description-inner">
+            <div class="featured__description-list-inner">
               <dt class="featured__table-title">Диаметр</dt>
               <dd class="featured__table-value">25 см</dd>
             </div>
-            <div class="featured__description-inner">
+            <div class="featured__description-list-inner">
               <dt class="featured__table-title">Высота</dt>
               <dd class="featured__table-value">15 см</dd>
             </div>
@@ -110,10 +109,9 @@
       </div>
     </section>
 
-    <section class="advantages">
-      <h2 class="visually-hidden">Наши преимущества</h2>
+    <section class="main-container__advantages advantages">
       <div class="advantages__wrapper">
-        <h3 class="advantages__title title-primary">Коротко о нас:</h3>
+        <h2 class="advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--flower">
             Экологически<br> чистые материалы
@@ -135,11 +133,12 @@
           </li>
         </ul>
       </div>
+
     </section>
 
-    <section class="reviews section-wavy">
+    <section class="main-container__reviews reviews section-wavy">
       <div class="reviews__wrapper">
-        <h2 class="reviews__title title-primary">Отзывы</h2>
+        <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list">
           <blockquote class="reviews__item">
             <p class="reviews__text">
@@ -155,7 +154,7 @@
             </p>
           </blockquote>
         </div>
-        <p class="reviews__control">
+        <div class="reviews__control">
           <button class="reviews__arrow" type="button" aria-label="Кнопка Предыдущий отзыв" tabindex="0">
             <span class="visually-hidden">Предыдущий отзыв</span>
             <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,14 +167,14 @@
               <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black" />
             </svg>
           </button>
-        </p>
+        </div>
         <a class="reviews__create-review button-primary" href="#">Написать</a>
       </div>
     </section>
 
-    <section class="contacts contacts--flag">
+    <section class="main-container__contacts contacts contacts--flag">
       <div class="contacts__wrapper">
-        <h2 class="contacts__title title-primary">Контакты</h2>
+        <h2 class="contacts__title">Контакты</h2>
         <dl class="contacts__address">
           <div class="contacts__address-inner">
             <dt class="contacts__address-title">e-mail</dt>
@@ -257,37 +256,35 @@
 
   <div class="modal modal--close">
     <h2 class="visually-hidden">Корзина</h2>
-    <div class="modal__wrapper">
-      <div class="modal__inner">
-        <span class="modal__title title-primary">Добавить в корзину</span>
-        <div class="modal__size-wrapper">
-          <form class="modal__form" action="#" method="get">
-            <fieldset class="modal__form-group">
-              <legend class="modal__form-legend">Выберите размер:</legend>
-              <ul class="modal__form-list">
-                <li class="modal__form-item modal__form-item--current">
-                  <label class="modal__form-title">
-                    <input class="modal__input item-control__radio input-radio" type="radio" name="размер" checked>
-                    <span class="modal__input-text item-control__text">S</span>
-                  </label>
-                </li>
-                <li class="modal__form-item form__item item-control">
-                  <label class="modal__form-title">
-                    <input class="modal__input item-control__radio input-radio" type="radio" name="размер">
-                    <span class="modal__input-text item-control__text">M</span>
-                  </label>
-                </li>
-                <li class="modal__form-item form__item item-control">
-                  <label class="modal__form-title">
-                    <input class="modal__input item-control__radio input-radio" type="radio" name="размер">
-                    <span class="modal__input-text item-control__text">L</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="modal__button button-primary modal__button--color" type="submit">Добавить</button>
-          </form>
-        </div>
+    <div class="modal__body">
+      <div class="modal__content">
+        <span class="modal__title">Добавить в корзину</span>
+        <form class="modal__form" action="#" method="get">
+          <fieldset class="modal__form-group">
+            <legend class="modal__form-legend">Выберите размер:</legend>
+            <ul class="modal__form-list">
+              <li class="modal__form-item modal__form-item--current">
+                <label class="modal__form-title">
+                  <input class="modal__input item-control__radio input-radio" type="radio" name="размер" checked>
+                  <span class="modal__input-text item-control__text">S</span>
+                </label>
+              </li>
+              <li class="modal__form-item form__item item-control">
+                <label class="modal__form-title">
+                  <input class="modal__input item-control__radio input-radio" type="radio" name="размер">
+                  <span class="modal__input-text item-control__text">M</span>
+                </label>
+              </li>
+              <li class="modal__form-item form__item item-control">
+                <label class="modal__form-title">
+                  <input class="modal__input item-control__radio input-radio" type="radio" name="размер">
+                  <span class="modal__input-text item-control__text">L</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="modal__button button-primary modal__button--color" type="submit">Добавить</button>
+        </form>
       </div>
     </div>
   </div>

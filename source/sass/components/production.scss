@@ -1,5 +1,4 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .production__wrapper {
   @include bootstrap.wrapper;
@@ -11,12 +10,12 @@
 }
 
 .production__title {
-  @include bootstrap.title-primary;
   display: flex;
   align-items: center;
   position: relative;
-  font-size: 17px;
-  line-height: 24px;
+
+  @include bootstrap.title-h3;
+
   margin-top: 22px;
   margin-bottom: 24.5px;
   padding-left: 91px;

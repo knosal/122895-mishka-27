@@ -1,8 +1,11 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .map {
   position: relative;
+}
+
+.map__image {
+  width: 100%;
 }
 
 .map__mark {

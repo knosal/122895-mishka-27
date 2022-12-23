@@ -1,7 +1,6 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
-.product__wrapper {
+.product {
   display: flex;
   flex-direction: column;
   outline: 1px solid bootstrap.$colorLightGrey;
@@ -18,10 +17,13 @@
   padding-left: 28px;
 }
 
+.product__link-title {
+  @include bootstrap.link-reset;
+}
+
 .product__title {
+  @include bootstrap.title-h3;
   margin-bottom: 6px;
-  font-size: 17px;
-  line-height: 24px;
 }
 
 .product__description {
@@ -36,6 +38,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 0;
+  margin-top: auto;
   padding-top: 22.5px;
   border-top: 1px solid bootstrap.$colorLightGrey;
 }

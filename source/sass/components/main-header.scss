@@ -1,8 +1,8 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .main-header {
   @include bootstrap.container;
+  position: relative;
   background-color: bootstrap.$colorWhite;
 }
 
@@ -13,9 +13,9 @@
   grid-template-rows: 1fr;
   align-items: center;
   justify-content: center;
+  padding: 22px 0;
 }
 
 .main-header__link-logo {
   margin: 0 auto;
-  padding: 22px 0;
 }

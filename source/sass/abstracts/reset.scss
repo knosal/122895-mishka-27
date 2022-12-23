@@ -12,33 +12,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
-}
-
-a {
-  text-decoration: none;
-  color: #000000;
-  cursor: pointer;
-}
-
-@mixin button-reset {
-  padding: 0;
-  outline: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-@mixin ul-reset {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-@mixin fieldset-reset {
-  appearance: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
 }

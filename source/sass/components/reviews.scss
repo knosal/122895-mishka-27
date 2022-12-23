@@ -1,5 +1,4 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .reviews {
   position: relative;
@@ -12,11 +11,10 @@
 }
 
 .reviews__title {
-  @include bootstrap.title-primary;
   position: relative;
-  margin: 0;
+
+  @include bootstrap.title-h2;
   margin-bottom: 14px;
-  font-size: 25px;
 }
 
 .reviews__item {

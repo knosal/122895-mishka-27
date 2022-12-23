@@ -1,5 +1,4 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .input-text {
   width: 100%;
@@ -10,7 +9,7 @@
   overflow: hidden;
 
   &::placeholder {
-    font-weight: 700;
+    font-family: bootstrap.$open-sans;
     font-size: 17px;
     line-height: 18px;
     opacity: 0.3;

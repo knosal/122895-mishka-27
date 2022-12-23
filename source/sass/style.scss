@@ -1,12 +1,9 @@
-@charset "utf-8";
 //global
-@use "abstracts/fonts.scss";
 @use "abstracts/bootstrap.scss";
 //общие
 @use "components/page.scss";
 @use "components/visually-hidden.scss";
 @use "components/icon-card.scss";
-@use "components/title-primary.scss";
 @use "components/button-primary.scss";
 @use "components/main-container.scss";
 @use "components/section-wavy.scss";
@@ -38,4 +35,3 @@
 @use "components/input-text.scss";
 //modal
 @use "components/modal.scss";
-/*-----------------------------------*/

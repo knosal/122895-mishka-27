@@ -1,5 +1,4 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .main-navigation__toogle {
   @include bootstrap.button-reset;
@@ -32,4 +31,8 @@
   position: absolute;
   width: 100%;
   background-color: bootstrap.$colorWhite;
+}
+
+.navigation-list__link {
+  @include bootstrap.link-reset;
 }

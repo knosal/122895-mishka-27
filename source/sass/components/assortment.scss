@@ -1,12 +1,10 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
-.assortment__wrapper {
+.assortment {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 373px;
-  margin-bottom: 31px;
   background-image: url("../img/handmade.jpg");
   background-color: bootstrap.$colorGrey;
   background-position: top center;
@@ -14,23 +12,34 @@
   background-size: contain;
 }
 
-.assortment__title {
+.assortment__wrapper {
   @include bootstrap.wrapper;
-  @include bootstrap.title-primary;
+}
+
+.assortment__title {
+  @include bootstrap.title-h1;
   padding-top: 73px;
   padding-bottom: 120px;
   text-align: center;
-  font-size: 27px;
 }
 
 .assortment__list {
+  position: relative;
+  margin-bottom: 31px;
+
   @include bootstrap.ul-reset;
 }
 
 .assortment__item {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   padding-top: 24px;
+  padding-right: 27px;
   padding-bottom: 31px;
+  padding-left: 30px;
 
   &:nth-child(odd) {
     background-color: bootstrap.$colorGreen-primary;
@@ -42,25 +51,18 @@
 
   &::after {
     content: "";
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    right: 0;
-    margin-right: 30px;
+    display: block;
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    background-position: center center;
   }
 
-  &:nth-child(1)::after {
-    margin-right: 39px;
-    width: 40px;
-    height: 62px;
+  &--interior::after {
+    width: 60px;
+    height: 60px;
     background-image: url("../img/svg/interior-icon.svg");
   }
 
-  &:nth-child(2)::after {
+  &--lego::after {
     background-image: url("../img/svg/lego-icon.svg");
     width: 60px;
     height: 60px;
@@ -69,7 +71,8 @@
 
 .assortment__link {
   display: block;
-  padding: 0 30px;
+
+  @include bootstrap.link-reset;
   color: bootstrap.$colorWhite;
   font-weight: 700;
   font-size: 19px;

@@ -1,11 +1,9 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
   width: 100vw;
   height: 100vh;
   background-color: rgba(bootstrap.$colorWhite, 0.9);
@@ -16,8 +14,24 @@
   }
 }
 
+.modal__body {
+  @include bootstrap.container;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  transform: translate(-50%, -50%);
+  background-color: bootstrap.$colorWhite;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+}
+
+.modal__content {
+  @include bootstrap.wrapper;
+  padding-top: 28px;
+  padding-bottom: 46px;
+}
+
 .modal__title {
-  @include bootstrap.title-primary;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,26 +42,9 @@
   font-size: 25px;
 }
 
-.modal__wrapper {
-  @include bootstrap.container;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-  background-color: bootstrap.$colorWhite;
-  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
-}
-
-.modal__inner {
-  @include bootstrap.wrapper;
-  padding-top: 28px;
-  padding-bottom: 46px;
-}
-
 .modal__form-group {
   appearance: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   border: 0;
 }
@@ -61,6 +58,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include bootstrap.ul-reset;
 }
 
 .modal__form-item {

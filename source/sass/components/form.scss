@@ -1,9 +1,15 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
 
 .form__group {
   @include bootstrap.fieldset-reset;
   margin-bottom: 10px;
+  display: grid;
+  grid-template-rows: 1fr auto;
 
   &--radio {
     margin-bottom: 30px;
@@ -65,14 +71,15 @@
 }
 
 .form__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
   gap: 22px;
 
   @include bootstrap.ul-reset;
 }
 
 .form__remark {
+  margin: 0;
   color: bootstrap.$colorDarkGrey;
   font-size: 14px;
   line-height: 16px;

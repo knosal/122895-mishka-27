@@ -1,19 +1,15 @@
 @use "../abstracts/bootstrap.scss";
-@use "../abstracts/fonts.scss";
 
 .advantages__wrapper {
   @include bootstrap.wrapper;
-  height: 100%;
-  margin-bottom: 58px;
 }
 
+
 .advantages__title {
-  @include bootstrap.title-primary;
   position: relative;
-  margin: 0;
-  padding-top: 31px;
-  padding-bottom: 28px;
-  font-size: 25px;
+
+  @include bootstrap.title-h2;
+  margin-bottom: 28px;
 }
 
 .advantages__list {
@@ -25,9 +21,8 @@
 
 .advantages__item {
   position: relative;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
+
+  @include bootstrap.title-h3;
 
   &::before {
     content: "";

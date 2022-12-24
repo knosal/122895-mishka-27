@@ -12,12 +12,13 @@
   background-size: contain;
 }
 
+
 .assortment__wrapper {
   @include bootstrap.wrapper;
 }
 
 .assortment__title {
-  @include bootstrap.title-h1;
+  @include bootstrap.title(27px);
   padding-top: 73px;
   padding-bottom: 120px;
   text-align: center;

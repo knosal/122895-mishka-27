@@ -4,11 +4,10 @@
   @include bootstrap.wrapper;
 }
 
-
 .advantages__title {
   position: relative;
 
-  @include bootstrap.title-h2;
+  @include bootstrap.title(25px);
   margin-bottom: 28px;
 }
 
@@ -22,7 +21,7 @@
 .advantages__item {
   position: relative;
 
-  @include bootstrap.title-h3;
+  @include bootstrap.title(17px, 20px);
 
   &::before {
     content: "";

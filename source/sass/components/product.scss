@@ -22,7 +22,7 @@
 }
 
 .product__title {
-  @include bootstrap.title-h3;
+  @include bootstrap.title(17px, 24px);
   margin-bottom: 6px;
 }
 

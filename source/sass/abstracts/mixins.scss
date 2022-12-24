@@ -40,29 +40,11 @@
 }
 
 //Заголовок
-@mixin title-h1 {
+@mixin title($f-size, $l-height: 30px) {
   margin: 0;
   font-weight: 700;
   font-style: normal;
-  font-size: 27px;
-  line-height: 30px;
-  color: variable.$colorBlack;
-}
-
-@mixin title-h2 {
-  margin: 0;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 25px;
-  line-height: 30px;
-  color: variable.$colorBlack;
-}
-
-@mixin title-h3 {
-  margin: 0;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 17px;
-  line-height: 20px;
+  font-size: $f-size;
+  line-height: $l-height;
   color: variable.$colorBlack;
 }

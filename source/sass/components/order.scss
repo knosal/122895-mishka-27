@@ -6,7 +6,7 @@
 }
 
 .order__title {
-  @include bootstrap.title-h2;
+  @include bootstrap.title(25px);
   @include bootstrap.wrapper;
   padding: 73px 0;
   text-align: center;

@@ -17,6 +17,8 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+
+  @include bootstrap.link-reset;
 }
 
 .navigation-list__icon {

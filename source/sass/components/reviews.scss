@@ -13,7 +13,7 @@
 .reviews__title {
   position: relative;
 
-  @include bootstrap.title-h2;
+  @include bootstrap.title(25px);
   margin-bottom: 14px;
 }
 

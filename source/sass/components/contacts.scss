@@ -8,7 +8,7 @@
 }
 
 .contacts__title {
-  @include bootstrap.title-h2;
+  @include bootstrap.title(25px);
   margin-bottom: 30px;
 }
 

@@ -6,7 +6,7 @@
 }
 
 .catalog__title {
-  @include bootstrap.title-h1;
+  @include bootstrap.title(27px);
   padding: 73px 0;
   text-align: center;
 }

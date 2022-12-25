@@ -1,0 +1,24 @@
+@use "../abstracts/bootstrap.scss";
+
+.button-primary {
+  display: block;
+
+  @include bootstrap.button-reset;
+  padding: 16px 0;
+  font-family: bootstrap.$open-sans;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid bootstrap.$colorDarkGrey;
+  color: bootstrap.$colorDarkGrey;
+
+
+  &--green {
+    color: bootstrap.$colorWhite;
+    border-color: bootstrap.$colorGreen-primary;
+    background-color: bootstrap.$colorGreen-primary;
+  }
+}

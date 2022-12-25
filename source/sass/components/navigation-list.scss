@@ -1,0 +1,27 @@
+@use "../abstracts/bootstrap.scss";
+
+.navigation-list__item {
+  display: flex;
+  align-items: center;
+  padding-top: 28.5px;
+  padding-right: 33px;
+  padding-bottom: 27.5px;
+  padding-left: 76px;
+  background-color: bootstrap.$colorWhite;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+}
+
+.navigation-list__link {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+
+  @include bootstrap.link-reset;
+}
+
+.navigation-list__icon {
+  position: absolute;
+  left: 30px;
+}

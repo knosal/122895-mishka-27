@@ -1,0 +1,57 @@
+@use "../abstracts/bootstrap.scss";
+
+.contacts__wrapper {
+  @include bootstrap.wrapper;
+  height: 100%;
+  padding-top: 38px;
+  margin-bottom: 62px;
+}
+
+.contacts__title {
+  @include bootstrap.title(25px);
+  margin-bottom: 30px;
+}
+
+.contacts__address {
+  margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.contacts__address-list {
+  margin-bottom: 41px;
+}
+
+.contacts__address-inner {
+  display: flex;
+}
+
+.contacts__address-inner:not(:last-of-type) {
+  padding-bottom: 40px;
+}
+
+.contacts__address-title {
+  width: 76px;
+
+  &::after {
+    content: ": ";
+  }
+}
+
+.contacts__address-value {
+  margin: 0;
+}
+
+.contacts__address-link {
+  @include bootstrap.link-reset;
+  border-bottom: 1px solid bootstrap.$colorGreen-primary;
+}
+
+.contacts__map {
+  margin-bottom: 42px;
+}
+
+.contacts__feedback {
+  @include bootstrap.wrapper;
+  margin-bottom: 39px;
+}

@@ -1,0 +1,27 @@
+@use "../abstracts/bootstrap.scss";
+
+.order__inner-title {
+  background-color: bootstrap.$colorGrey;
+  margin-bottom: 17px;
+}
+
+.order__title {
+  @include bootstrap.title(25px);
+  @include bootstrap.wrapper;
+  padding: 73px 0;
+  text-align: center;
+}
+
+.order__wrapper {
+  @include bootstrap.wrapper;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.order__text {
+  margin: 0;
+  font-size: 13px;
+  line-height: 24px;
+  margin-bottom: 29px;
+}

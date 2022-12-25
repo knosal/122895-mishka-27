@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -13,16 +14,21 @@
         <img class="main-header__logo-icon" src="img/svg/logo-mobile-icon.svg" width="86" height="35" alt="Логотип сайта 'Мишка'">
       </a>
       <nav class="main-navigation">
-        <button class="main-navigation__toogle button-primary" type="button">
+        <button class="main-navigation__toogle " type="button">
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 0H0V2H20V0Z" fill="#231F20"/>
+            <path d="M20 6H0V8H20V6Z" fill="#231F20"/>
+            <path d="M20 12H0V14H20V12Z" fill="#231F20"/>
+          </svg>
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <div class="main-navigation__wrapper">
+        <div class="main-navigation__inner-popover">
           <ul class="main-navigation__list navigation-list">
             <li class="navigation-list__item">
-              <a href="catalog.html">Каталог товаров</a>
+              <a class="navigation-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="navigation-list__item">
-              <a href="#">Вязание на заказ</a>
+              <a class="navigation-list__link" href="#">Вязание на заказ</a>
             </li>
             <li class="navigation-list__item">
               <a class="navigation-list__link" href="#">
@@ -53,78 +59,88 @@
 
   <main class="main-container">
     <h1 class="visually-hidden">Мишка</h1>
-    <section class="assortment">
+    <section class="main-container__assortment assortment">
       <div class="assortment__wrapper">
-        <h2 class="visually-hidden">Наш ассортимент</h2>
-        <h3 class="assortment__title title-primary">Милые штуки ручной работы для дома</h3>
+        <h2 class="assortment__title">Милые штуки ручной<br> работы для дома</h2>
         <ul class="assortment__list">
-          <li class="assortment__item">
-            <a class="assortment__link " href="#">Предметы интерьера</a>
-          </li>
-          <li class="assortment__item">
-            <a class="assortment__link " href="#">Детские игрушки</a>
-          </li>
-        </ul>
       </div>
+
+        <li class="assortment__item assortment__item--interior">
+          <a class="assortment__link" href="#">Предметы<br>интерьера</a>
+        </li>
+        <li class="assortment__item assortment__item--lego">
+          <a class="assortment__link" href="#">Детские<br>игрушки</a>
+        </li>
+      </ul>
     </section>
 
-    <section class="featured section-wavy">
+    <section class="main-container__featured featured section-wavy">
       <div class="featured__wrapper">
-        <h2 class="visually-hidden">Популярные товары</h2>
-        <h3 class="featured__title title-primary">Вязаные корзинки</h3>
-        <span class="subtitle">Товар недели</span>
-        <div class="featured__description-wrapper">
+        <h3 class="featured__title">Вязаные корзинки
+          <span class="featured__subtitle subtitle">Товар недели</span>
+        </h3>
+        <div class="featured__description-inner">
           <p class="featured__description-text">
             Экологически чистая пряжа, ручная работа. Доступны в шести
             расцветках и трёх размерах.
           </p>
           <dl class="featured__description-list">
-            <dt class="featured__table-title">Цвет</dt>
-            <dd class="featured__table-value">тиффани/серый</dd>
-            <dt class="featured__table-title">Диаметр</dt>
-            <dd class="featured__table-value">25 см</dd>
-            <dt class="featured__table-title">Высота</dt>
-            <dd class="featured__table-value">15 см</dd>
+            <div class="featured__description-list-inner">
+              <dt class="featured__table-title">Цвет</dt>
+              <dd class="featured__table-value">тиффани/серый</dd>
+            </div>
+            <div class="featured__description-list-inner">
+              <dt class="featured__table-title">Диаметр</dt>
+              <dd class="featured__table-value">25 см</dd>
+            </div>
+            <div class="featured__description-list-inner">
+              <dt class="featured__table-title">Высота</dt>
+              <dd class="featured__table-value">15 см</dd>
+            </div>
           </dl>
         </div>
-        <img src="img/handmade.jpg" width="260" height="315" alt="Вязанные корзинки ручной работы">
-        <span class="featured__price">Цена: 990 руб.</span>
-        <button class="featured__button button-primary" type="button">Заказать</button>
+        <div class="featured__image-inner">
+          <img src="img/knitted-baskets.jpg" width="260" height="315" alt="Вязанные корзинки ручной работы">
+        </div>
+        <div class="featured__price-inner">
+          <span class="featured__price">Цена: 990 руб.</span>
+          <button class="featured__button featured__button--dark button-primary" type="button">Заказать</button>
+        </div>
       </div>
     </section>
 
-    <section class="advantages section-wavy">
+    <section class="main-container__advantages advantages">
       <div class="advantages__wrapper">
-        <h2 class="visually-hidden">Наши преимущества</h2>
-        <h3 class="advantages__title title-primary">Коротко о нас:</h3>
+        <h2 class="advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
           <li class="advantages__item advantages__item--flower">
-            Экологически чистые материалы
+            Экологически<br> чистые материалы
           </li>
           <li class="advantages__item advantages__item--bill">
-            Скандинавский стиль по российской цене
+            Скандинавский стиль<br> по российской цене
           </li>
           <li class="advantages__item advantages__item--heart">
-            Увеличивает лайки на фотографиях
+            Увеличивает лайки<br> на фотографиях
           </li>
           <li class="advantages__item advantages__item--tangle">
-            Связано вручную с любовью и умилением
+            Связано вручную<br> с любовью и умилением
           </li>
           <li class="advantages__item advantages__item--rocket">
-            Поддержка отечественного производителя
+            Поддержка отечественного<br> производителя
           </li>
           <li class="advantages__item advantages__item--gift">
-            Поставляется в подарочной упаковке
+            Поставляется<br> в подарочной упаковке
           </li>
         </ul>
       </div>
+
     </section>
 
-    <section class="reviews reviews-slider">
+    <section class="main-container__reviews reviews section-wavy">
       <div class="reviews__wrapper">
-        <h2 class="reviews-slider__title title-primary">Отзывы</h2>
-        <div class="reviews__list reviews-slider__list">
-          <blockquote class="reviews__item reviews-slider__item">
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__list">
+          <blockquote class="reviews__item">
             <p class="reviews__text">
               Я молодая мама, но всё равно фотографии не набирали и близко
               такого количества лайков, как у популярных инстамамочек. В
@@ -138,7 +154,7 @@
             </p>
           </blockquote>
         </div>
-        <p class="reviews__control reviews-slider__control">
+        <div class="reviews__control">
           <button class="reviews__arrow" type="button" aria-label="Кнопка Предыдущий отзыв" tabindex="0">
             <span class="visually-hidden">Предыдущий отзыв</span>
             <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -151,48 +167,49 @@
               <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black" />
             </svg>
           </button>
-        </p>
+        </div>
         <a class="reviews__create-review button-primary" href="#">Написать</a>
       </div>
     </section>
 
-    <section class="contacts contacts--flag">
+    <section class="main-container__contacts contacts contacts--flag">
       <div class="contacts__wrapper">
-        <h2 class="contacts__title title-primary">Контакты</h2>
-        <address class="contacts__address-wrapper">
-          <p class="contacts__address-email-wrapper">
-            <span class="contacts__address-email">e-mail:</span>
-            <a href="malto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          </p>
-          <p class="contacts__address-location-wrapper">
-            <span class="contacts__address-location">адрес:</span>
-            г. Санкт-Петербург
-            <br>
-            ул. Большая Конюшенная
-            <br>
-            д. 19/8, офис 10
-          </p>
-        </address>
-        <div class="contacts__map map">
-          <img class="map__image" src="img/map.png" width="320" height="454" alt="Наш адресс на карте">
-          <svg class="map__mark" width="67" height="100" viewBox="0 0 67 100" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M57.1276 9.15178C44.0322 -3.05059 22.917 -3.05059 9.82159 9.15178C-3.27386 21.3542 -3.27386 41.0962 9.82159 53.2986C9.82159 53.2986 33.4746 74.9256 33.4746 99.9256C33.4746 74.9256 57.1276 53.2986 57.1276 53.2986C70.2231 41.1954 70.2231 21.3542 57.1276 9.15178Z"
-              fill="white" />
-            <path
-              d="M47.6871 45.164C47.078 41.8902 47.7886 38.3188 47.6871 34.9458C47.5856 31.1759 46.9765 27.5053 46.9765 23.8347C46.9765 20.8585 47.4841 17.6839 46.4689 14.8069C46.5704 14.5093 46.5704 14.1124 46.672 13.8148C46.9765 12.3267 42.0023 13.1204 41.2917 14.4101C40.7841 14.8069 40.581 15.3029 40.7841 15.6997C40.8856 15.7989 40.8856 15.8982 40.8856 16.0966C39.972 20.5608 38.6523 24.8267 37.1295 29.1918C36.5204 30.8783 35.9114 32.4656 35.3023 34.0529C34.4901 32.5648 33.678 30.9775 32.9674 29.3902C31.0386 24.6283 29.2114 19.7672 26.8765 15.2037C27.1811 13.1204 22.3083 13.3188 21.3947 15.2037C20.278 17.5847 20.3795 19.9656 20.7856 22.4458C21.1917 25.3228 21.2932 28.1005 21.2932 30.9775C21.3947 36.5331 21.8007 41.9894 21.9023 47.545C21.3947 48.1402 21.2932 48.7355 21.8007 49.4299C22.0038 49.7275 22.3083 49.9259 22.6129 50.2235C23.9326 51.2156 27.5871 50.422 27.5871 48.4378C27.5871 42.6839 27.1811 37.0291 26.978 31.2751C26.978 30.6799 26.978 30.1839 26.978 29.5886C27.0795 29.787 27.1811 29.9855 27.1811 30.1839C28.0947 32.3664 29.0083 34.5489 30.328 36.6323C31.5462 38.7156 32.1553 40.8982 32.8659 43.0807C32.5614 43.3783 32.4598 43.6759 32.5614 44.0728C32.4598 44.3704 32.6629 44.4696 32.9674 44.5688C33.8811 45.3624 35.6068 44.9656 36.5204 44.5688C36.9265 44.3704 37.3326 44.172 37.7386 43.9735C38.2462 43.6759 38.9568 42.9815 38.7538 42.3862C38.7538 42.287 38.6523 42.0886 38.6523 41.9894C39.3629 40.2037 39.6674 38.418 40.0735 36.5331C40.4795 34.5489 41.1901 32.664 41.9007 30.7791C42.0023 31.672 42.0023 32.4656 42.1038 33.3585C42.4083 36.9299 42.1038 40.4021 42.1038 43.9735C42.1038 45.164 42.2053 46.2553 42.4083 47.3466C42.5098 47.8426 42.9159 49.8267 42.8144 49.9259C41.9007 50.7196 42.2053 51.7116 43.322 51.9101C44.6417 52.2077 46.2659 51.8109 47.281 50.918C48.9053 49.5291 48.0932 47.1482 47.6871 45.164Z"
-              fill="#6BC6B3" />
-          </svg>
-        </div>
-        <a class="contacts__feedback button-primary" href="#">Напишите нам</a>
+        <h2 class="contacts__title">Контакты</h2>
+        <dl class="contacts__address">
+          <div class="contacts__address-inner">
+            <dt class="contacts__address-title">e-mail</dt>
+            <dd class="contacts__address-value">
+              <a class="contacts__address-link" href="malto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </dd>
+          </div>
+          <div class="contacts__address-inner">
+            <dt class="contacts__address-title">адрес</dt>
+            <dd class="contacts__address-value">г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 10</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="contacts__map map">
+        <img class="map__image" src="img/map.png" width="320" height="454" alt="Наш адресс на карте">
+        <svg class="map__mark" width="67" height="100" viewBox="0 0 67 100" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M57.1276 9.15178C44.0322 -3.05059 22.917 -3.05059 9.82159 9.15178C-3.27386 21.3542 -3.27386 41.0962 9.82159 53.2986C9.82159 53.2986 33.4746 74.9256 33.4746 99.9256C33.4746 74.9256 57.1276 53.2986 57.1276 53.2986C70.2231 41.1954 70.2231 21.3542 57.1276 9.15178Z"
+            fill="white" />
+          <path
+            d="M47.6871 45.164C47.078 41.8902 47.7886 38.3188 47.6871 34.9458C47.5856 31.1759 46.9765 27.5053 46.9765 23.8347C46.9765 20.8585 47.4841 17.6839 46.4689 14.8069C46.5704 14.5093 46.5704 14.1124 46.672 13.8148C46.9765 12.3267 42.0023 13.1204 41.2917 14.4101C40.7841 14.8069 40.581 15.3029 40.7841 15.6997C40.8856 15.7989 40.8856 15.8982 40.8856 16.0966C39.972 20.5608 38.6523 24.8267 37.1295 29.1918C36.5204 30.8783 35.9114 32.4656 35.3023 34.0529C34.4901 32.5648 33.678 30.9775 32.9674 29.3902C31.0386 24.6283 29.2114 19.7672 26.8765 15.2037C27.1811 13.1204 22.3083 13.3188 21.3947 15.2037C20.278 17.5847 20.3795 19.9656 20.7856 22.4458C21.1917 25.3228 21.2932 28.1005 21.2932 30.9775C21.3947 36.5331 21.8007 41.9894 21.9023 47.545C21.3947 48.1402 21.2932 48.7355 21.8007 49.4299C22.0038 49.7275 22.3083 49.9259 22.6129 50.2235C23.9326 51.2156 27.5871 50.422 27.5871 48.4378C27.5871 42.6839 27.1811 37.0291 26.978 31.2751C26.978 30.6799 26.978 30.1839 26.978 29.5886C27.0795 29.787 27.1811 29.9855 27.1811 30.1839C28.0947 32.3664 29.0083 34.5489 30.328 36.6323C31.5462 38.7156 32.1553 40.8982 32.8659 43.0807C32.5614 43.3783 32.4598 43.6759 32.5614 44.0728C32.4598 44.3704 32.6629 44.4696 32.9674 44.5688C33.8811 45.3624 35.6068 44.9656 36.5204 44.5688C36.9265 44.3704 37.3326 44.172 37.7386 43.9735C38.2462 43.6759 38.9568 42.9815 38.7538 42.3862C38.7538 42.287 38.6523 42.0886 38.6523 41.9894C39.3629 40.2037 39.6674 38.418 40.0735 36.5331C40.4795 34.5489 41.1901 32.664 41.9007 30.7791C42.0023 31.672 42.0023 32.4656 42.1038 33.3585C42.4083 36.9299 42.1038 40.4021 42.1038 43.9735C42.1038 45.164 42.2053 46.2553 42.4083 47.3466C42.5098 47.8426 42.9159 49.8267 42.8144 49.9259C41.9007 50.7196 42.2053 51.7116 43.322 51.9101C44.6417 52.2077 46.2659 51.8109 47.281 50.918C48.9053 49.5291 48.0932 47.1482 47.6871 45.164Z"
+            fill="#6BC6B3" />
+        </svg>
+      </div>
+      <div class="contacts__feedback">
+        <a class="feedback__link button-primary" href="#">Напишите нам</a>
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <div class="main-footer__wrapper">
-      <ul class="main-footer__social-list socials">
+    <section class="main-footer__social socials">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <ul class="main-footer__social-list socials__list">
         <li class="socials__item">
           <a class="socials__link" href="#">
             <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -224,48 +241,49 @@
           </a>
         </li>
       </ul>
-      <p class="main-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg class="copyright__image" width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-            <path fill="#2E368F"
-              d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
-          </svg>
-        </a>
-      </p>
-    </div>
+    </section>
+    <section class="main-footer__copyright copyright">
+      <h2 class="visually-hidden">Доступные ссылки</h2>
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="copyright__image" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+          <path fill="#63D1BB"
+            d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+        </svg>
+      </a>
+    </section>
   </footer>
 
   <div class="modal modal--close">
-    <div class="modal__wrapper">
-      <h2 class="visually-hidden">Корзина</h2>
-      <span class="modal__title title-primary">Добавить в корзину</span>
-      <div class="modal__size-wrapper">
-        <form class="modal__form form" action="#" method="get">
-          <fieldset class="form__group">
-            <legend class="form__legend form__legend--color">Выберите размер:</legend>
-            <ul class="form__list form__list--current">
-              <li class="form__item item-control">
-                <label class="form__item-title">
-                  <input class="item-control__radio input-radio" type="radio" name="размер" checked>
-                  <span class="item-control__text">S</span>
+    <h2 class="visually-hidden">Корзина</h2>
+    <div class="modal__body">
+      <div class="modal__content">
+        <span class="modal__title">Добавить в корзину</span>
+        <form class="modal__form" action="#" method="get">
+          <fieldset class="modal__form-group">
+            <legend class="modal__form-legend">Выберите размер:</legend>
+            <ul class="modal__form-list">
+              <li class="modal__form-item modal__form-item--current">
+                <label class="modal__form-title">
+                  <input class="modal__input item-control__radio input-radio" type="radio" name="размер" checked>
+                  <span class="modal__input-text item-control__text">S</span>
                 </label>
               </li>
-              <li class="form__item item-control">
-                <label class="form__item-title">
-                  <input class="item-control__radio input-radio" type="radio" name="размер">
-                  <span class="item-control__text">M</span>
+              <li class="modal__form-item form__item item-control">
+                <label class="modal__form-title">
+                  <input class="modal__input item-control__radio input-radio" type="radio" name="размер">
+                  <span class="modal__input-text item-control__text">M</span>
                 </label>
               </li>
-              <li class="form__item item-control">
-                <label class="form__item-title">
-                  <input class="item-control__radio input-radio" type="radio" name="размер">
-                  <span class="item-control__text">L</span>
+              <li class="modal__form-item form__item item-control">
+                <label class="modal__form-title">
+                  <input class="modal__input item-control__radio input-radio" type="radio" name="размер">
+                  <span class="modal__input-text item-control__text">L</span>
                 </label>
               </li>
             </ul>
           </fieldset>
-          <button class="modal__button button-primary button-primary--color" type="submit">Напишите нам</button>
+          <button class="modal__button button-primary button-primary--green" type="submit">Добавить</button>
         </form>
       </div>
     </div>

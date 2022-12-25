@@ -1,0 +1,17 @@
+@use "../abstracts/bootstrap.scss";
+
+.page {
+  height: 100%;
+  font-family: bootstrap.$open-sans;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: bootstrap.$colorDarkGrey;
+  background-color: bootstrap.$colorWhite;
+}
+
+.page__body {
+  max-width: 320px;
+  margin: auto;
+}

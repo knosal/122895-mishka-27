@@ -1,0 +1,58 @@
+@use "../abstracts/bootstrap.scss";
+
+.advantages__wrapper {
+  @include bootstrap.wrapper;
+}
+
+.advantages__title {
+  position: relative;
+
+  @include bootstrap.title(25px);
+  margin-bottom: 28px;
+}
+
+.advantages__list {
+  @include bootstrap.ul-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.advantages__item {
+  position: relative;
+
+  @include bootstrap.title(17px, 20px);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &--flower::before {
+    background-image: url("../img/svg/flower-icon.svg");
+  }
+
+  &--bill::before {
+    background-image: url("../img/svg/bill-icon.svg");
+  }
+
+  &--heart::before {
+    background-image: url("../img/svg/heart-icon.svg");
+  }
+
+  &--tangle::before {
+    background-image: url("../img/svg/tangle-icon.svg");
+  }
+
+  &--rocket::before {
+    background-image: url("../img/svg/rocket-icon.svg");
+  }
+
+  &--gift::before {
+    background-image: url("../img/svg/gift-icon.svg");
+  }
+}

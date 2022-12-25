@@ -1,0 +1,16 @@
+@use "../abstracts/bootstrap.scss";
+
+.map {
+  position: relative;
+}
+
+.map__image {
+  width: 100%;
+}
+
+.map__mark {
+  position: absolute;
+  top: 42%;
+  right: 47%;
+  transform: translate(50%, -50%);
+}

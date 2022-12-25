@@ -1,0 +1,97 @@
+@use "../abstracts/bootstrap.scss";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(bootstrap.$colorWhite, 0.9);
+  z-index: 10;
+
+  &--close {
+    display: none;
+  }
+}
+
+.modal__body {
+  @include bootstrap.container;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  transform: translate(-50%, -50%);
+  background-color: bootstrap.$colorWhite;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+}
+
+.modal__content {
+  @include bootstrap.wrapper;
+  padding-top: 28px;
+  padding-bottom: 46px;
+}
+
+.modal__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include bootstrap.title(25px);
+  padding-bottom: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal__form-group {
+  appearance: none;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+}
+
+.modal__form-legend {
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.modal__form-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include bootstrap.ul-reset;
+}
+
+.modal__form-item {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  width: 82px;
+  padding: 18px 0;
+  border: 1px solid;
+  border-color: rgba(bootstrap.$colorDarkGrey, 0.1);
+
+  &--current {
+    border: 1px solid bootstrap.$colorGreen-primary;
+  }
+}
+
+.modal__form-title {
+  display: flex;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.modal__input {
+  appearance: none;
+  margin: 0;
+}
+
+.modal__button {
+  width: 100%;
+  margin-top: 31px;
+  font-size: 17px;
+  line-height: 16px;
+}

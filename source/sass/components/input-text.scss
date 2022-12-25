@@ -1,0 +1,25 @@
+@use "../abstracts/bootstrap.scss";
+
+.input-text {
+  width: 100%;
+  padding: 17px 0;
+  border: none;
+  border-bottom: 2px solid bootstrap.$colorBlack;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &::placeholder {
+    font-family: bootstrap.$open-sans;
+    font-size: 17px;
+    line-height: 18px;
+    opacity: 0.3;
+  }
+
+  &--textarea {
+    appearance: none;
+    border: 2px solid bootstrap.$colorBlack;
+    padding: 17px;
+    padding-bottom: 89px;
+    resize: none;
+  }
+}

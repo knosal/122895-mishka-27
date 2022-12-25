@@ -1,0 +1,81 @@
+@use "../abstracts/bootstrap.scss";
+
+.assortment {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 373px;
+  background-image: url("../img/handmade.jpg");
+  background-color: bootstrap.$colorGrey;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.assortment__wrapper {
+  @include bootstrap.wrapper;
+}
+
+.assortment__title {
+  @include bootstrap.title(27px);
+  padding-top: 73px;
+  padding-bottom: 120px;
+  text-align: center;
+}
+
+.assortment__list {
+  position: relative;
+  margin-bottom: 31px;
+
+  @include bootstrap.ul-reset;
+}
+
+.assortment__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 24px;
+  padding-right: 27px;
+  padding-bottom: 31px;
+  padding-left: 30px;
+
+  &:nth-child(odd) {
+    background-color: bootstrap.$colorGreen-primary;
+  }
+
+  &:nth-child(even) {
+    background-color: rgba(86, 195, 178, 1);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &--interior::after {
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/svg/interior-icon.svg");
+  }
+
+  &--lego::after {
+    background-image: url("../img/svg/lego-icon.svg");
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.assortment__link {
+  display: block;
+
+  @include bootstrap.link-reset;
+  color: bootstrap.$colorWhite;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+}

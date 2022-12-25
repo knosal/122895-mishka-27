@@ -1,0 +1,21 @@
+@use "../abstracts/bootstrap.scss";
+
+.main-header {
+  @include bootstrap.container;
+  position: relative;
+  background-color: bootstrap.$colorWhite;
+}
+
+.main-header__wrapper {
+  @include bootstrap.wrapper;
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 0;
+}
+
+.main-header__link-logo {
+  margin: 0 auto;
+}

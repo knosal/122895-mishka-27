@@ -1,0 +1,50 @@
+@use "../abstracts/variable.scss";
+
+//Сброс стилей
+@mixin link-reset {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+@mixin button-reset {
+  padding: 0;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@mixin ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin fieldset-reset {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+//Стили разрешения
+@mixin container {
+  margin: 0 auto;
+  width: 320px;
+}
+
+@mixin wrapper {
+  margin: 0 auto;
+  width: 260px;
+}
+
+//Заголовок
+@mixin title($f-size, $l-height: 30px) {
+  margin: 0;
+  font-weight: 700;
+  font-style: normal;
+  font-size: $f-size;
+  line-height: $l-height;
+  color: variable.$colorBlack;
+}

@@ -1,0 +1,12 @@
+@use "../abstracts/bootstrap.scss";
+
+.section-wavy {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/svg/zigzag-line-icon.svg");
+    z-index: 10;
+  }
+}

@@ -1,0 +1,87 @@
+@use "../abstracts/bootstrap.scss";
+
+.featured {
+  position: relative;
+}
+
+.featured__wrapper {
+  @include bootstrap.wrapper;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  padding-bottom: 36px;
+}
+
+.featured__title {
+  grid-column: span 3;
+  position: relative;
+
+  @include bootstrap.title(25px);
+  margin-bottom: 41px;
+}
+
+.featured__subtitle {
+  position: absolute;
+  display: block;
+}
+
+.featured__description-inner {
+  grid-column: span 3;
+}
+
+.featured__description-text {
+  margin: 0;
+  margin-bottom: 28px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.featured__description-list {
+  margin: 0;
+  margin-bottom: 41px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.featured__description-list-inner {
+  display: flex;
+  margin-top: auto;
+  padding: 14px 0;
+  border-bottom: 1px solid bootstrap.$colorLightGrey;
+}
+
+.featured__table-title {
+  width: 97px;
+
+  &::after {
+    content: ": ";
+  }
+}
+
+.featured__table-value {
+  margin: 0;
+}
+
+.featured__image-inner {
+  grid-column: auto;
+}
+
+.featured__price-inner {
+  grid-column: span 3;
+}
+
+.featured__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25.5px;
+  padding-bottom: 24.5px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: bootstrap.$colorDarkGrey;
+}
+
+.featured__button {
+  width: 100%;
+}

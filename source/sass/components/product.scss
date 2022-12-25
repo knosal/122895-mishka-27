@@ -1,0 +1,54 @@
+@use "../abstracts/bootstrap.scss";
+
+.product {
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid bootstrap.$colorLightGrey;
+}
+
+.product__link-image {
+  background-color: bootstrap.$colorLightGrey;
+}
+
+.product__info-inner {
+  padding-top: 27.5px;
+  padding-right: 28px;
+  padding-bottom: 25px;
+  padding-left: 28px;
+}
+
+.product__link-title {
+  @include bootstrap.link-reset;
+}
+
+.product__title {
+  @include bootstrap.title(17px, 24px);
+  margin-bottom: 6px;
+}
+
+.product__description {
+  margin: 0;
+  padding-bottom: 17.5px;
+  font-size: 13px;
+  line-height: 30px;
+}
+
+.product__price-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: auto;
+  padding-top: 22.5px;
+  border-top: 1px solid bootstrap.$colorLightGrey;
+}
+
+.product__price {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.product__button-buy {
+  @include bootstrap.button-reset;
+}

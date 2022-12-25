@@ -1,0 +1,53 @@
+@use "../abstracts/bootstrap.scss";
+
+.reviews {
+  position: relative;
+}
+
+.reviews__wrapper {
+  @include bootstrap.wrapper;
+  height: 100%;
+  margin-bottom: 38px;
+}
+
+.reviews__title {
+  position: relative;
+
+  @include bootstrap.title(25px);
+  margin-bottom: 14px;
+}
+
+.reviews__item {
+  margin: 0;
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.reviews__text {
+  margin-bottom: 33px;
+}
+
+.reviews__author-info {
+  margin-bottom: 30px;
+}
+
+.reviews__author-name {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.reviews__control {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+
+.reviews__arrow {
+  @include bootstrap.button-reset;
+  padding: 13px 0;
+  padding-left: 37px;
+  padding-right: 42px;
+  outline: 1px solid bootstrap.$colorLightGrey;
+}

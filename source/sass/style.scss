@@ -1,1 +1,37 @@
-// Начните писать стили здесь
+//global
+@use "abstracts/bootstrap.scss";
+//общие
+@use "components/page.scss";
+@use "components/visually-hidden.scss";
+@use "components/icon-card.scss";
+@use "components/button-primary.scss";
+@use "components/main-container.scss";
+@use "components/section-wavy.scss";
+//header
+@use "components/main-header.scss";
+@use "components/main-navigation.scss";
+@use "components/navigation-list.scss";
+//footer
+@use "components/main-footer.scss";
+@use "components/socials.scss";
+@use "components/copyright.scss";
+//index
+@use "components/assortment.scss";
+@use "components/featured.scss";
+@use "components/subtitle.scss";
+@use "components/advantages.scss";
+@use "components/reviews.scss";
+@use "components/contacts.scss";
+@use "components/map.scss";
+//catalog
+@use "components/catalog.scss";
+@use "components/product.scss";
+@use "components/production.scss";
+//form
+@use "components/order.scss";
+@use "components/form.scss";
+@use "components/item-control.scss";
+@use "components/input-control.scss";
+@use "components/input-text.scss";
+//modal
+@use "components/modal.scss";

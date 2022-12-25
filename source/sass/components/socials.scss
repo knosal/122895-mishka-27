@@ -1,0 +1,11 @@
+@use "../abstracts/bootstrap.scss";
+
+.socials__list {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  column-gap: 29px;
+
+  @include bootstrap.ul-reset;
+
+  padding: 0 10px;
+}

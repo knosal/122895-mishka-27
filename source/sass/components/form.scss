@@ -1,0 +1,92 @@
+@use "../abstracts/bootstrap.scss";
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group {
+  @include bootstrap.fieldset-reset;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  &--radio {
+    margin-bottom: 30px;
+  }
+
+  &--checkbox {
+    margin-bottom: 33px;
+  }
+}
+
+.form__group-inner {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.form__item-title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.form__legend {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: bootstrap.$colorGreen-primary;
+  text-transform: uppercase;
+
+  &--line::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 63px;
+    right: 0;
+    height: 50%;
+    border-top: 1px solid bootstrap.$colorGreen-line;
+    z-index: -1;
+  }
+
+  &--radio {
+    margin-bottom: 30px;
+  }
+
+  &--checkbox {
+    margin-bottom: 25px;
+  }
+
+  &--name {
+    margin-bottom: 29px;
+  }
+
+  &--other {
+    margin-bottom: 23px;
+  }
+}
+
+.form__list {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 22px;
+
+  @include bootstrap.ul-reset;
+}
+
+.form__remark {
+  margin: 0;
+  color: bootstrap.$colorDarkGrey;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__button {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 55px;
+}

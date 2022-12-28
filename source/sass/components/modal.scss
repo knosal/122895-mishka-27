@@ -25,10 +25,27 @@
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .modal__body {
+    min-width: 566px;
+  }
+}
+
+
 .modal__content {
   @include bootstrap.wrapper;
   padding-top: 28px;
   padding-bottom: 46px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .modal__content {
+    width: auto;
+    padding-top: 37.5px;
+    padding-right: 92px;
+    padding-bottom: 46px;
+    padding-left: 93px;
+  }
 }
 
 .modal__title {
@@ -58,6 +75,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 7px;
 
   @include bootstrap.ul-reset;
 }
@@ -65,14 +83,18 @@
 .modal__form-item {
   display: flex;
   justify-content: center;
-  gap: 7px;
-  width: 82px;
-  padding: 18px 0;
+  padding: 18px 36px;
   border: 1px solid;
   border-color: rgba(bootstrap.$colorDarkGrey, 0.1);
 
   &--current {
     border: 1px solid bootstrap.$colorGreen-primary;
+  }
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .modal__form-item {
+    padding: 18px 51px;
   }
 }
 

@@ -41,12 +41,13 @@
 
 @media (min-width: bootstrap.$tablet-width) {
   .main-navigation__inner-popover {
+    position: relative;
     display: grid;
     grid-template-columns: 160px 160px 80px 268px;
     grid-template-rows: 89px 69px;
     grid-template-areas:
       "logo logo navu navu"
-      "navs navs . .";
+      "navs navs . promo";
     margin: 0;
     background-color: transparent;
   }

@@ -12,16 +12,11 @@
   background-size: contain;
 }
 
-.assortment__delivery-promo {
-  position: absolute;
-  top: 20px;
-  right: 0;
-  color: bootstrap.$colorDarkGrey;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 24px;
+@media (min-width: bootstrap.$tablet-width) {
+  .assortment {
+    min-height: 746px;
+  }
 }
-
 
 .assortment__wrapper {
   position: relative;
@@ -36,11 +31,26 @@
   text-align: center;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .assortment__title {
+    padding-top: 133px;
+  }
+}
+
 .assortment__list {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 31px;
 
   @include bootstrap.ul-reset;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .assortment__list {
+    flex-direction: row;
+    padding: 0 50px;
+  }
 }
 
 .assortment__item {
@@ -79,6 +89,15 @@
     background-image: url("../img/svg/lego-icon.svg");
     width: 60px;
     height: 60px;
+  }
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .assortment__item {
+    padding-top: 25px;
+    padding-right: 36px;
+    padding-bottom: 34px;
+    padding-left: 36px;
   }
 }
 

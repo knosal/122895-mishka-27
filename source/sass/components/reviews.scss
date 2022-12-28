@@ -4,10 +4,36 @@
   position: relative;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews {
+    padding-top: 82.5px;
+    padding-bottom: 47px;
+    background-image: url("../img/review.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
+}
+
 .reviews__wrapper {
   @include bootstrap.wrapper;
   height: 100%;
-  margin-bottom: 38px;
+  //padding-bottom: 38px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 175px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title button"
+      "review review"
+      "author control";
+    column-gap: 20px;
+    row-gap: 20px;
+
+    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+  }
 }
 
 .reviews__title {
@@ -17,19 +43,51 @@
   margin-bottom: 14px;
 }
 
-.reviews__item {
-  margin: 0;
-  font-size: 15px;
-  line-height: 30px;
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews__title {
+    grid-area: title;
+    margin-bottom: 38.5px;
+  }
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews__list {
+    display: grid;
+    grid-template-columns: 1fr 175px;
+    grid-area: review;
+    grid-template-areas:
+      "review review"
+      "author control";
+    column-gap: 20px;
+    row-gap: 20px;
+  }
 }
 
 .reviews__text {
-  margin-bottom: 33px;
+  margin: 0;
   line-height: 24px;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews__text {
+    grid-area: review;
+    margin-bottom: 41px;
+  }
+}
+
 .reviews__author-info {
+  margin: 0;
+  font-size: 15px;
+  line-height: 30px;
+  margin-top: 33px;
   margin-bottom: 30px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews__author-info {
+    grid-area: author;
+    margin: 0;
+  }
 }
 
 .reviews__author-name {
@@ -39,10 +97,25 @@
   line-height: 24px;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews__author-name {
+    display: block;
+    margin: 0;
+  }
+}
+
 .reviews__control {
   display: flex;
   justify-content: space-between;
   margin-bottom: 38px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews__control {
+    grid-area: control;
+    margin: 0;
+    padding: 0 19px;
+  }
 }
 
 .reviews__arrow {
@@ -51,4 +124,18 @@
   padding-left: 37px;
   padding-right: 42px;
   outline: 1px solid bootstrap.$colorLightGrey;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews__arrow {
+    padding: 0;
+    outline: none;
+  }
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .reviews__create-review {
+    grid-area: button;
+    height: min-content;
+  }
 }

@@ -6,18 +6,37 @@
 
 .featured__wrapper {
   @include bootstrap.wrapper;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
   padding-bottom: 36px;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .featured__wrapper {
+    display: grid;
+    grid-template-columns: 292px 1fr;
+    column-gap: 42px;
+    grid-template-areas:
+      "title title"
+      "description product"
+      "price product";
+
+    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+  }
+}
+
 .featured__title {
-  grid-column: span 3;
   position: relative;
 
   @include bootstrap.title(25px);
   margin-bottom: 41px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .featured__title {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 }
 
 .featured__subtitle {
@@ -25,8 +44,19 @@
   display: block;
 }
 
-.featured__description-inner {
-  grid-column: span 3;
+@media (min-width: bootstrap.$tablet-width) {
+  .featured__subtitle {
+    display: inline-block;
+    right: 0;
+    width: 100px;
+    text-align: center;
+  }
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .featured__description-inner {
+    grid-area: description;
+  }
 }
 
 .featured__description-text {
@@ -63,12 +93,23 @@
 }
 
 .featured__image-inner {
-  grid-column: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.featured__price-inner {
-  grid-column: span 3;
+@media (min-width: bootstrap.$tablet-width) {
+  .featured__image-inner {
+    grid-area: product;
+  }
 }
+
+@media (min-width: bootstrap.$tablet-width) {
+  .featured__price-inner {
+    grid-area: price;
+  }
+}
+
 
 .featured__price {
   display: flex;

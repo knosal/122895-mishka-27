@@ -3,9 +3,15 @@
 .contacts__wrapper {
   @include bootstrap.wrapper;
   height: 100%;
-  padding-top: 38px;
   margin-bottom: 62px;
 }
+
+@media (min-width: bootstrap.$tablet-width) {
+  .contacts__wrapper {
+    padding-top: 22px;
+  }
+}
+
 
 .contacts__title {
   @include bootstrap.title(25px);

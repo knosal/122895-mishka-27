@@ -27,7 +27,7 @@
     grid-template-rows: 89px 69px;
     grid-template-areas:
       "nav nav logo logo"
-      "nav nav . .";
+      "nav nav . promo";
     color: bootstrap.$colorWhite;
   }
 }
@@ -45,5 +45,22 @@
     top: 0;
     left: 0;
     color: bootstrap.$colorWhite;
+  }
+}
+
+
+.main-header__delivery-promo {
+  display: none;
+  grid-area: promo;
+  margin-left: auto;
+  color: bootstrap.$colorDarkGrey;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .main-header__delivery-promo {
+    display: block;
   }
 }

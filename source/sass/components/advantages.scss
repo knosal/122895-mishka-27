@@ -4,6 +4,12 @@
   @include bootstrap.wrapper;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .advantages__wrapper {
+    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+  }
+}
+
 .advantages__title {
   position: relative;
 
@@ -16,6 +22,15 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 57px;
+  }
 }
 
 .advantages__item {
@@ -54,5 +69,33 @@
 
   &--gift::before {
     background-image: url("../img/svg/gift-icon.svg");
+  }
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .advantages__item {
+    &--flower::before {
+      margin-bottom: 13px;
+    }
+
+    &--bill::before {
+      margin-bottom: 14px;
+    }
+
+    &--heart::before {
+      margin-bottom: 21px;
+    }
+
+    &--tangle::before {
+      margin-bottom: 23px;
+    }
+
+    &--rocket::before {
+      margin-bottom: 23px;
+    }
+
+    &--gift::before {
+      margin-bottom: 23px;
+    }
   }
 }

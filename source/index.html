@@ -65,6 +65,7 @@
           </ul>
         </div>
       </nav>
+      <div class="main-header__delivery-promo">Бесплатная доставка по России</div>
     </div>
   </header>
 
@@ -72,9 +73,9 @@
     <h1 class="visually-hidden">Мишка</h1>
     <section class="main-container__assortment assortment">
       <div class="assortment__wrapper">
-        <div class="assortment__delivery-promo visually-hidden">Бесплатная доставка по России</div>
         <h2 class="assortment__title">Милые штуки ручной<br> работы для дома</h2>
       </div>
+
       <ul class="assortment__list">
         <li class="assortment__item assortment__item--interior">
           <a class="assortment__link" href="#">Предметы<br>интерьера</a>
@@ -150,34 +151,85 @@
     <section class="main-container__reviews reviews section-wavy">
       <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__list">
-          <blockquote class="reviews__item">
-            <p class="reviews__text">
-              Я молодая мама, но всё равно фотографии не набирали и близко
-              такого количества лайков, как у популярных инстамамочек. В
-              отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
-              фотографии сразу стали более стильными, а также набирают больше
-              лайков!
-            </p>
-            <p class="reviews__author-info">
-              <span class="reviews__author-name">Анастасия Красильникова</span>
-              @misssssiskras
-            </p>
-          </blockquote>
+        <div class="reviews__list reviews__list--first">
+          <p class="reviews__text">
+            Я молодая мама, но всё равно фотографии не набирали и близко
+            такого количества лайков, как у популярных инстамамочек. В
+            отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
+            фотографии сразу стали более стильными, а также набирают больше
+            лайков!
+          </p>
+          <p class="reviews__author-info">
+            <span class="reviews__author-name">Анастасия Красильникова</span>
+            @misssssiskras
+          </p>
+          <div class="reviews__control">
+            <button class="reviews__arrow" type="button" aria-label="Кнопка Предыдущий отзыв" tabindex="0">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+              <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black" />
+              </svg>
+            </button>
+            <button class="reviews__arrow" type="button" aria-label="Кнопка Слудующий отзыв" tabindex="0">
+              <span class="visually-hidden">Слудующий отзыв</span>
+              <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black" />
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="reviews__control">
-          <button class="reviews__arrow" type="button" aria-label="Кнопка Предыдущий отзыв" tabindex="0">
-            <span class="visually-hidden">Предыдущий отзыв</span>
-            <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black" />
-            </svg>
-          </button>
-          <button class="reviews__arrow" type="button" aria-label="Кнопка Слудующий отзыв" tabindex="0">
-            <span class="visually-hidden">Слудующий отзыв</span>
-            <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black" />
-            </svg>
-          </button>
+        <div class="reviews__list reviews__list--second visually-hidden">
+          <p class="reviews__text">
+            Я сестра молодой мамы, но всё равно фотографии не набирали и
+            близко такого количества лайков, как у популярных инстамамочек.
+            В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои
+            фотографии сразу стали более стильными, а также набирают больше лайков!
+          </p>
+          <p class="reviews__author-info">
+            <span class="reviews__author-name">Екатерина Красильникова</span>
+            @misssssiskras2
+          </p>
+          <div class="reviews__control">
+            <button class="reviews__arrow" type="button" aria-label="Кнопка Предыдущий отзыв" tabindex="0">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+              <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black" />
+              </svg>
+            </button>
+            <button class="reviews__arrow" type="button" aria-label="Кнопка Слудующий отзыв" tabindex="0">
+              <span class="visually-hidden">Слудующий отзыв</span>
+              <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="reviews__list reviews__list--third visually-hidden">
+          <p class="reviews__text">
+            Я двоюродная сестра молодой мамы, но всё равно фотографии не
+            набирали и близко такого количества лайков, как у популярных
+            инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в
+            Мишке, и мои фотографии сразу стали более стильными, а также
+            набирают больше лайков!
+          </p>
+          <p class="reviews__author-info">
+            <span class="reviews__author-name">Екатерина Красильникова</span>
+            @misssssiskras3
+          </p>
+          <div class="reviews__control">
+            <button class="reviews__arrow" type="button" aria-label="Кнопка Предыдущий отзыв" tabindex="0">
+              <span class="visually-hidden">Предыдущий отзыв</span>
+              <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black" />
+              </svg>
+            </button>
+            <button class="reviews__arrow" type="button" aria-label="Кнопка Слудующий отзыв" tabindex="0">
+              <span class="visually-hidden">Слудующий отзыв</span>
+              <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black" />
+              </svg>
+            </button>
+          </div>
         </div>
         <a class="reviews__create-review button-primary" href="#">Написать</a>
       </div>
@@ -218,6 +270,9 @@
   </main>
 
   <footer class="main-footer">
+    <a class="main-footer__link-logo" href="index.html">
+      <img class="main-footer__logo-icon" src="img/svg/logo-footer-icon.svg" width="102" height="34" alt="Логотип сайта 'Мишка'">
+    </a>
     <section class="main-footer__social socials">
       <h2 class="visually-hidden">Социальные сети</h2>
       <ul class="main-footer__social-list socials__list">

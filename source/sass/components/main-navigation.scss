@@ -1,5 +1,11 @@
 @use "../abstracts/bootstrap.scss";
 
+@media (min-width: bootstrap.$tablet-width) {
+  .main-navigation {
+    grid-area: nav;
+  }
+}
+
 .main-navigation__toogle {
   @include bootstrap.button-reset;
   position: absolute;
@@ -20,15 +26,41 @@
   }
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .main-navigation__toogle {
+    display: none;
+  }
+}
+
 .main-navigation__inner-popover {
   @include bootstrap.container;
   position: relative;
   display: none;
+  z-index: 10;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .main-navigation__inner-popover {
+    display: grid;
+    grid-template-columns: 160px 160px 80px 268px;
+    grid-template-rows: 89px 69px;
+    grid-template-areas:
+      "logo logo navu navu"
+      "navs navs . .";
+    margin: 0;
+    background-color: transparent;
+  }
 }
 
 .main-navigation__list {
   @include bootstrap.ul-reset;
   position: absolute;
   width: 100%;
-  background-color: bootstrap.$colorWhite;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .main-navigation__list {
+    position: relative;
+    display: flex;
+  }
 }

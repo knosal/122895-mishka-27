@@ -29,14 +29,30 @@
 }
 
 //Стили разрешения
-@mixin container {
+@mixin container($size: 320px) {
   margin: 0 auto;
-  width: 320px;
-}
+  width: $size;
+  //padding: 0 30px;
+  background-color: #ffffff;
+  //outline: 1px solid rgba(#0026ff, 1);
 
-@mixin wrapper {
+  @if ($size == variable.$tablet-width) {
+    width: 768px;//padding: 0 50px;
+  }
+}
+/*
+@mixin wrapper($size: 260px) {
   margin: 0 auto;
-  width: 260px;
+  width: $size;
+}
+*/
+@mixin wrapper($size: 260px) {
+  margin: 0 auto;
+  width: $size;
+
+  @if ($size == variable.$tablet-width) {
+    width: 668px;
+  }
 }
 
 //Заголовок

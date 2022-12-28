@@ -12,8 +12,20 @@
   background-size: contain;
 }
 
+.assortment__delivery-promo {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  color: bootstrap.$colorDarkGrey;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+}
+
 
 .assortment__wrapper {
+  position: relative;
+
   @include bootstrap.wrapper;
 }
 

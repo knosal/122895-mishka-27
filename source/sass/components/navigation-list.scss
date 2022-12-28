@@ -1,5 +1,55 @@
 @use "../abstracts/bootstrap.scss";
 
+.navigation-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  &__site {
+    order: 1;
+  }
+
+  &__user {
+    top: 160px;
+    order: 2;
+  }
+
+  &__promotions {
+    top: 320px;
+    order: 3;
+  }
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .navigation-list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    &__site {
+      grid-area: navs;
+      order: 2;
+      box-shadow: 0 -1px 0 bootstrap.$colorLightGrey;
+    }
+
+    &__user {
+      grid-area: navu;
+      top: 0;
+      order: 1;
+      box-shadow: 0 1px 0 bootstrap.$colorLightGrey;
+    }
+
+    &__promotions {
+      top: 0;
+      right: 0;
+      order: 3;
+    }
+
+    &__icon-text {
+      visibility: hidden;
+    }
+  }
+}
+
 .navigation-list__item {
   display: flex;
   align-items: center;
@@ -8,7 +58,29 @@
   padding-bottom: 27.5px;
   padding-left: 76px;
   background-color: bootstrap.$colorWhite;
-  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  box-shadow: inset 0 1px 0 bootstrap.$colorLightGrey;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .navigation-list__item {
+    padding: 0;
+    box-shadow: none;
+
+    &:not(:last-child) {
+      margin-right: 33px;
+    }
+
+    &--search {
+      border-left: 1px solid bootstrap.$colorLightGrey;
+      border-right: 1px solid bootstrap.$colorLightGrey;
+    }
+
+    &--card {
+      width: 100%;
+      justify-content: flex-end;
+    }
+
+  }
 }
 
 .navigation-list__link {
@@ -21,7 +93,37 @@
   @include bootstrap.link-reset;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .navigation-list__link {
+    position: relative;
+    font-size: 15px;
+
+    &:not(:first-child) {
+      padding-left: 30px;
+    }
+  }
+}
+
 .navigation-list__icon {
   position: absolute;
-  left: 30px;
+
+  &--search {
+    left: 30px;
+  }
+
+  &--card {
+    left: 30px;
+  }
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .navigation-list__icon {
+    &--search {
+      left: 30px;
+    }
+
+    &--card {
+      left: -60px;
+    }
+  }
 }

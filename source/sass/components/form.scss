@@ -5,11 +5,19 @@
   flex-direction: column;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .form {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    column-gap: 15px;
+    row-gap: 50px;
+  }
+}
+
 .form__group {
   @include bootstrap.fieldset-reset;
   margin-bottom: 10px;
   display: grid;
-  grid-template-rows: 1fr auto;
 
   &--radio {
     margin-bottom: 30px;
@@ -17,6 +25,16 @@
 
   &--checkbox {
     margin-bottom: 33px;
+  }
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .form__group {
+    display: contents;
+
+    &:nth-child(even) {
+      background-color: rgba(241, 241, 241, 1);
+    }
   }
 }
 
@@ -85,8 +103,30 @@
   line-height: 16px;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .form__remark {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    order: 2;
+  }
+}
+
+.form__button-wrapper {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+}
+
 .form__button {
+  box-sizing: border-box;
   width: 100%;
   margin-top: 30px;
-  margin-bottom: 55px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .form__button {
+    min-width: 230px;
+    margin: 0;
+    order: 1;
+  }
 }

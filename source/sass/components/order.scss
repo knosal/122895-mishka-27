@@ -17,6 +17,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .order__wrapper {
+    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    margin-top: 54px;
+    margin-bottom: 50px;
+  }
 }
 
 .order__text {
@@ -24,4 +33,11 @@
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 29px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .order__text {
+    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    margin-bottom: 60px;
+  }
 }

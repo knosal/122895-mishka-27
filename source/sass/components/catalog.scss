@@ -5,6 +5,12 @@
   margin-bottom: 30px;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .catalog__inner-title {
+    margin-bottom: 67px;
+  }
+}
+
 .catalog__title {
   @include bootstrap.title(27px);
   padding: 73px 0;
@@ -19,6 +25,13 @@
   margin-bottom: 30px;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .catalog__wrapper {
+    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    margin-bottom: 53px;
+  }
+}
+
 .catalog__text {
   font-size: 13px;
   line-height: 24px;
@@ -31,4 +44,10 @@
   gap: 30px;
 
   @include bootstrap.ul-reset;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .catalog__list {
+    gap: 54px;
+  }
 }

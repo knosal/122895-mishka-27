@@ -6,6 +6,14 @@
   outline: 1px solid bootstrap.$colorLightGrey;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .product {
+    display: grid;
+    grid-template-columns: 334px 1fr;
+    height: 334px;
+  }
+}
+
 .product__link-image {
   background-color: bootstrap.$colorLightGrey;
 }
@@ -15,6 +23,14 @@
   padding-right: 28px;
   padding-bottom: 25px;
   padding-left: 28px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .product__info-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .product__link-title {

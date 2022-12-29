@@ -9,6 +9,13 @@
   border: 1px solid bootstrap.$colorLightGrey;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .production__wrapper {
+    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    margin-bottom: 64px;
+  }
+}
+
 .production__title {
   display: flex;
   align-items: center;
@@ -35,10 +42,22 @@
   }
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .production__title {
+    order: 2;
+  }
+}
+
 .production__info-inner {
   order: 3;
   padding: 34px;
   padding-right: 29px;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .production__info-inner {
+    padding-bottom: 46px;
+  }
 }
 
 .production__description {
@@ -59,9 +78,21 @@
   margin: 0;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .production__video-inner {
+    order: 1;
+  }
+}
+
 .production__video {
   display: block;
   background-color: bootstrap.$colorLightGrey;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .production__video {
+    order: 2;
+  }
 }
 
 .production__video-play {

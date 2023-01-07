@@ -63,6 +63,17 @@
   }
 }
 
+.reviews__list {
+  &--second {
+    display: none;
+  }
+
+  &--third {
+    display: none;
+  }
+}
+
+
 .reviews__text {
   margin: 0;
   line-height: 24px;
@@ -134,8 +145,9 @@
 }
 
 @media (min-width: bootstrap.$tablet-width) {
-  .reviews__create-review {
+  .reviews__create-button {
     grid-area: button;
     height: min-content;
+    width: 100%;
   }
 }

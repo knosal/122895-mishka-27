@@ -15,6 +15,7 @@
   }
 
   &__promotions {
+    display: none;
     top: 320px;
     order: 3;
   }
@@ -41,7 +42,6 @@
     &__promotions {
       top: 0;
       right: 0;
-      display: none;
       order: 3;
     }
 
@@ -66,6 +66,7 @@
   .navigation-list__item {
     padding: 0;
     box-shadow: none;
+    background-color: inherit;
 
     &:not(:last-child) {
       margin-right: 33px;
@@ -84,6 +85,7 @@
 }
 
 .navigation-list__link {
+  position: relative;
   display: flex;
   align-items: center;
   font-weight: 700;
@@ -95,7 +97,6 @@
 
 @media (min-width: bootstrap.$tablet-width) {
   .navigation-list__link {
-    position: relative;
     font-size: 15px;
 
     &:not(:first-child) {
@@ -108,11 +109,11 @@
   position: absolute;
 
   &--search {
-    left: 30px;
+    left: -40px;
   }
 
   &--card {
-    left: 30px;
+    left: -40px;
   }
 }
 

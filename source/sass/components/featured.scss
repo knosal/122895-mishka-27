@@ -110,7 +110,6 @@
   }
 }
 
-
 .featured__price {
   display: flex;
   align-items: center;
@@ -125,4 +124,15 @@
 
 .featured__button {
   width: 100%;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .featured__price-inner {
+    grid-area: price;
+  }
+
+  .featured__button {
+    max-width: 100%;
+  }
+
 }

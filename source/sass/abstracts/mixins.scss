@@ -31,23 +31,23 @@
 //Стили разрешения
 @mixin container($size: 320px) {
   margin: 0 auto;
-  width: $size;
+  width: 100%;
+  max-width: $size;
   //padding: 0 30px;
   background-color: #ffffff;
-  //outline: 1px solid rgba(#0026ff, 1);
+  /*
   @if ($size == variable.$tablet-width) {
-    width: 768px;
-    //padding: 0 50px;
-  }
+    max-width: variable.$tablet-width;
+  }*/
 }
 
 @mixin wrapper($size: 260px) {
   margin: 0 auto;
-  width: $size;
-
+  width: calc(100% - 60px);
+ /*
   @if ($size == variable.$tablet-width) {
-    width: 668px;
-  }
+    max-width: variable.$tablet-width;
+  }*/
 }
 
 //Заголовок

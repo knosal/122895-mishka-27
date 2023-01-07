@@ -1,34 +1,24 @@
 @use "../abstracts/bootstrap.scss";
 
 .main-header {
-  @include bootstrap.container;
   position: relative;
 }
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-header {
-    @include bootstrap.container($size: bootstrap.$tablet-width);
-  }
-}
 
 .main-header__wrapper {
   @include bootstrap.wrapper;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: bootstrap.$tablet-width) {
   .main-header__wrapper {
+    position: relative;
+    height: 89px;
+
     @include bootstrap.wrapper($size: bootstrap.$tablet-width);
-    display: grid;
-    grid-template-columns: 160px 160px 80px 268px;
-    grid-template-rows: 89px 69px;
-    grid-template-areas:
-      "nav nav logo logo"
-      "nav nav . promo";
-    color: bootstrap.$colorWhite;
   }
 }
 
@@ -42,12 +32,13 @@
 @media (min-width: bootstrap.$tablet-width) {
   .main-header__link-logo {
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
+    transform: translate(0, -50%);
     color: bootstrap.$colorWhite;
+    z-index: 15;
   }
 }
-
 
 .main-header__delivery-promo {
   display: none;
@@ -61,6 +52,10 @@
 
 @media (min-width: bootstrap.$tablet-width) {
   .main-header__delivery-promo {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0;
     display: block;
   }
 }

@@ -24,3 +24,9 @@
     resize: none;
   }
 }
+
+@media (min-width: bootstrap.$tablet-width) {
+  .input-text {
+    padding-left: 17px;
+  }
+}

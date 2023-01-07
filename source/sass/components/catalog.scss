@@ -1,12 +1,17 @@
 @use "../abstracts/bootstrap.scss";
 
 .catalog__inner-title {
-  background-color: bootstrap.$colorGrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
+  background-color: bootstrap.$colorGrey;
 }
 
 @media (min-width: bootstrap.$tablet-width) {
   .catalog__inner-title {
+    min-height: 238px;
     margin-bottom: 67px;
   }
 }

@@ -72,6 +72,12 @@
   width: 100%;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .production__button {
+    max-width: 100%;
+  }
+}
+
 .production__video-inner {
   position: relative;
   order: 2;

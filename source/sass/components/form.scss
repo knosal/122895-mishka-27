@@ -5,19 +5,9 @@
   flex-direction: column;
 }
 
-@media (min-width: bootstrap.$tablet-width) {
-  .form {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    column-gap: 15px;
-    row-gap: 50px;
-  }
-}
-
 .form__group {
-  @include bootstrap.fieldset-reset;
-  margin-bottom: 10px;
   display: grid;
+  margin-bottom: 10px;
 
   &--radio {
     margin-bottom: 30px;
@@ -30,11 +20,27 @@
 
 @media (min-width: bootstrap.$tablet-width) {
   .form__group {
-    display: contents;
+    grid-template-columns: 150px 1fr;
+    column-gap: 15px;
+    row-gap: 50px;
+    padding: 50px;
 
     &:nth-child(even) {
       background-color: rgba(241, 241, 241, 1);
     }
+
+    &--unification {
+      display: block;
+    }
+
+    &--phone {
+      padding: 0;
+    }
+
+    &--email {
+      padding: 0;
+    }
+
   }
 }
 
@@ -43,16 +49,33 @@
   margin-bottom: 25px;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .form__group-inner {
+    &--name {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+
 .form__item-title {
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .form__item-title {
+    padding-right: 25px;
+  }
+}
+
 .form__legend {
   position: relative;
   display: inline-block;
   width: 100%;
+  margin: 0;
   padding: 0;
   font-weight: 700;
   font-size: 17px;
@@ -96,8 +119,32 @@
   @include bootstrap.ul-reset;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .form__list--checkbox {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+}
+
+.form__inner-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .form__inner-button {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+}
+
+
 .form__remark {
   margin: 0;
+  margin-right: auto;
   color: bootstrap.$colorDarkGrey;
   font-size: 14px;
   line-height: 16px;
@@ -105,6 +152,7 @@
 
 @media (min-width: bootstrap.$tablet-width) {
   .form__remark {
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -120,12 +168,13 @@
 .form__button {
   box-sizing: border-box;
   width: 100%;
+  max-width: 100%;
   margin-top: 30px;
 }
 
 @media (min-width: bootstrap.$tablet-width) {
   .form__button {
-    min-width: 230px;
+    max-width: 230px;
     margin: 0;
     order: 1;
   }

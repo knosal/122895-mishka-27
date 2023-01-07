@@ -1,8 +1,19 @@
 @use "../abstracts/bootstrap.scss";
 
 .order__inner-title {
-  background-color: bootstrap.$colorGrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 17px;
+  background-color: bootstrap.$colorGrey;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .order__inner-title {
+    min-height: 238px;
+    margin-bottom: 54px;
+  }
 }
 
 .order__title {
@@ -22,14 +33,14 @@
 
 @media (min-width: bootstrap.$tablet-width) {
   .order__wrapper {
-    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    width: auto;
     margin-top: 54px;
     margin-bottom: 50px;
   }
 }
 
 .order__text {
-  margin: 0;
+  @include bootstrap.wrapper($size: bootstrap.$mobile-width);
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 29px;
@@ -38,6 +49,6 @@
 @media (min-width: bootstrap.$tablet-width) {
   .order__text {
     @include bootstrap.wrapper($size: bootstrap.$tablet-width);
-    margin-bottom: 60px;
+    margin-bottom: 13px;
   }
 }

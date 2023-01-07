@@ -20,12 +20,12 @@
 
 @media (min-width: bootstrap.$tablet-width) {
   .page__body {
-    max-width: bootstrap.$tablet-width;
+    min-width: bootstrap.$tablet-width;
   }
 }
 
 @media (min-width: bootstrap.$desktop-width) {
   .page__body {
-    max-width: bootstrap.$desktop-width;
+    min-width: bootstrap.$desktop-width;
   }
 }

@@ -98,3 +98,9 @@
   @include bootstrap.wrapper;
   margin-bottom: 39px;
 }
+
+@media (min-width: bootstrap.$tablet-width) {
+  .contacts__feedback-button {
+    max-width: 230px;
+  }
+}

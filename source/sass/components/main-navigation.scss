@@ -1,16 +1,15 @@
 @use "../abstracts/bootstrap.scss";
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-navigation {
-    grid-area: nav;
-  }
+.main-navigation {
+  position: absolute;
+  width: 100%;
 }
 
 .main-navigation__toogle {
   @include bootstrap.button-reset;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 25px;
   transform: translate(0, -50%);
 
   &:focus-within,
@@ -33,9 +32,12 @@
 }
 
 .main-navigation__inner-popover {
-  @include bootstrap.container;
-  position: relative;
+  position: absolute;
   display: none;
+  top: 40px;
+  right: 0;
+  bottom: 0;
+  left: 0;
   z-index: 10;
 }
 
@@ -48,7 +50,6 @@
     grid-template-areas:
       "logo logo navu navu"
       "navs navs . promo";
-    margin: 0;
     background-color: transparent;
   }
 }

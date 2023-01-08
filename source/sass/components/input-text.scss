@@ -23,10 +23,8 @@
     padding-bottom: 89px;
     resize: none;
   }
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .input-text {
+  @media (min-width: bootstrap.$tablet-width) {
     padding-left: 17px;
   }
 }

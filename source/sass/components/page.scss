@@ -16,16 +16,12 @@
   min-width: 320px;
   margin: 0 auto;
   background-color: bootstrap.$colorWhite;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .page__body {
+  @media (min-width: bootstrap.$tablet-width) {
     min-width: bootstrap.$tablet-width;
   }
-}
 
-@media (min-width: bootstrap.$desktop-width) {
-  .page__body {
+  @media (min-width: bootstrap.$desktop-width) {
     min-width: bootstrap.$desktop-width;
   }
 }

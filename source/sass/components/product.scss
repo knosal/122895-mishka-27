@@ -4,10 +4,8 @@
   display: flex;
   flex-direction: column;
   outline: 1px solid bootstrap.$colorLightGrey;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .product {
+  @media (min-width: bootstrap.$tablet-width) {
     display: grid;
     grid-template-columns: 334px 1fr;
     height: 334px;
@@ -23,10 +21,8 @@
   padding-right: 28px;
   padding-bottom: 25px;
   padding-left: 28px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .product__info-inner {
+  @media (min-width: bootstrap.$tablet-width) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

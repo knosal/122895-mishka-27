@@ -8,10 +8,8 @@
   justify-content: center;
   padding: 46px 30px 32px 30px;
   background-color: bootstrap.$colorGrey;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-footer {
+  @media (min-width: bootstrap.$tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     gap: 122px;
@@ -21,10 +19,8 @@
 
 .main-footer__link-logo {
   display: none;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-footer__link-logo {
+  @media (min-width: bootstrap.$tablet-width) {
     display: block;
   }
 }
@@ -39,10 +35,8 @@
   margin-bottom: 30.5px;
   padding-bottom: 30.5px;
   border-bottom: 1px solid rgba(229, 229, 229, 1);
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-footer__social {
+  @media (min-width: bootstrap.$tablet-width) {
     width: auto;
     margin: 0;
     padding: 0;

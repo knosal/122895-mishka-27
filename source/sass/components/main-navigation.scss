@@ -1,12 +1,7 @@
 @use "../abstracts/bootstrap.scss";
 
 .main-navigation {
-  //position: absolute;
-  //@at-root: 100%;
-}
-
-@media (min-width: bootstrap.$tablet-width) {
-  .main-navigation {
+  @media (min-width: bootstrap.$tablet-width) {
     width: 100%;
   }
 }
@@ -29,26 +24,21 @@
     display: block;
     z-index: 5;
   }
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-navigation__toogle {
+  @media (min-width: bootstrap.$tablet-width) {
     display: none;
   }
 }
 
 .main-navigation__inner-popover {
   position: absolute;
-  //display: none;
-  //top: 0;
+  display: none;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 10;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-navigation__inner-popover {
+  @media (min-width: bootstrap.$tablet-width) {
     top: 35px;
     position: relative;
     display: grid;
@@ -65,10 +55,8 @@
   @include bootstrap.ul-reset;
   position: absolute;
   width: 100%;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-navigation__list {
+  @media (min-width: bootstrap.$tablet-width) {
     position: relative;
     display: flex;
   }

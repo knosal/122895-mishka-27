@@ -1,42 +1,75 @@
 @use "../abstracts/bootstrap.scss";
 
+.contacts {
+  @media (min-width: bootstrap.$desktop-width) {
+    display: grid;
+    grid-template-columns: 175px 292px 1fr;
+    column-gap: 50px;
+    grid-template-areas:
+      ". title map"
+      ". description map"
+      ". feedback map";
+  }
+}
+
 .contacts__wrapper {
   @include bootstrap.wrapper;
   height: 100%;
   margin-bottom: 62px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .contacts__wrapper {
+  @media (min-width: bootstrap.$tablet-width) {
     padding-top: 22px;
+    margin-bottom: 55px;
 
     @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-area: title;
+
+    @include bootstrap.wrapper($size: bootstrap.$desktop-width);
   }
 }
 
 .contacts__title {
   display: flex;
-  align-items: center;
 
   @include bootstrap.title(25px);
   min-height: 87px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    align-items: center;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-top: 79px;
+  }
 }
 
-@media (min-width: bootstrap.$tablet-width) {
-  .contacts__title {
-    &--flag {
-      position: relative;
+.contacts__subtitle {
+  position: absolute;
+  display: block;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 47px;
-        height: 81px;
-        background-image: url("../img/svg/flag-icon.svg");
-      }
+  &::after {
+    content: "";
+    display: none;
+    width: 47px;
+    height: 81px;
+    background-image: url("../img/svg/flag-icon.svg");
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    right: 50px;
+    width: 100px;
+    text-align: center;
+
+    &::after {
+      display: inline-block;
     }
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    left: 50px;
   }
 }
 
@@ -44,10 +77,9 @@
   margin: 0;
   font-size: 14px;
   line-height: 30px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .contacts__address {
+
+  @media (min-width: bootstrap.$tablet-width) {
     display: flex;
     gap: 51px;
     padding-top: 40px;
@@ -86,21 +118,25 @@
 
 .contacts__map {
   margin-bottom: 42px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .contacts__wrapper {
-    margin-bottom: 55px;
+  @media (min-width: bootstrap.$desktop-width) {
+    margin: 0;
+    grid-area: map;
   }
 }
 
 .contacts__feedback {
   @include bootstrap.wrapper;
   margin-bottom: 39px;
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin: 0;
+    grid-area: feedback;
+  }
 }
 
-@media (min-width: bootstrap.$tablet-width) {
-  .contacts__feedback-button {
+.contacts__feedback-button {
+  @media (min-width: bootstrap.$tablet-width) {
     max-width: 230px;
   }
 }

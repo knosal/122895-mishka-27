@@ -16,10 +16,8 @@
   &--checkbox {
     margin-bottom: 33px;
   }
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .form__group {
+  @media (min-width: bootstrap.$tablet-width) {
     grid-template-columns: 150px 1fr;
     column-gap: 15px;
     row-gap: 50px;
@@ -40,17 +38,14 @@
     &--email {
       padding: 0;
     }
-
   }
 }
 
 .form__group-inner {
   margin: 0;
   margin-bottom: 25px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .form__group-inner {
+  @media (min-width: bootstrap.$tablet-width) {
     &--name {
       display: flex;
       align-items: center;
@@ -58,15 +53,12 @@
   }
 }
 
-
 .form__item-title {
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .form__item-title {
+  @media (min-width: bootstrap.$tablet-width) {
     padding-right: 25px;
   }
 }
@@ -117,12 +109,12 @@
   gap: 22px;
 
   @include bootstrap.ul-reset;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .form__list--checkbox {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+  @media (min-width: bootstrap.$tablet-width) {
+    &--checkbox {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+    }
   }
 }
 
@@ -131,10 +123,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .form__inner-button {
+  @media (min-width: bootstrap.$tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     padding: 0 50px;
@@ -147,10 +137,8 @@
   color: bootstrap.$colorDarkGrey;
   font-size: 14px;
   line-height: 16px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .form__remark {
+  @media (min-width: bootstrap.$tablet-width) {
     margin: 0;
     display: flex;
     align-items: center;
@@ -169,10 +157,8 @@
   width: 100%;
   max-width: 100%;
   margin-top: 30px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .form__button {
+  @media (min-width: bootstrap.$tablet-width) {
     max-width: 230px;
     margin: 0;
     order: 1;

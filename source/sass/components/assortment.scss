@@ -10,10 +10,8 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .assortment {
+  @media (min-width: bootstrap.$tablet-width) {
     min-height: 746px;
   }
 }
@@ -29,10 +27,8 @@
   padding-top: 73px;
   padding-bottom: 120px;
   text-align: center;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .assortment__title {
+  @media (min-width: bootstrap.$tablet-width) {
     padding-top: 133px;
   }
 }
@@ -44,12 +40,20 @@
   margin-bottom: 31px;
 
   @include bootstrap.ul-reset;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .assortment__list {
+  @media (min-width: bootstrap.$tablet-width) {
     flex-direction: row;
     padding: 0 50px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
@@ -90,10 +94,8 @@
     width: 60px;
     height: 60px;
   }
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .assortment__item {
+  @media (min-width: bootstrap.$tablet-width) {
     padding-top: 25px;
     padding-right: 36px;
     padding-bottom: 34px;

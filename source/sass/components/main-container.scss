@@ -3,12 +3,9 @@
 .main-container__assortment {
   position: relative;
   margin-bottom: 31px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-container__assortment {
+  @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 39.5px;
-
     /*
     //лмнейный градиент
     &::before {
@@ -48,44 +45,57 @@
       z-index: 10;
     }
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .main-container__featured {
   margin-bottom: 31px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-container__featured {
+  @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 50px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 68px;
   }
 }
 
+
 .main-container__advantages {
   margin-bottom: 58px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-container__advantages {
+  @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 83px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 90px;
   }
 }
 
 .main-container__reviews {
   margin-bottom: 38px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-container__reviews {
+  @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 46px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 71px;
   }
 }
 
 .main-container__contacts {
   margin-bottom: 39px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-container__contacts {
+  @media (min-width: bootstrap.$tablet-width) {
     margin-bottom: 57px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 105px;
   }
 }

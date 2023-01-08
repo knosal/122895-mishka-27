@@ -11,10 +11,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-header__wrapper {
+  @media (min-width: bootstrap.$tablet-width) {
     position: relative;
     height: 89px;
 
@@ -27,10 +25,8 @@
   align-items: center;
   justify-content: center;
   height: 79px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-header__link-logo {
+  @media (min-width: bootstrap.$tablet-width) {
     position: absolute;
     top: 50%;
     left: 0;
@@ -48,10 +44,8 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .main-header__delivery-promo {
+  @media (min-width: bootstrap.$tablet-width) {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);

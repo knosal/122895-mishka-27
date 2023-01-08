@@ -7,10 +7,8 @@
 .featured__wrapper {
   @include bootstrap.wrapper;
   padding-bottom: 36px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .featured__wrapper {
+  @media (min-width: bootstrap.$tablet-width) {
     display: grid;
     grid-template-columns: 292px 1fr;
     column-gap: 42px;
@@ -21,40 +19,53 @@
 
     @include bootstrap.wrapper($size: bootstrap.$tablet-width);
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-template-columns: 175px 292px 1fr;
+    grid-template-areas:
+      ". title title"
+      ". description product"
+      ". price product";
+    column-gap: 50px;
+
+    @include bootstrap.wrapper($size: bootstrap.$desktop-width);
+  }
 }
 
 .featured__title {
-  position: relative;
-
   @include bootstrap.title(25px);
   margin-bottom: 41px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .featured__title {
+  @media (min-width: bootstrap.$tablet-width) {
     grid-area: title;
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 61px;
   }
 }
 
 .featured__subtitle {
   position: absolute;
   display: block;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .featured__subtitle {
+  @media (min-width: bootstrap.$tablet-width) {
     display: inline-block;
-    right: 0;
+    right: 50px;
     width: 100px;
     text-align: center;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    left: 50px;
+  }
 }
 
-@media (min-width: bootstrap.$tablet-width) {
-  .featured__description-inner {
+.featured__description-inner {
+  @media (min-width: bootstrap.$tablet-width) {
     grid-area: description;
   }
 }
@@ -96,16 +107,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .featured__image-inner {
+  @media (min-width: bootstrap.$tablet-width) {
     grid-area: product;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-row-start: 1;
   }
 }
 
-@media (min-width: bootstrap.$tablet-width) {
-  .featured__price-inner {
+.featured__price-inner {
+  @media (min-width: bootstrap.$tablet-width) {
     grid-area: price;
   }
 }
@@ -124,14 +137,8 @@
 
 .featured__button {
   width: 100%;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .featured__price-inner {
-    grid-area: price;
-  }
-
-  .featured__button {
+  @media (min-width: bootstrap.$tablet-width) {
     max-width: 100%;
   }
 }

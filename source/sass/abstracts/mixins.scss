@@ -33,19 +33,18 @@
   margin: 0 auto;
   width: 100%;
   max-width: $size;
-  //padding: 0 30px;
   background-color: #ffffff;
-  /*
-  @if ($size == variable.$tablet-width) {
-    max-width: variable.$tablet-width;
-  }*/
 }
 
-@mixin wrapper($size: 260px) {
+@mixin wrapper($size: variable.$mobile-width) {
   margin: 0 auto;
   width: calc(100% - 60px);
 
-  @if ($size == variable.$tablet-width) {
+  @if $size == variable.$tablet-width {
+    width: calc(100% - 100px);
+  }
+
+  @else if $size == variable.$desktop-width {
     width: calc(100% - 100px);
   }
 }

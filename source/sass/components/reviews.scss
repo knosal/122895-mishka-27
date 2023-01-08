@@ -2,10 +2,8 @@
 
 .reviews {
   position: relative;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews {
+  @media (min-width: bootstrap.$tablet-width) {
     padding-top: 82.5px;
     padding-bottom: 47px;
     background-image: url("../img/review.png");
@@ -17,10 +15,8 @@
 .reviews__wrapper {
   @include bootstrap.wrapper;
   height: 100%;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews__wrapper {
+  @media (min-width: bootstrap.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 175px;
     grid-template-rows: auto auto auto;
@@ -33,6 +29,12 @@
 
     @include bootstrap.wrapper($size: bootstrap.$tablet-width);
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-left: 175px;
+
+    @include bootstrap.wrapper($size: bootstrap.$desktop-width);
+  }
 }
 
 .reviews__title {
@@ -40,17 +42,15 @@
 
   @include bootstrap.title(25px);
   margin-bottom: 14px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews__title {
+  @media (min-width: bootstrap.$tablet-width) {
     grid-area: title;
     margin-bottom: 38.5px;
   }
 }
 
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews__list {
+.reviews__list {
+  @media (min-width: bootstrap.$tablet-width) {
     display: grid;
     grid-template-columns: 1fr 175px;
     grid-area: review;
@@ -60,9 +60,7 @@
     column-gap: 20px;
     row-gap: 20px;
   }
-}
 
-.reviews__list {
   &--second {
     display: none;
   }
@@ -75,10 +73,8 @@
 .reviews__text {
   margin: 0;
   line-height: 24px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews__text {
+  @media (min-width: bootstrap.$tablet-width) {
     grid-area: review;
     margin-bottom: 41px;
   }
@@ -95,22 +91,15 @@
 @media (min-width: bootstrap.$tablet-width) {
   .reviews__author-info {
     grid-area: author;
-    margin: 0;
   }
 }
 
 .reviews__author-name {
-  margin-bottom: 30px;
+  display: block;
+  margin: 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
-}
-
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews__author-name {
-    display: block;
-    margin: 0;
-  }
 }
 
 .reviews__control {

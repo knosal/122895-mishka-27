@@ -7,10 +7,8 @@
   justify-content: center;
   margin-bottom: 30px;
   background-color: bootstrap.$colorGrey;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .catalog__inner-title {
+  @media (min-width: bootstrap.$tablet-width) {
     min-height: 238px;
     margin-bottom: 67px;
   }
@@ -28,10 +26,8 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .catalog__wrapper {
+  @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.wrapper($size: bootstrap.$tablet-width);
     margin-bottom: 53px;
   }
@@ -49,10 +45,8 @@
   gap: 30px;
 
   @include bootstrap.ul-reset;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .catalog__list {
+  @media (min-width: bootstrap.$tablet-width) {
     gap: 54px;
   }
 }

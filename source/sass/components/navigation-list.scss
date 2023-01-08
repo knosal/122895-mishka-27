@@ -19,10 +19,8 @@
     top: 320px;
     order: 3;
   }
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .navigation-list {
+  @media (min-width: bootstrap.$tablet-width) {
     flex-direction: row;
     flex-wrap: nowrap;
 
@@ -43,8 +41,10 @@
       order: 3;
     }
   }
+}
 
-  .navigation-list__icon-text {
+.navigation-list__icon-text {
+  @media (min-width: bootstrap.$tablet-width) {
     visibility: hidden;
   }
 }
@@ -58,10 +58,8 @@
   padding-left: 76px;
   background-color: bootstrap.$colorWhite;
   box-shadow: inset 0 1px 0 bootstrap.$colorLightGrey;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .navigation-list__item {
+  @media (min-width: bootstrap.$tablet-width) {
     padding: 0;
     box-shadow: none;
     background-color: inherit;
@@ -91,10 +89,8 @@
   line-height: 24px;
 
   @include bootstrap.link-reset;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .navigation-list__link {
+  @media (min-width: bootstrap.$tablet-width) {
     font-size: 15px;
 
     &:not(:first-child) {
@@ -113,10 +109,8 @@
   &--card {
     left: -40px;
   }
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .navigation-list__icon {
+  @media (min-width: bootstrap.$tablet-width) {
     &--search {
       left: 30px;
     }

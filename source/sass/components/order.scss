@@ -7,10 +7,8 @@
   justify-content: center;
   margin-bottom: 17px;
   background-color: bootstrap.$colorGrey;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .order__inner-title {
+  @media (min-width: bootstrap.$tablet-width) {
     min-height: 238px;
     margin-bottom: 54px;
   }
@@ -29,10 +27,8 @@
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 55px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .order__wrapper {
+  @media (min-width: bootstrap.$tablet-width) {
     width: auto;
     margin-top: 54px;
     margin-bottom: 50px;
@@ -44,10 +40,8 @@
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 29px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .order__text {
+  @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.wrapper($size: bootstrap.$tablet-width);
     margin-bottom: 13px;
   }

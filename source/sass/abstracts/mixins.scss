@@ -44,10 +44,10 @@
 @mixin wrapper($size: 260px) {
   margin: 0 auto;
   width: calc(100% - 60px);
- /*
+
   @if ($size == variable.$tablet-width) {
-    max-width: variable.$tablet-width;
-  }*/
+    width: calc(100% - 100px);
+  }
 }
 
 //Заголовок

@@ -5,16 +5,16 @@
   flex-direction: column;
   flex-wrap: wrap;
 
-  &__site {
+  &--site {
     order: 1;
   }
 
-  &__user {
+  &--user {
     top: 160px;
     order: 2;
   }
 
-  &__promotions {
+  &--promotions {
     display: none;
     top: 320px;
     order: 3;
@@ -26,28 +26,26 @@
     flex-direction: row;
     flex-wrap: nowrap;
 
-    &__site {
+    &--site {
       grid-area: navs;
       order: 2;
-      border-top: 1px solid bootstrap.$colorLightGrey;
     }
 
-    &__user {
+    &--user {
       grid-area: navu;
       top: 0;
       order: 1;
-      box-shadow: 0 1px 0 bootstrap.$colorLightGrey;
     }
 
-    &__promotions {
+    &--promotions {
       top: 0;
       right: 0;
       order: 3;
     }
+  }
 
-    &__icon-text {
-      visibility: hidden;
-    }
+  .navigation-list__icon-text {
+    visibility: hidden;
   }
 }
 

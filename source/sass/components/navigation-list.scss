@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 33px;
 
   &--site {
     order: 1;
@@ -23,6 +22,7 @@
   @media (min-width: bootstrap.$tablet-width) {
     flex-direction: row;
     flex-wrap: nowrap;
+    gap: 33px;
 
     &--site {
       grid-area: navs;

@@ -8,16 +8,29 @@
     width: 100%;
     height: 6px;
     background-image: url("../img/svg/zigzag-line-icon.svg");
+    background-repeat: repeat-x;
     z-index: 10;
   }
-}
 
-
-@media (min-width: bootstrap.$tablet-width) {
-  .section-wavy {
+  @media (min-width: bootstrap.$tablet-width) {
     &::after {
       height: 17px;
-      background-repeat: repeat-x;
+      background-image: url("../img/svg/zigzag-line-desktop-icon.svg");
+    }
+
+    &--white {
+      height: 24px;
+      background-image: url("../img/svg/zigzag-fill-desktop.svg");
+    }
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    &::after {
+      height: 23px;
+    }
+
+    &--white {
+      height: 34px;
     }
   }
 }

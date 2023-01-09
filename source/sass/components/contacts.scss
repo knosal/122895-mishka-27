@@ -35,7 +35,7 @@
   display: flex;
 
   @include bootstrap.title(25px);
-  min-height: 87px;
+  margin-bottom: 28px;
 
   @media (min-width: bootstrap.$tablet-width) {
     align-items: center;

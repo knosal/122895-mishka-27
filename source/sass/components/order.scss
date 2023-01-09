@@ -12,6 +12,10 @@
     min-height: 238px;
     margin-bottom: 54px;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 99px;
+  }
 }
 
 .order__title {
@@ -33,6 +37,10 @@
     margin-top: 54px;
     margin-bottom: 50px;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .order__text {
@@ -44,5 +52,9 @@
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.wrapper($size: bootstrap.$tablet-width);
     margin-bottom: 13px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    max-width: 700px;
   }
 }

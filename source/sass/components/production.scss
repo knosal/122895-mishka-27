@@ -12,6 +12,14 @@
     @include bootstrap.wrapper($size: bootstrap.$tablet-width);
     margin-bottom: 64px;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 368px;
+    grid-template-areas:
+      "video title"
+      "video info";
+  }
 }
 
 .production__title {
@@ -42,6 +50,21 @@
   @media (min-width: bootstrap.$tablet-width) {
     order: 2;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-area: title;
+    max-width: 178;
+    margin: 0;
+    margin-bottom: 28px;
+    padding: 0;
+    padding-top: 96px;
+    padding-left: 80px;
+    padding-right: 57px;
+
+    &--icon::before {
+      left: auto;
+    }
+  }
 }
 
 .production__info-inner {
@@ -52,6 +75,14 @@
   @media (min-width: bootstrap.$tablet-width) {
     padding-bottom: 46px;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-area: info;
+    margin-bottom: 60px;
+    padding: 0;
+    padding-left: 80px;
+    padding-right: 57px;
+  }
 }
 
 .production__description {
@@ -60,6 +91,10 @@
   font-size: 13px;
   line-height: 24px;
   order: 2;
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 51px;
+  }
 }
 
 .production__button {
@@ -77,6 +112,10 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     order: 1;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-area: video;
   }
 }
 

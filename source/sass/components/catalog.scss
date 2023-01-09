@@ -49,4 +49,11 @@
   @media (min-width: bootstrap.$tablet-width) {
     gap: 54px;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 51px;
+  }
 }

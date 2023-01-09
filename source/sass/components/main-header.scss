@@ -34,6 +34,11 @@
     color: bootstrap.$colorWhite;
     z-index: 15;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    left: 50%;
+    transform: translate(0, -50%);
+  }
 }
 
 .main-header__delivery-promo {

@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 33px;
 
   &--site {
     order: 1;
@@ -16,7 +17,6 @@
 
   &--promotions {
     display: none;
-    top: 320px;
     order: 3;
   }
 
@@ -34,11 +34,20 @@
       top: 0;
       order: 1;
     }
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    &--site .navigation-list__item {
+      min-width: 175px;
+    }
 
     &--promotions {
-      top: 0;
-      right: 0;
-      order: 3;
+      display: flex;
+      grid-area: navp;
+    }
+
+    &--promotions .navigation-list__item {
+      min-width: 175px;
     }
   }
 }
@@ -63,10 +72,6 @@
     padding: 0;
     box-shadow: none;
     background-color: inherit;
-
-    &:not(:last-child) {
-      margin-right: 33px;
-    }
 
     &--search {
       border-left: 1px solid bootstrap.$colorLightGrey;

@@ -49,6 +49,13 @@
       "navs navs . promo";
     background-color: transparent;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-template-columns: 436px 1fr 80px 268px;
+    grid-template-areas:
+      "navs logo navu navu"
+      "navp promo promo promo";
+  }
 }
 
 .main-navigation__list {

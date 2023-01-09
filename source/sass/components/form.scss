@@ -39,6 +39,24 @@
       padding: 0;
     }
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-template-columns: 100px 1fr;
+    padding-left: 110px;
+
+    &--name {
+      padding-right: 173px;
+    }
+
+    &--unification {
+      padding-left: 0;
+      padding-right: 173px;
+    }
+
+    &--other {
+      padding-right: 173px;
+    }
+  }
 }
 
 .form__group-inner {
@@ -116,6 +134,12 @@
       column-gap: 20px;
     }
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    &--checkbox {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 }
 
 .form__inner-button {
@@ -128,6 +152,14 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0 50px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    width: 100%;
+    min-width: 700px;
+    gap: 10px;
+    padding-left: 228px;
+    padding-right: 175px;
   }
 }
 

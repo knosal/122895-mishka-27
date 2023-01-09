@@ -21,6 +21,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    position: relative;
     grid-template-columns: 175px 292px 1fr;
     grid-template-areas:
       ". title title"

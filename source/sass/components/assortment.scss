@@ -13,6 +13,16 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     min-height: 746px;
+
+    &--section-wavy::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/svg/zigzag-fill-desktop-icon.svg");
+      z-index: 10;
+    }
   }
 }
 

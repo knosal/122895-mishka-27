@@ -61,24 +61,48 @@
     background-repeat: no-repeat;
   }
 
+  &--flower {
+    order: 1;
+  }
+
   &--flower::before {
     background-image: url("../img/svg/flower-icon.svg");
+  }
+
+  &--bill {
+    order: 2;
   }
 
   &--bill::before {
     background-image: url("../img/svg/bill-icon.svg");
   }
 
+  &--heart {
+    order: 3;
+  }
+
   &--heart::before {
     background-image: url("../img/svg/heart-icon.svg");
+  }
+
+  &--tangle {
+    order: 4;
   }
 
   &--tangle::before {
     background-image: url("../img/svg/tangle-icon.svg");
   }
 
+  &--rocket {
+    order: 5;
+  }
+
   &--rocket::before {
     background-image: url("../img/svg/rocket-icon.svg");
+  }
+
+  &--gift {
+    order: 6;
   }
 
   &--gift::before {
@@ -86,6 +110,22 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    &--bill {
+      order: 3;
+    }
+
+    &--heart {
+      order: 5;
+    }
+
+    &--tangle {
+      order: 2;
+    }
+
+    &--rocket {
+      order: 4;
+    }
+
     &--flower::before {
       margin-bottom: 13px;
     }

@@ -1,5 +1,5 @@
 @use "../abstracts/bootstrap.scss";
-/*
+
 .section-wavy {
   &::after {
     content: "";
@@ -17,11 +17,6 @@
       height: 17px;
       background-image: url("../img/svg/zigzag-line-desktop-icon.svg");
     }
-
-    &--white {
-      height: 24px;
-      background-image: url("../img/svg/zigzag-fill-desktop.svg");
-    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -34,4 +29,3 @@
     }
   }
 }
-*/

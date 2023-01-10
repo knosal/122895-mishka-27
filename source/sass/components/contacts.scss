@@ -4,7 +4,7 @@
   @media (min-width: bootstrap.$desktop-width) {
     display: grid;
     grid-template-columns: 175px 292px 1fr;
-    column-gap: 50px;
+    column-gap: 23px;
     grid-template-areas:
       ". title map"
       ". description map"
@@ -26,8 +26,9 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: title;
-
-    @include bootstrap.wrapper($size: bootstrap.$desktop-width);
+    width: auto;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -85,6 +86,13 @@
     padding-top: 40px;
     padding-bottom: 49px;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 84px;
+    padding: 0;
+  }
 }
 
 .contacts__address-list {
@@ -97,6 +105,10 @@
 
 .contacts__address-inner:not(:last-of-type) {
   padding-bottom: 40px;
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding: 0;
+  }
 }
 
 .contacts__address-title {
@@ -130,6 +142,7 @@
   margin-bottom: 39px;
 
   @media (min-width: bootstrap.$desktop-width) {
+    width: 230px;
     margin: 0;
     grid-area: feedback;
   }

@@ -2,13 +2,13 @@
 
 .main-header {
   position: relative;
+  display: flex;
   border-bottom: 1px solid rgb(236, 236, 236);
 }
 
 .main-header__wrapper {
   @include bootstrap.wrapper;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 
@@ -23,7 +23,6 @@
 .main-header__link-logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   height: 79px;
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -39,6 +38,11 @@
     left: 50%;
     transform: translate(0, -50%);
   }
+}
+
+.main-header__logo img {
+  width: 86px;
+  height: 35px;
 }
 
 .main-header__delivery-promo {

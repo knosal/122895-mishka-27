@@ -7,7 +7,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(bootstrap.$colorWhite, 0.9);
-  z-index: 10;
+  z-index: 20;
 
   &--close {
     display: none;
@@ -15,10 +15,11 @@
 }
 
 .modal__body {
-  @include bootstrap.container;
   position: fixed;
   top: 50%;
   left: 50%;
+  width: 100%;
+  max-width: bootstrap.$mobile-width;
   display: flex;
   transform: translate(-50%, -50%);
   background-color: bootstrap.$colorWhite;

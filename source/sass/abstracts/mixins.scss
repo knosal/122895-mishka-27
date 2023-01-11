@@ -29,13 +29,6 @@
 }
 
 //Стили разрешения
-@mixin container($size: 320px) {
-  margin: 0 auto;
-  width: 100%;
-  max-width: $size;
-  background-color: #ffffff;
-}
-
 @mixin wrapper($size: variable.$mobile-width) {
   margin: 0 auto;
   width: calc(100% - 60px);

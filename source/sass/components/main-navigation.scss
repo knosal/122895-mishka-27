@@ -1,6 +1,59 @@
 @use "../abstracts/bootstrap.scss";
 
 .main-navigation {
+  &--closed .main-navigation__toogle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background-color: #000000;
+    box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+  }
+
+  &--closed .main-navigation__toogle:active::before {
+    background-color: rgba(#000000, 0.3);
+    box-shadow:
+      0 6px 0 0 rgba(#000000, 0.3),
+      0 12px 0 0 rgba(#000000, 0.3);
+  }
+
+  &--opened .main-navigation__toogle {
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translate(0, -50%);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #000000;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: rgba(#000000, 0.3);
+    }
+  }
+
+  &--nojs .main-navigation__toogle {
+    display: none;
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
     width: 100%;
   }
@@ -12,6 +65,10 @@
   top: 50%;
   right: 25px;
   transform: translate(0, -50%);
+  z-index: 2;
+  display: block;
+  width: 20px;
+  height: 14px;
 
   &:focus-within,
   &:hover,

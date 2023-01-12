@@ -31,5 +31,9 @@
     color: bootstrap.$colorWhite;
     border-color: bootstrap.$colorGreen-primary;
     background-color: bootstrap.$colorGreen-primary;
+
+    &:hover {
+      border: 2px solid bootstrap.$colorDarkGrey;
+    }
   }
 }

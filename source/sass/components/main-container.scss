@@ -1,5 +1,9 @@
 @use "../abstracts/bootstrap.scss";
 
+.main-container {
+  @include bootstrap.container;
+}
+
 .main-container__assortment {
   position: relative;
   margin-bottom: 31px;
@@ -64,7 +68,6 @@
   }
 }
 
-
 .main-container__advantages {
   margin-bottom: 58px;
 
@@ -90,6 +93,7 @@
 }
 
 .main-container__contacts {
+  position: relative;
   margin-bottom: 39px;
 
   @media (min-width: bootstrap.$tablet-width) {

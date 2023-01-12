@@ -29,6 +29,11 @@
 }
 
 //Стили разрешения
+@mixin container {
+  margin: 0 auto;
+  max-width: 1150px;
+}
+
 @mixin wrapper-mobile($size: variable.$mobile-width-only) {
   margin: 0 auto;
   width: calc(100% - 60px);
@@ -42,6 +47,7 @@
 @mixin wrapper-desktop($size: variable.$desktop-width) {
   margin: 0 auto;
   width: calc(100% - 100px);
+  max-width: 1150px;
 }
 
 //Заголовок

@@ -6,6 +6,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @include bootstrap.container;
   padding: 46px 30px 32px 30px;
   background-color: bootstrap.$colorGrey;
 

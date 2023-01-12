@@ -145,11 +145,13 @@
 
   &:hover,
   &:focus-within {
-    width: 120%;
+    width: auto;
+    height: 77px * 1.2;
   }
 
   &:active {
     opacity: 0.3;
-    width: 80%;
+    width: auto;
+    height: 77px * 0.8;
   }
 }

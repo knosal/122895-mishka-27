@@ -5,6 +5,16 @@
   display: flex;
   align-items: center;
 
+  &:hover .item-control__icon,
+  &:focus-within .item-control__icon {
+    border-color: bootstrap.$colorGreen-hover;
+  }
+
+  &:active .item-control__icon,
+  &:active .control__icon {
+    border-color: rgba(bootstrap.$colorDarkGrey, 0.3);
+  }
+
   &--radio {
     height: 42px;
     padding-left: 61px;
@@ -41,6 +51,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .item-control__icon {

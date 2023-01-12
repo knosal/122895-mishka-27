@@ -9,11 +9,31 @@
   overflow: hidden;
   background-color: transparent;
 
+  &:hover,
+  &:focus-within {
+    outline: none;
+    border-color: bootstrap.$colorGreen-line;
+  }
+
+  &:hover ~ .input-text__icon,
+  &:focus-within ~ .input-text__icon {
+    color: rgba(bootstrap.$colorGreen-hover, 1);
+  }
+
+  &:active {
+    outline: none;
+    border-color: bootstrap.$colorGreen-line;
+  }
+
   &::placeholder {
     font-family: bootstrap.$open-sans;
     font-size: 17px;
     line-height: 18px;
     opacity: 0.3;
+  }
+
+  &--mail {
+    position: relative;
   }
 
   &--textarea {
@@ -27,4 +47,12 @@
   @media (min-width: bootstrap.$tablet-width) {
     padding-left: 17px;
   }
+}
+
+.input-text__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(bootstrap.$colorBlack, 0.2);
+  fill: currentColor;
 }

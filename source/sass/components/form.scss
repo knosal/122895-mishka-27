@@ -68,17 +68,22 @@
       display: flex;
       align-items: center;
     }
+
+    &--name > .form__item-title {
+      padding-right: 25px;
+    }
   }
 }
 
 .form__item-title {
+  position: relative;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
 
-  @media (min-width: bootstrap.$tablet-width) {
+ /* @media (min-width: bootstrap.$tablet-width) {
     padding-right: 25px;
-  }
+  }*/
 }
 
 .form__legend {
@@ -101,7 +106,6 @@
     right: 0;
     height: 50%;
     border-top: 1px solid bootstrap.$colorGreen-line;
-    z-index: -1;
   }
 
   &--radio {
@@ -118,6 +122,14 @@
 
   &--other {
     margin-bottom: 23px;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 17px;
+
+    &--line::after {
+      display: none;
+    }
   }
 }
 

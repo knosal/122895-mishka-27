@@ -7,7 +7,7 @@
 }
 
 .main-header__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@
     position: relative;
     height: 89px;
 
-    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    @include bootstrap.wrapper-tablet;
   }
 }
 
@@ -38,9 +38,18 @@
     left: 50%;
     transform: translate(0, -50%);
   }
+
+  &:hover .main-header__logo-icon {
+    opacity: 0.6;
+  }
+
+  &:focus-within .main-header__logo-icon,
+  &:active .main-header__logo-icon {
+    opacity: 0.3;
+  }
 }
 
-.main-header__logo img {
+.main-header__logo-icon {
   width: 86px;
   height: 35px;
 }

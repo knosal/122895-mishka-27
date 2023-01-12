@@ -102,10 +102,26 @@
       padding-left: 30px;
     }
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-within,
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover .navigation-list__icon {
+    opacity: 1;
+    color: bootstrap.$colorGreen-primary;
+  }
 }
 
 .navigation-list__icon {
   position: absolute;
+  fill: currentColor;
+  opacity: 0.2;
 
   &--search {
     left: -40px;

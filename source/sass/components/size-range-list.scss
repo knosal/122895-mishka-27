@@ -1,0 +1,53 @@
+@use "../abstracts/bootstrap.scss";
+
+.size-range-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+
+  @include bootstrap.ul-reset;
+}
+
+.size-range-list__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.size-range-list__title {
+  display: flex;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.size-range-list__input {
+  appearance: none;
+  margin: 0;
+}
+
+.size-range-list__text {
+  border: 1px solid;
+  border-color: rgba(bootstrap.$colorDarkGrey, 0.1);
+  padding: 18px 0;
+  text-align: center;
+  width: 82px;
+
+  &:hover {
+    border-color: rgba(bootstrap.$colorDarkGrey, 1);
+  }
+
+  &:active {
+    border-color: bootstrap.$colorGreen-primary;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: 112px;
+  }
+}
+
+.size-range-list__input:checked + .size-range-list__text {
+  border: 2px solid bootstrap.$colorGreen-primary;
+}

@@ -5,7 +5,7 @@
 }
 
 .featured__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   padding-bottom: 42px;
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -17,7 +17,7 @@
       "description product"
       "price product";
 
-    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    @include bootstrap.wrapper-tablet;
     padding-bottom: 69px;
   }
 
@@ -30,7 +30,7 @@
       ". price product";
     column-gap: 50px;
 
-    @include bootstrap.wrapper($size: bootstrap.$desktop-width);
+    @include bootstrap.wrapper-desktop;
   }
 }
 

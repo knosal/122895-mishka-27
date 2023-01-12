@@ -42,6 +42,15 @@
 .product__title {
   @include bootstrap.title(17px, 24px);
   margin-bottom: 6px;
+
+  &:hover,
+  &:focus-within {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product__description {
@@ -69,4 +78,19 @@
 
 .product__button-buy {
   @include bootstrap.button-reset;
+
+  &:hover .product__icon,
+  &:focus-within .product__icon {
+    opacity: 1;
+    color: bootstrap.$colorGreen-primary;
+  }
+
+  &:active .product__icon {
+    opacity: 0.3;
+    color: bootstrap.$colorGreen-primary;
+  }
+}
+
+.product__icon {
+  opacity: 0.2;
 }

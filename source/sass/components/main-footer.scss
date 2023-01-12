@@ -19,10 +19,23 @@
 
 .main-footer__link-logo {
   display: none;
+  color: bootstrap.$colorBlack;
 
   @media (min-width: bootstrap.$tablet-width) {
     display: block;
+
+    &:hover {
+      color: bootstrap.$colorGreen-hover;
+    }
+
+    &:active {
+      color: rgba(bootstrap.$colorGreen-hover, 0.3);
+    }
   }
+}
+
+.main-footer__logo-icon {
+  fill: currentColor;
 }
 
 .main-footer__social {

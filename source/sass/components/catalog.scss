@@ -21,22 +21,16 @@
 }
 
 .catalog__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    @include bootstrap.wrapper-tablet;
     margin-bottom: 53px;
   }
-}
-
-.catalog__text {
-  font-size: 13px;
-  line-height: 24px;
-  margin-bottom: 29px;
 }
 
 .catalog__list {
@@ -55,5 +49,16 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 51px;
+  }
+}
+
+.catalog__item {
+  &:hover,
+  &:focus-within {
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
   }
 }

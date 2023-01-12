@@ -20,13 +20,13 @@
 
 .order__title {
   @include bootstrap.title(25px);
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   padding: 73px 0;
   text-align: center;
 }
 
 .order__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,13 +44,13 @@
 }
 
 .order__text {
-  @include bootstrap.wrapper($size: bootstrap.$mobile-width);
+  @include bootstrap.wrapper-mobile;
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 29px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    @include bootstrap.wrapper-tablet;
     margin-bottom: 13px;
   }
 

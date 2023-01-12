@@ -29,17 +29,19 @@
 }
 
 //Стили разрешения
-@mixin wrapper($size: variable.$mobile-width) {
+@mixin wrapper-mobile($size: variable.$mobile-width-only) {
   margin: 0 auto;
   width: calc(100% - 60px);
+}
 
-  @if $size == variable.$tablet-width {
-    width: calc(100% - 100px);
-  }
+@mixin wrapper-tablet($size: variable.$tablet-width) {
+  margin: 0 auto;
+  width: calc(100% - 100px);
+}
 
-  @else if $size == variable.$desktop-width {
-    width: calc(100% - 100px);
-  }
+@mixin wrapper-desktop($size: variable.$desktop-width) {
+  margin: 0 auto;
+  width: calc(100% - 100px);
 }
 
 //Заголовок

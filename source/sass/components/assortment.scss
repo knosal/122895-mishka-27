@@ -29,7 +29,7 @@
 .assortment__wrapper {
   position: relative;
 
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
 }
 
 .assortment__title {
@@ -77,32 +77,43 @@
   padding-right: 27px;
   padding-bottom: 31px;
   padding-left: 30px;
+  cursor: pointer;
 
   &:nth-child(odd) {
     background-color: bootstrap.$colorGreen-primary;
   }
 
+  &:nth-child(odd):hover {
+    background-color: bootstrap.$colorGreen-hover-odd;
+  }
+
   &:nth-child(even) {
-    background-color: rgba(86, 195, 178, 1);
+    background-color: bootstrap.$colorGreen-even;
+  }
+
+  &:nth-child(even):hover {
+    background-color: bootstrap.$colorGreen-hover;
   }
 
   &::after {
     content: "";
     display: block;
+    width: 60px;
+    height: 60px;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
+  &:active::after {
+    opacity: 0.3;
+  }
+
   &--interior::after {
-    width: 60px;
-    height: 60px;
     background-image: url("../img/svg/interior-icon.svg");
   }
 
   &--lego::after {
     background-image: url("../img/svg/lego-icon.svg");
-    width: 60px;
-    height: 60px;
   }
 
   @media (min-width: bootstrap.$tablet-width) {

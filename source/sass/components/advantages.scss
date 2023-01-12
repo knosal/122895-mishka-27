@@ -1,10 +1,10 @@
 @use "../abstracts/bootstrap.scss";
 
 .advantages__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
 
   @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    @include bootstrap.wrapper-tablet;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -14,6 +14,8 @@
       ". title title"
       ". advantages advantages"
       ". advantages advantages";
+
+    @include bootstrap.wrapper-desktop;
   }
 }
 

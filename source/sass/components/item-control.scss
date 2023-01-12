@@ -14,6 +14,26 @@
     height: 38px;
     padding-left: 61px;
   }
+
+  &--text {
+    border: 1px solid;
+    border-color: rgba(bootstrap.$colorDarkGrey, 0.1);
+    padding: 18px 0;
+    text-align: center;
+    width: 82px;
+
+    &:hover {
+      border-color: rgba(bootstrap.$colorDarkGrey, 1);
+    }
+
+    &:active {
+      border-color: bootstrap.$colorGreen-primary;
+    }
+
+    @media (min-width: bootstrap.$tablet-width) {
+      width: 112px;
+    }
+  }
 }
 
 .item-control__title {
@@ -72,4 +92,8 @@
   background-image: url("../img/svg/tick-icon.svg");
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.item-control__radio:checked + .item-control--text {
+  border: 2px solid bootstrap.$colorGreen-primary;
 }

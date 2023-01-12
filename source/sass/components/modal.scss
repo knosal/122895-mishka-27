@@ -10,7 +10,7 @@
   z-index: 20;
 
   &--close {
-    display: none;
+   display: none;
   }
 }
 
@@ -19,19 +19,15 @@
   top: 50%;
   left: 50%;
   width: 100%;
-  max-width: bootstrap.$mobile-width;
+  max-width: 566px;
   display: flex;
   transform: translate(-50%, -50%);
   background-color: bootstrap.$colorWhite;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
-
-  @media (min-width: bootstrap.$tablet-width) {
-    min-width: 566px;
-  }
 }
 
 .modal__content {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   padding-top: 28px;
   padding-bottom: 46px;
 
@@ -55,6 +51,17 @@
   text-transform: uppercase;
 }
 
+@media (min-width: bootstrap.$tablet-width) {
+  .modal__title br {
+    display: none;
+  }
+}
+
+.modal__form {
+  margin: 0 auto;
+  max-width: 350px;
+}
+
 .modal__form-group {
   appearance: none;
   margin: 0 auto;
@@ -67,46 +74,9 @@
   margin-bottom: 21px;
 }
 
-.modal__form-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 7px;
-
-  @include bootstrap.ul-reset;
-}
-
-.modal__form-item {
-  display: flex;
-  justify-content: center;
-  padding: 18px 36px;
-  border: 1px solid;
-  border-color: rgba(bootstrap.$colorDarkGrey, 0.1);
-
-  &--current {
-    border: 1px solid bootstrap.$colorGreen-primary;
-  }
-
-  @media (min-width: bootstrap.$tablet-width) {
-    padding: 18px 51px;
-  }
-}
-
-.modal__form-title {
-  display: flex;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 16px;
-  text-transform: uppercase;
-}
-
-.modal__input {
-  appearance: none;
-  margin: 0;
-}
-
 .modal__button {
   width: 100%;
+  max-width: 350px;
   margin-top: 31px;
   font-size: 17px;
   line-height: 16px;

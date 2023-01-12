@@ -3,8 +3,8 @@
 .contacts {
   @media (min-width: bootstrap.$desktop-width) {
     display: grid;
-    grid-template-columns: 175px 292px 1fr;
-    column-gap: 23px;
+    grid-template-columns: 175px 361px 1fr;
+    column-gap: 51px;
     grid-template-areas:
       ". title map"
       ". description map"
@@ -13,7 +13,7 @@
 }
 
 .contacts__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   height: 100%;
   margin-bottom: 62px;
 
@@ -21,7 +21,7 @@
     padding-top: 22px;
     margin-bottom: 55px;
 
-    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    @include bootstrap.wrapper-tablet;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -29,6 +29,8 @@
     width: auto;
     margin: 0;
     padding: 0;
+
+    @include bootstrap.wrapper-desktop;
   }
 }
 
@@ -112,7 +114,7 @@
 }
 
 .contacts__address-title {
-  width: 76px;
+  min-width: 76px;
 
   &::after {
     content: ": ";
@@ -126,6 +128,15 @@
 .contacts__address-link {
   @include bootstrap.link-reset;
   border-bottom: 1px solid bootstrap.$colorGreen-primary;
+
+  &:hover,
+  &:focus-within {
+    color: bootstrap.$colorGreen-primary;
+  }
+
+  &:active {
+    border-bottom: 1px solid rgba(bootstrap.$colorGreen-primary, 0.1);
+  }
 }
 
 .contacts__map {
@@ -138,7 +149,7 @@
 }
 
 .contacts__feedback {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   margin-bottom: 39px;
 
   @media (min-width: bootstrap.$desktop-width) {

@@ -13,7 +13,7 @@
 }
 
 .reviews__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   height: 100%;
   padding-bottom: 51px;
 
@@ -28,13 +28,13 @@
     column-gap: 20px;
     row-gap: 20px;
 
-    @include bootstrap.wrapper($size: bootstrap.$tablet-width);
+    @include bootstrap.wrapper-tablet;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     padding-left: 175px;
 
-    @include bootstrap.wrapper($size: bootstrap.$desktop-width);
+    @include bootstrap.wrapper-desktop;
   }
 }
 
@@ -87,10 +87,8 @@
   line-height: 30px;
   margin-top: 33px;
   margin-bottom: 30px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews__author-info {
+  @media (min-width: bootstrap.$tablet-width) {
     grid-area: author;
   }
 }
@@ -107,10 +105,17 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 38px;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews__control {
+  &:hover svg,
+  &:focus-within {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
     grid-area: control;
     align-items: center;
     margin-top: -115px;
@@ -124,17 +129,15 @@
   padding-left: 37px;
   padding-right: 42px;
   outline: 1px solid bootstrap.$colorLightGrey;
-}
 
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews__arrow {
+  @media (min-width: bootstrap.$tablet-width) {
     padding: 0;
     outline: none;
   }
 }
 
-@media (min-width: bootstrap.$tablet-width) {
-  .reviews__create-button {
+.reviews__create-button {
+  @media (min-width: bootstrap.$tablet-width) {
     grid-area: button;
     height: min-content;
     width: 100%;

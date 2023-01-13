@@ -1,24 +1,42 @@
 @use "../abstracts/bootstrap.scss";
 
 .contacts__wrapper {
-  @media (min-width: bootstrap.$mobile-width-only) {
-    @include bootstrap.wrapper-mobile;
-  }
-
-  @media (min-width: bootstrap.$tablet-width) {
-    @include bootstrap.wrapper-tablet;
-  }
+  position: relative;
 
   @media (min-width: bootstrap.$desktop-width) {
     display: grid;
-    grid-template-columns: 175px 361px 1fr;
-    column-gap: 51px;
+    grid-template-columns: 125px 361px 1fr;
+    column-gap: 50px;
     grid-template-areas:
       ". title map"
       ". description map"
       ". feedback map";
 
     @include bootstrap.wrapper-desktop;
+  }
+}
+
+.contacts__address {
+  @include bootstrap.wrapper-mobile;
+  font-size: 14px;
+  line-height: 30px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: flex;
+    gap: 51px;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 49px;
+
+    @include bootstrap.wrapper-tablet;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-area: description;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 74px;
+    padding: 0;
   }
 }
 
@@ -43,6 +61,7 @@
     grid-area: title;
     margin: 0;
     padding: 0;
+    width: auto;
   }
 }
 
@@ -54,7 +73,7 @@
   margin-bottom: 28px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin: 0;
+    @include bootstrap.wrapper-tablet;
     align-items: center;
   }
 
@@ -87,31 +106,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    left: 50px;
-  }
-}
-
-.contacts__address {
-  margin: 0;
-
-  @include bootstrap.wrapper-mobile;
-  font-size: 14px;
-  line-height: 30px;
-
-  @media (min-width: bootstrap.$tablet-width) {
-    display: flex;
-    gap: 51px;
-    margin: 0;
-    padding-top: 40px;
-    padding-bottom: 49px;
-  }
-
-  @media (min-width: bootstrap.$desktop-width) {
-    grid-area: description;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 74px;
-    padding: 0;
+    left: 10px;
   }
 }
 

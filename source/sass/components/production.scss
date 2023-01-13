@@ -14,7 +14,7 @@
   }
 
   &:active {
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px #0000001a;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -28,6 +28,9 @@
     grid-template-areas:
       "video title"
       "video info";
+
+    @include bootstrap.wrapper-desktop;
+    margin-bottom: 64px;
   }
 }
 

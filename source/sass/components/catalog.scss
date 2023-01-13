@@ -31,6 +31,11 @@
     @include bootstrap.wrapper-tablet;
     margin-bottom: 53px;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.wrapper-desktop;
+    margin-bottom: 53px;
+  }
 }
 
 .catalog__list {

@@ -1,9 +1,5 @@
 @use "../abstracts/bootstrap.scss";
 
-.main-container {
-  @include bootstrap.container;
-}
-
 .main-container__assortment {
   position: relative;
   margin-bottom: 31px;

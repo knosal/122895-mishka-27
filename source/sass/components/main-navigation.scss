@@ -56,6 +56,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     width: 100%;
+    max-width: 1150px;
   }
 }
 
@@ -112,6 +113,8 @@
     grid-template-areas:
       "navs logo navu navu"
       "navp promo promo promo";
+
+    @include bootstrap.wrapper-desktop;
   }
 }
 

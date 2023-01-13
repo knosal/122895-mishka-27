@@ -1,9 +1,6 @@
 @use "../abstracts/bootstrap.scss";
 
 .assortment {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 373px;
   background-image: url("../img/handmade.jpg");
   background-color: bootstrap.$colorGrey;
@@ -28,12 +25,18 @@
 
 .assortment__wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  @include bootstrap.wrapper-mobile;
+  @media (min-width: bootstrap.$tablet-width) {
+    min-height: 746px;
+  }
 }
 
 .assortment__title {
   @include bootstrap.title(27px);
+  margin: 0 30px;
   padding-top: 73px;
   padding-bottom: 120px;
   text-align: center;

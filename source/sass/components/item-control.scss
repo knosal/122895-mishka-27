@@ -10,8 +10,7 @@
     border-color: bootstrap.$colorGreen-hover;
   }
 
-  &:active .item-control__icon,
-  &:active .control__icon {
+  &:active .item-control__icon {
     border-color: rgba(bootstrap.$colorDarkGrey, 0.3);
   }
 

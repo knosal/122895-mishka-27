@@ -47,7 +47,6 @@
 @mixin wrapper-desktop($size: variable.$desktop-width) {
   margin: 0 auto;
   width: calc(100% - 100px);
-  max-width: 1150px;
 }
 
 //Заголовок

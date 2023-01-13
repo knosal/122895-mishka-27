@@ -119,7 +119,7 @@
 
   &:hover .navigation-list__icon {
     opacity: 1;
-    color: bootstrap.$colorGreen-primary;
+    color: rgba(bootstrap.$colorGreen-primary, 1);
   }
 }
 

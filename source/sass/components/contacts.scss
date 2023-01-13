@@ -1,6 +1,14 @@
 @use "../abstracts/bootstrap.scss";
 
-.contacts {
+.contacts__wrapper {
+  @media (min-width: bootstrap.$mobile-width-only) {
+    @include bootstrap.wrapper-mobile;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.wrapper-tablet;
+  }
+
   @media (min-width: bootstrap.$desktop-width) {
     display: grid;
     grid-template-columns: 175px 361px 1fr;
@@ -9,13 +17,20 @@
       ". title map"
       ". description map"
       ". feedback map";
+
+    @include bootstrap.wrapper-desktop;
   }
 }
 
-.contacts__wrapper {
+.contacts__address-inner {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px;
+
   @include bootstrap.wrapper-mobile;
+  width: auto;
   height: 100%;
-  margin-bottom: 62px;
+  margin-bottom: 37px;
 
   @media (min-width: bootstrap.$tablet-width) {
     padding-top: 22px;
@@ -26,11 +41,8 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: title;
-    width: auto;
     margin: 0;
     padding: 0;
-
-    @include bootstrap.wrapper-desktop;
   }
 }
 
@@ -38,14 +50,17 @@
   display: flex;
 
   @include bootstrap.title(25px);
+  @include bootstrap.wrapper-mobile;
   margin-bottom: 28px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    margin: 0;
     align-items: center;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding-top: 79px;
+    grid-area: title;
+    margin: 34px 0;
   }
 }
 
@@ -78,39 +93,30 @@
 
 .contacts__address {
   margin: 0;
+
+  @include bootstrap.wrapper-mobile;
   font-size: 14px;
   line-height: 30px;
-
 
   @media (min-width: bootstrap.$tablet-width) {
     display: flex;
     gap: 51px;
+    margin: 0;
     padding-top: 40px;
     padding-bottom: 49px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    grid-area: description;
     display: flex;
     flex-direction: column;
-    margin-bottom: 84px;
+    margin-bottom: 74px;
     padding: 0;
   }
 }
 
 .contacts__address-list {
   margin-bottom: 41px;
-}
-
-.contacts__address-inner {
-  display: flex;
-}
-
-.contacts__address-inner:not(:last-of-type) {
-  padding-bottom: 40px;
-
-  @media (min-width: bootstrap.$desktop-width) {
-    padding: 0;
-  }
 }
 
 .contacts__address-title {
@@ -141,6 +147,10 @@
 
 .contacts__map {
   margin-bottom: 42px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 55px;
+  }
 
   @media (min-width: bootstrap.$desktop-width) {
     margin: 0;

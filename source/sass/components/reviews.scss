@@ -106,15 +106,6 @@
   justify-content: space-between;
   margin-bottom: 38px;
 
-  &:hover svg,
-  &:focus-within {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: control;
     align-items: center;
@@ -129,6 +120,15 @@
   padding-left: 37px;
   padding-right: 42px;
   outline: 1px solid bootstrap.$colorLightGrey;
+
+  &:hover,
+  &:focus-within {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     padding: 0;

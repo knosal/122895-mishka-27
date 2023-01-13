@@ -4,6 +4,13 @@
   position: relative;
 }
 
+.map iframe {
+  border: none;
+  display: block;
+  width: 100%;
+  max-height: 457px;
+}
+
 .map__image {
   width: 100%;
   max-height: 457px;
@@ -11,7 +18,9 @@
 
 .map__mark {
   position: absolute;
-  top: 42%;
-  right: 47%;
+  top: 30%;
+  right: 38%;
   transform: translate(50%, -50%);
+  z-index: 15;
+  cursor: pointer;
 }

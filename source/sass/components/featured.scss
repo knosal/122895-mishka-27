@@ -23,7 +23,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     position: relative;
-    grid-template-columns: 175px 292px 1fr;
+    grid-template-columns: 125px 292px 1fr;
     grid-template-areas:
       ". title title"
       ". description product"
@@ -48,9 +48,11 @@
 
 .featured__subtitle {
   position: absolute;
+  top: 34px;
   display: block;
 
   @media (min-width: bootstrap.$tablet-width) {
+    top: 0;
     display: inline-block;
     right: 50px;
     width: 100px;
@@ -58,7 +60,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    left: 50px;
+    left: 30px;
   }
 }
 

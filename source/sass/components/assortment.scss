@@ -30,12 +30,16 @@
   @media (min-width: bootstrap.$tablet-width) {
     min-height: 746px;
   }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.wrapper-desktop;
+  }
 }
 
 .assortment__title {
   @include bootstrap.title(27px);
   margin: 0 30px;
-  padding-top: 73px;
+  padding-top: 93px;
   padding-bottom: 120px;
   text-align: center;
 
@@ -72,9 +76,9 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-top: 24px;
+  padding-top: 20px;
   padding-right: 27px;
-  padding-bottom: 31px;
+  padding-bottom: 23px;
   padding-left: 30px;
   cursor: pointer;
 

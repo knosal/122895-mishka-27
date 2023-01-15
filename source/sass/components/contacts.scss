@@ -20,6 +20,7 @@
   @include bootstrap.wrapper-mobile;
   font-size: 14px;
   line-height: 30px;
+  margin-bottom: 62px;
 
   @media (min-width: bootstrap.$tablet-width) {
     display: flex;
@@ -33,8 +34,9 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: description;
-    display: flex;
+    gap: 33px;
     flex-direction: column;
+    margin: 0;
     margin-bottom: 74px;
     padding: 0;
   }
@@ -45,23 +47,27 @@
   justify-content: flex-start;
   gap: 5px;
 
+  &:first-of-type {
+    margin-bottom: 37px;
+  }
+
   @include bootstrap.wrapper-mobile;
   width: auto;
   height: 100%;
-  margin-bottom: 37px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-top: 22px;
-    margin-bottom: 55px;
-
-    @include bootstrap.wrapper-tablet;
+    margin: 0;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: title;
-    margin: 0;
     padding: 0;
     width: auto;
+    height: auto;
+
+    &:first-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -96,7 +102,7 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    right: 50px;
+    right: 0;
     width: 100px;
     text-align: center;
 

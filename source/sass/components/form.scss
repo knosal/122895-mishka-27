@@ -6,62 +6,68 @@
 }
 
 .form__group {
-  display: grid;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 
-  &--radio {
-    margin-bottom: 30px;
-  }
-
-  &--checkbox {
-    margin-bottom: 33px;
+  &--email {
+    margin: 0;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    grid-template-columns: 150px 1fr;
-    column-gap: 15px;
-    row-gap: 50px;
-    padding: 50px;
+    margin: 0;
 
     &:nth-child(even) {
       background-color: rgba(241, 241, 241, 1);
     }
 
+    &--phone {
+      margin-bottom: 35px;
+    }
+
+    &--phone,
+    &--email {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      column-gap: 15px;
+
+      @media (min-width: bootstrap.$desktop-width) {
+        grid-template-columns: 100px 1fr;
+      }
+    }
+  }
+}
+
+.form__group-wrapper {
+  display: grid;
+  margin-bottom: 10px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-template-columns: 150px 1fr;
+    column-gap: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    @include bootstrap.wrapper-tablet;
+
     &--unification {
       display: block;
-    }
-
-    &--phone {
-      padding: 0;
-    }
-
-    &--email {
-      padding: 0;
     }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-template-columns: 100px 1fr;
-    padding-left: 110px;
+    padding-left: 60px;
+    padding-right: 225px;
 
-    &--name {
-      padding-right: 173px;
-    }
-
-    &--unification {
-      padding-left: 0;
-      padding-right: 173px;
-    }
-
-    &--other {
-      padding-right: 173px;
-    }
+    @include bootstrap.wrapper-desktop;
   }
 }
 
 .form__group-inner {
   margin: 0;
-  margin-bottom: 25px;
+
+  &:not(:last-child) {
+    margin-bottom: 25px;
+  }
 
   @media (min-width: bootstrap.$tablet-width) {
     &--name {
@@ -146,6 +152,7 @@
   @media (min-width: bootstrap.$desktop-width) {
     &--checkbox {
       grid-template-columns: repeat(3, 1fr);
+      column-gap: 60px;
     }
   }
 }
@@ -159,15 +166,15 @@
   @media (min-width: bootstrap.$tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 50px;
+
+    @include bootstrap.wrapper-tablet;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    width: 100%;
-    min-width: 700px;
+    width: 700px;
+    justify-content: space-between;
     gap: 10px;
-    padding-left: 228px;
-    padding-right: 175px;
+    padding-right: 50px;
   }
 }
 

@@ -4,11 +4,11 @@
   width: 100%;
 
   @media (max-width: bootstrap.$mobile-width-only) {
-    &--closed .navigation-list__item {
+    &--closed .main-navigation__list {
       display: none;
     }
 
-    &--nojs .navigation-list__item {
+    &--nojs .main-navigation__list {
       display: block;
     }
   }

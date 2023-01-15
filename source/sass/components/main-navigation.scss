@@ -34,12 +34,15 @@
   &:active {
     opacity: 0.5;
   }
-/*
+
+  /*
+//Реализация меню-бургер без js
   &:focus-within ~ .main-navigation__inner-popover,
   &:active ~ .main-navigation__inner-popover {
     display: block;
     z-index: 5;
-  }*/
+  }
+*/
 
   @media (min-width: bootstrap.$tablet-width) {
     display: none;

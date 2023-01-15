@@ -102,7 +102,9 @@
 }
 
 .main-navigation__inner-popover {
-  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 
   @media (min-width: bootstrap.$tablet-width) {
     top: 35px;

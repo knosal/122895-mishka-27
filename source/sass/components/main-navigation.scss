@@ -1,100 +1,108 @@
 @use "../abstracts/bootstrap.scss";
 
 .main-navigation {
-  &--closed .main-navigation__toogle::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 20px;
-    height: 2px;
-    background-color: #000000;
-    box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
-  }
+  width: 100%;
 
-  &--closed .main-navigation__toogle:active::before {
-    background-color: rgba(#000000, 0.3);
-    box-shadow:
-      0 6px 0 0 rgba(#000000, 0.3),
-      0 12px 0 0 rgba(#000000, 0.3);
-  }
-
-  &--opened .main-navigation__toogle {
-    position: absolute;
-    top: 50%;
-    right: 25px;
-    transform: translate(0, -50%);
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 20px;
-      height: 2px;
-      background-color: #000000;
+  @media (max-width: bootstrap.$mobile-width-only) {
+    &--closed .navigation-list__item {
+      display: none;
     }
 
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-
-    &:active::before,
-    &:active::after {
-      background-color: rgba(#000000, 0.3);
+    &--nojs .navigation-list__item {
+      display: block;
     }
   }
 
-  &--nojs .main-navigation__toogle {
-    display: none;
-  }
-
-  @media (min-width: bootstrap.$tablet-width) {
-    width: 100%;
+  @media (min-width: bootstrap.$desktop-width) {
     max-width: 1150px;
   }
 }
 
 .main-navigation__toogle {
-  @include bootstrap.button-reset;
   position: absolute;
-  top: 50%;
-  right: 25px;
-  transform: translate(0, -50%);
-  z-index: 2;
+  top: 32px;
+  right: 30px;
   display: block;
-  width: 20px;
-  height: 14px;
+  width: 21px;
+  height: 21px;
+
+  @include bootstrap.button-reset;
+  z-index: 2;
 
   &:focus-within,
   &:hover,
   &:active {
     opacity: 0.5;
   }
-
+/*
   &:focus-within ~ .main-navigation__inner-popover,
   &:active ~ .main-navigation__inner-popover {
     display: block;
     z-index: 5;
-  }
+  }*/
 
   @media (min-width: bootstrap.$tablet-width) {
     display: none;
   }
 }
 
-.main-navigation__inner-popover {
+.main-navigation--closed .main-navigation__toogle::before {
+  content: "";
   position: absolute;
-  display: none;
+  top: 3px;
   right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
+  width: 21px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+}
+
+.main-navigation--closed .main-navigation__toogle:active::before {
+  background-color: rgba(#000000, 0.3);
+  box-shadow:
+    0 6px 0 0 rgba(#000000, 0.3),
+    0 12px 0 0 rgba(#000000, 0.3);
+}
+
+.main-navigation--opened .main-navigation__toogle {
+  position: absolute;
+  //transform: translate(0, -50%);
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 21px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(#000000, 0.3);
+  }
+}
+
+.main-navigation--nojs .main-navigation__toogle {
+  display: none;
+}
+
+.main-navigation--nojs .main-navigation__inner-popover {
+  position: static;
+  min-height: 0;
+}
+
+.main-navigation__inner-popover {
+  display: block;
 
   @media (min-width: bootstrap.$tablet-width) {
     top: 35px;
@@ -120,7 +128,6 @@
 
 .main-navigation__list {
   @include bootstrap.ul-reset;
-  position: absolute;
   width: 100%;
 
   @media (min-width: bootstrap.$tablet-width) {

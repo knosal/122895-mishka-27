@@ -12,6 +12,8 @@
 }
 
 .map__image {
+  //display: none;
+  position: absolute;
   width: 100%;
   max-height: 457px;
 }
@@ -19,8 +21,7 @@
 .map__mark {
   position: absolute;
   top: 30%;
-  right: 38%;
-  transform: translate(50%, -50%);
+  right: 40%;
   z-index: 15;
   cursor: pointer;
 }

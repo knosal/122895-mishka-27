@@ -72,6 +72,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.wrapper-desktop;
     margin-bottom: 90px;
   }
 }
@@ -84,6 +85,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.wrapper-desktop;
     margin-bottom: 71px;
   }
 }

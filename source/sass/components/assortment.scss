@@ -9,8 +9,6 @@
   background-size: contain;
 
   @media (min-width: bootstrap.$tablet-width) {
-    min-height: 746px;
-
     &--section-wavy::after {
       content: "";
       position: absolute;
@@ -64,8 +62,6 @@
     grid-template-columns: 1fr 1fr;
     align-content: center;
     width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
     padding: 0;
   }
 }

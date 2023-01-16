@@ -4,18 +4,28 @@
   display: flex;
   align-items: center;
   gap: 25px;
+
+  &:hover svg {
+    color: bootstrap.$colorGreen-hover;
+  }
+
+  &:active svg {
+    color: rgba(bootstrap.$colorGreen-hover, 0.3);
+  }
 }
 
 .copyright__text {
   font-size: 19px;
   line-height: 18px;
+  cursor: pointer;
 }
 
 .copyright__link {
   display: flex;
   align-items: center;
+  color: bootstrap.$colorBlack;
 }
 
-.copyright__image {
-  height: 34px;
+.copyright__link > svg {
+  fill: currentColor;
 }

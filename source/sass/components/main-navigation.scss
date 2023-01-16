@@ -1,11 +1,33 @@
 @use "../abstracts/bootstrap.scss";
 
+.main-navigation {
+  width: 100%;
+
+  @media (max-width: bootstrap.$mobile-width-only) {
+    &--closed .main-navigation__list {
+      display: none;
+    }
+
+    &--nojs .main-navigation__list {
+      display: block;
+    }
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    max-width: 1150px;
+  }
+}
+
 .main-navigation__toogle {
-  @include bootstrap.button-reset;
   position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translate(0, -50%);
+  top: 32px;
+  right: 30px;
+  display: block;
+  width: 21px;
+  height: 21px;
+
+  @include bootstrap.button-reset;
+  z-index: 2;
 
   &:focus-within,
   &:hover,
@@ -13,22 +35,108 @@
     opacity: 0.5;
   }
 
+  /*
+//Реализация меню-бургер без js
   &:focus-within ~ .main-navigation__inner-popover,
   &:active ~ .main-navigation__inner-popover {
     display: block;
     z-index: 5;
   }
+*/
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-navigation--closed .main-navigation__toogle::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 21px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 6px 0 0 #000000, 0 12px 0 0 #000000;
+}
+
+.main-navigation--closed .main-navigation__toogle:active::before {
+  background-color: rgba(#000000, 0.3);
+  box-shadow:
+    0 6px 0 0 rgba(#000000, 0.3),
+    0 12px 0 0 rgba(#000000, 0.3);
+}
+
+.main-navigation--opened .main-navigation__toogle {
+  position: absolute;
+  //transform: translate(0, -50%);
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 21px;
+    height: 2px;
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(#000000, 0.3);
+  }
+}
+
+.main-navigation--nojs .main-navigation__toogle {
+  display: none;
+}
+
+.main-navigation--nojs .main-navigation__inner-popover {
+  position: static;
+  min-height: 0;
 }
 
 .main-navigation__inner-popover {
-  @include bootstrap.container;
-  position: relative;
-  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    top: 35px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 80px 268px;
+    grid-template-rows: 89px 69px;
+    grid-template-areas:
+      "logo logo navu navu"
+      "navs navs . promo";
+    background-color: transparent;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-template-columns: 436px 1fr 80px 268px;
+    grid-template-areas:
+      "navs logo navu navu"
+      "navp promo promo promo";
+
+    @include bootstrap.wrapper-desktop;
+  }
 }
 
 .main-navigation__list {
   @include bootstrap.ul-reset;
-  position: absolute;
   width: 100%;
-  background-color: bootstrap.$colorWhite;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    position: relative;
+    display: flex;
+  }
 }

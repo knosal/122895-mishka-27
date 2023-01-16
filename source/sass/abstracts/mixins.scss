@@ -29,14 +29,20 @@
 }
 
 //Стили разрешения
-@mixin container {
+@mixin wrapper-mobile($size: variable.$mobile-width-only) {
   margin: 0 auto;
-  width: 320px;
+  width: calc(100% - 60px);
 }
 
-@mixin wrapper {
+@mixin wrapper-tablet($size: variable.$tablet-width) {
   margin: 0 auto;
-  width: 260px;
+  width: calc(100% - 100px);
+}
+
+@mixin wrapper-desktop($size: variable.$desktop-width) {
+  margin: 0 auto;
+  width: calc(100% - 100px);
+  max-width: 1050px;
 }
 
 //Заголовок

@@ -7,7 +7,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(bootstrap.$colorWhite, 0.9);
-  z-index: 10;
+  z-index: 20;
 
   &--close {
     display: none;
@@ -15,10 +15,11 @@
 }
 
 .modal__body {
-  @include bootstrap.container;
   position: fixed;
   top: 50%;
   left: 50%;
+  width: 100%;
+  max-width: 566px;
   display: flex;
   transform: translate(-50%, -50%);
   background-color: bootstrap.$colorWhite;
@@ -26,9 +27,17 @@
 }
 
 .modal__content {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   padding-top: 28px;
   padding-bottom: 46px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: auto;
+    padding-top: 37.5px;
+    padding-right: 92px;
+    padding-bottom: 46px;
+    padding-left: 93px;
+  }
 }
 
 .modal__title {
@@ -40,6 +49,17 @@
   padding-bottom: 14px;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: bootstrap.$tablet-width) {
+  .modal__title br {
+    display: none;
+  }
+}
+
+.modal__form {
+  margin: 0 auto;
+  max-width: 350px;
 }
 
 .modal__form-group {
@@ -54,43 +74,9 @@
   margin-bottom: 21px;
 }
 
-.modal__form-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @include bootstrap.ul-reset;
-}
-
-.modal__form-item {
-  display: flex;
-  justify-content: center;
-  gap: 7px;
-  width: 82px;
-  padding: 18px 0;
-  border: 1px solid;
-  border-color: rgba(bootstrap.$colorDarkGrey, 0.1);
-
-  &--current {
-    border: 1px solid bootstrap.$colorGreen-primary;
-  }
-}
-
-.modal__form-title {
-  display: flex;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 16px;
-  text-transform: uppercase;
-}
-
-.modal__input {
-  appearance: none;
-  margin: 0;
-}
-
 .modal__button {
   width: 100%;
+  max-width: 350px;
   margin-top: 31px;
   font-size: 17px;
   line-height: 16px;

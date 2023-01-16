@@ -1,27 +1,60 @@
 @use "../abstracts/bootstrap.scss";
 
 .order__inner-title {
-  background-color: bootstrap.$colorGrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 17px;
+  background-color: bootstrap.$colorGrey;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    min-height: 238px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 99px;
+  }
 }
 
 .order__title {
   @include bootstrap.title(25px);
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   padding: 73px 0;
   text-align: center;
 }
 
-.order__wrapper {
-  @include bootstrap.wrapper;
+.order__form-wrapper {
+  @include bootstrap.wrapper-mobile;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 55px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: auto;
+    margin-top: 54px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-top: 0;
+  }
 }
 
 .order__text {
-  margin: 0;
+  @include bootstrap.wrapper-mobile;
   font-size: 13px;
   line-height: 24px;
   margin-bottom: 29px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.wrapper-tablet;
+    margin-bottom: 13px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    max-width: 700px;
+  }
 }

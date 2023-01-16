@@ -1,34 +1,73 @@
 @use "../abstracts/bootstrap.scss";
 
 .assortment {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   min-height: 373px;
   background-image: url("../img/handmade.jpg");
   background-color: bootstrap.$colorGrey;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    &--section-wavy::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/svg/zigzag-fill-desktop-icon.svg");
+      z-index: 10;
+    }
+  }
 }
 
-
 .assortment__wrapper {
-  @include bootstrap.wrapper;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    min-height: 746px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.wrapper-desktop;
+  }
 }
 
 .assortment__title {
   @include bootstrap.title(27px);
-  padding-top: 73px;
+  margin: 0 30px;
+  padding-top: 93px;
   padding-bottom: 120px;
   text-align: center;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 133px;
+  }
 }
 
 .assortment__list {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 31px;
 
   @include bootstrap.ul-reset;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    flex-direction: row;
+    padding: 0 50px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .assortment__item {
@@ -37,36 +76,54 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding-top: 24px;
+  padding-top: 20px;
   padding-right: 27px;
-  padding-bottom: 31px;
+  padding-bottom: 23px;
   padding-left: 30px;
+  cursor: pointer;
 
   &:nth-child(odd) {
     background-color: bootstrap.$colorGreen-primary;
   }
 
+  &:nth-child(odd):hover {
+    background-color: bootstrap.$colorGreen-hover-odd;
+  }
+
   &:nth-child(even) {
-    background-color: rgba(86, 195, 178, 1);
+    background-color: bootstrap.$colorGreen-even;
+  }
+
+  &:nth-child(even):hover {
+    background-color: bootstrap.$colorGreen-hover;
   }
 
   &::after {
     content: "";
     display: block;
+    width: 60px;
+    height: 60px;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
+  &:active::after {
+    opacity: 0.3;
+  }
+
   &--interior::after {
-    width: 60px;
-    height: 60px;
     background-image: url("../img/svg/interior-icon.svg");
   }
 
   &--lego::after {
     background-image: url("../img/svg/lego-icon.svg");
-    width: 60px;
-    height: 60px;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 25px;
+    padding-right: 36px;
+    padding-bottom: 34px;
+    padding-left: 36px;
   }
 }
 

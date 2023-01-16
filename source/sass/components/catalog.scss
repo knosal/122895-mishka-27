@@ -1,8 +1,17 @@
 @use "../abstracts/bootstrap.scss";
 
 .catalog__inner-title {
-  background-color: bootstrap.$colorGrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
+  background-color: bootstrap.$colorGrey;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    min-height: 238px;
+    margin-bottom: 67px;
+  }
 }
 
 .catalog__title {
@@ -12,17 +21,21 @@
 }
 
 .catalog__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
-}
 
-.catalog__text {
-  font-size: 13px;
-  line-height: 24px;
-  margin-bottom: 29px;
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.wrapper-tablet;
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.wrapper-desktop;
+    margin-bottom: 53px;
+  }
 }
 
 .catalog__list {
@@ -31,4 +44,26 @@
   gap: 30px;
 
   @include bootstrap.ul-reset;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    gap: 54px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 51px;
+  }
+}
+
+.catalog__item {
+  &:hover,
+  &:focus-within {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }

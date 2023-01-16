@@ -1,7 +1,22 @@
 @use "../abstracts/bootstrap.scss";
 
 .advantages__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.wrapper-tablet;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    display: grid;
+    grid-template-columns: 175px max-content max-content;
+    grid-template-areas:
+      ". title title"
+      ". advantages advantages"
+      ". advantages advantages";
+
+    @include bootstrap.wrapper-desktop;
+  }
 }
 
 .advantages__title {
@@ -9,6 +24,10 @@
 
   @include bootstrap.title(25px);
   margin-bottom: 28px;
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-area: title;
+  }
 }
 
 .advantages__list {
@@ -16,6 +35,18 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    row-gap: 57px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-area: advantages;
+    column-gap: 52px;
+  }
 }
 
 .advantages__item {
@@ -32,27 +63,94 @@
     background-repeat: no-repeat;
   }
 
+  &--flower {
+    order: 1;
+  }
+
   &--flower::before {
     background-image: url("../img/svg/flower-icon.svg");
+    margin-bottom: 16px;
+  }
+
+  &--bill {
+    order: 2;
   }
 
   &--bill::before {
     background-image: url("../img/svg/bill-icon.svg");
   }
 
+  &--heart {
+    order: 3;
+  }
+
   &--heart::before {
     background-image: url("../img/svg/heart-icon.svg");
+  }
+
+  &--tangle {
+    order: 4;
   }
 
   &--tangle::before {
     background-image: url("../img/svg/tangle-icon.svg");
   }
 
+  &--rocket {
+    order: 5;
+  }
+
   &--rocket::before {
     background-image: url("../img/svg/rocket-icon.svg");
   }
 
+  &--gift {
+    order: 6;
+  }
+
   &--gift::before {
     background-image: url("../img/svg/gift-icon.svg");
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    &--bill {
+      order: 3;
+    }
+
+    &--heart {
+      order: 5;
+    }
+
+    &--tangle {
+      order: 2;
+    }
+
+    &--rocket {
+      order: 4;
+    }
+
+    &--flower::before {
+      margin-bottom: 13px;
+    }
+
+    &--bill::before {
+      margin-bottom: 14px;
+    }
+
+    &--heart::before {
+      margin-bottom: 21px;
+    }
+
+    &--tangle::before {
+      margin-bottom: 23px;
+    }
+
+    &--rocket::before {
+      margin-bottom: 23px;
+    }
+
+    &--gift::before {
+      margin-bottom: 23px;
+    }
   }
 }

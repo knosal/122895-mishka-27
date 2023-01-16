@@ -4,13 +4,24 @@
   position: relative;
 }
 
-.map__image {
+.map iframe {
+  border: none;
+  display: block;
   width: 100%;
+  max-height: 457px;
+}
+
+.map__image {
+  //display: none;
+  position: absolute;
+  width: 100%;
+  max-height: 457px;
 }
 
 .map__mark {
   position: absolute;
-  top: 42%;
-  right: 47%;
-  transform: translate(50%, -50%);
+  top: 30%;
+  right: 40%;
+  z-index: 15;
+  cursor: pointer;
 }

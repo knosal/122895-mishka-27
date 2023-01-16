@@ -5,28 +5,69 @@
 }
 
 .featured__wrapper {
-  @include bootstrap.wrapper;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto;
-  padding-bottom: 36px;
+  @include bootstrap.wrapper-mobile;
+  padding-bottom: 42px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: grid;
+    grid-template-columns: 292px 1fr;
+    column-gap: 42px;
+    grid-template-areas:
+      "title title"
+      "description product"
+      "price product";
+
+    @include bootstrap.wrapper-tablet;
+    padding-bottom: 69px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    position: relative;
+    grid-template-columns: 125px 292px 1fr;
+    grid-template-areas:
+      ". title title"
+      ". description product"
+      ". price product";
+    column-gap: 50px;
+
+    @include bootstrap.wrapper-desktop;
+  }
 }
 
 .featured__title {
-  grid-column: span 3;
-  position: relative;
-
   @include bootstrap.title(25px);
   margin-bottom: 41px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-area: title;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 }
 
 .featured__subtitle {
   position: absolute;
+  top: 34px;
   display: block;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    top: 0;
+    display: inline-block;
+    right: 50px;
+    width: 100px;
+    text-align: center;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    left: 30px;
+  }
 }
 
 .featured__description-inner {
-  grid-column: span 3;
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-area: description;
+  }
 }
 
 .featured__description-text {
@@ -63,11 +104,23 @@
 }
 
 .featured__image-inner {
-  grid-column: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-area: product;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-row-start: 1;
+  }
 }
 
 .featured__price-inner {
-  grid-column: span 3;
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-area: price;
+  }
 }
 
 .featured__price {
@@ -84,4 +137,8 @@
 
 .featured__button {
   width: 100%;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    max-width: 100%;
+  }
 }

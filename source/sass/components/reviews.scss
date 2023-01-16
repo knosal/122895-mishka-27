@@ -2,12 +2,40 @@
 
 .reviews {
   position: relative;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 82.5px;
+    padding-bottom: 47px;
+    background-image: url("../img/review.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+  }
 }
 
 .reviews__wrapper {
-  @include bootstrap.wrapper;
+  @include bootstrap.wrapper-mobile;
   height: 100%;
-  margin-bottom: 38px;
+  padding-bottom: 51px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 175px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title button"
+      "review review"
+      ". control";
+    column-gap: 20px;
+    row-gap: 20px;
+
+    @include bootstrap.wrapper-tablet;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    padding-left: 175px;
+
+    @include bootstrap.wrapper-desktop;
+  }
 }
 
 .reviews__title {
@@ -15,24 +43,59 @@
 
   @include bootstrap.title(25px);
   margin-bottom: 14px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-area: title;
+    margin-bottom: 38.5px;
+  }
 }
 
-.reviews__item {
-  margin: 0;
-  font-size: 15px;
-  line-height: 30px;
+.reviews__list {
+  @media (min-width: bootstrap.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 175px;
+    grid-area: review;
+    grid-template-areas:
+      "review review"
+      "author control";
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  &--second {
+    display: none;
+  }
+
+  &--third {
+    display: none;
+  }
 }
 
 .reviews__text {
-  margin-bottom: 33px;
+  margin: 0;
+  line-height: 24px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-area: review;
+    margin-bottom: 41px;
+  }
 }
 
 .reviews__author-info {
+  margin: 0;
+  font-size: 15px;
+  line-height: 30px;
+  margin-top: 33px;
   margin-bottom: 30px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-area: author;
+  }
 }
 
 .reviews__author-name {
-  margin-bottom: 30px;
+  display: block;
+  margin: 0;
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
@@ -42,6 +105,13 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 38px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-area: control;
+    align-items: center;
+    margin-top: -115px;
+    padding: 0 19px;
+  }
 }
 
 .reviews__arrow {
@@ -50,4 +120,26 @@
   padding-left: 37px;
   padding-right: 42px;
   outline: 1px solid bootstrap.$colorLightGrey;
+
+  &:hover,
+  &:focus-within {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding: 0;
+    outline: none;
+  }
+}
+
+.reviews__create-button {
+  @media (min-width: bootstrap.$tablet-width) {
+    grid-area: button;
+    height: min-content;
+    width: 100%;
+  }
 }

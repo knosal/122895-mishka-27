@@ -4,6 +4,8 @@
   display: block;
 
   @include bootstrap.button-reset;
+  max-width: 260px;
+  margin: 0 auto;
   padding: 16px 0;
   font-family: bootstrap.$open-sans;
   font-weight: 700;
@@ -15,10 +17,23 @@
   border: 2px solid bootstrap.$colorDarkGrey;
   color: bootstrap.$colorDarkGrey;
 
+  &:hover,
+  &:focus-within {
+    color: bootstrap.$colorWhite;
+    background-color: bootstrap.$colorDarkGrey;
+  }
+
+  &:active {
+    color: rgba(bootstrap.$colorWhite, 0.3);
+  }
 
   &--green {
     color: bootstrap.$colorWhite;
     border-color: bootstrap.$colorGreen-primary;
     background-color: bootstrap.$colorGreen-primary;
+
+    &:hover {
+      border: 2px solid bootstrap.$colorDarkGrey;
+    }
   }
 }

@@ -12,6 +12,15 @@
 }
 
 .page__body {
-  max-width: 320px;
-  margin: auto;
+  min-height: 100%;
+  margin: 0;
+  background-color: bootstrap.$colorWhite;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    min-width: bootstrap.$tablet-width;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    min-width: bootstrap.$desktop-width;
+  }
 }

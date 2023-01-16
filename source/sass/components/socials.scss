@@ -9,3 +9,19 @@
 
   padding: 0 10px;
 }
+
+.socials__link {
+  color: bootstrap.$colorBlack;
+
+  &:hover > svg {
+    color: bootstrap.$colorGreen-hover;
+  }
+
+  &:active > svg {
+    color: rgba(bootstrap.$colorGreen-hover, 0.3);
+  }
+}
+
+.socials__link > svg {
+  fill: currentColor;
+}

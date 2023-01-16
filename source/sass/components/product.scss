@@ -4,6 +4,17 @@
   display: flex;
   flex-direction: column;
   outline: 1px solid bootstrap.$colorLightGrey;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    flex-direction: row;
+    min-height: 334px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    flex-direction: column;
+    width: 316px;
+    min-height: 659px;
+  }
 }
 
 .product__link-image {
@@ -15,6 +26,13 @@
   padding-right: 28px;
   padding-bottom: 25px;
   padding-left: 28px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
 }
 
 .product__link-title {
@@ -24,6 +42,15 @@
 .product__title {
   @include bootstrap.title(17px, 24px);
   margin-bottom: 6px;
+
+  &:hover,
+  &:focus-within {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product__description {
@@ -51,4 +78,19 @@
 
 .product__button-buy {
   @include bootstrap.button-reset;
+
+  &:hover .product__icon,
+  &:focus-within .product__icon {
+    opacity: 1;
+    color: bootstrap.$colorGreen-primary;
+  }
+
+  &:active .product__icon {
+    opacity: 0.3;
+    color: bootstrap.$colorGreen-primary;
+  }
+}
+
+.product__icon {
+  opacity: 0.2;
 }

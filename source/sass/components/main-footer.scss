@@ -4,25 +4,71 @@
   background-color: bootstrap.$colorGrey;
 }
 
-.main-footer__social {
-  @include bootstrap.wrapper;
+.main-footer__wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 46px;
+
+  padding: 46px 30px 32px 30px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 122px;
+    padding: 51px 50px 58px 50px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.wrapper-desktop;
+  }
+}
+
+.main-footer__link-logo {
+  display: none;
+  color: bootstrap.$colorBlack;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    display: block;
+
+    &:hover {
+      color: bootstrap.$colorGreen-hover;
+    }
+
+    &:active {
+      color: rgba(bootstrap.$colorGreen-hover, 0.3);
+    }
+  }
+}
+
+.main-footer__logo-icon {
+  fill: currentColor;
+}
+
+.main-footer__social {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 30.5px;
   padding-bottom: 30.5px;
   border-bottom: 1px solid rgba(229, 229, 229, 1);
+
+  @media (min-width: bootstrap.$tablet-width) {
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
 }
 
 .main-footer__copyright {
-  @include bootstrap.wrapper;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 25px;
-  padding-top: 29px;
-  padding-bottom: 32px;
   color: bootstrap.$colorBlack;
 }

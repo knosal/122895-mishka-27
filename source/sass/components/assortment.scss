@@ -2,13 +2,30 @@
 
 .assortment {
   min-height: 373px;
-  background-image: url("../img/handmade.jpg");
+  background-image: url("../img/index/handmade.jpg");
   background-color: bootstrap.$colorGrey;
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
 
+  @media (max-width: bootstrap.$mobile-width-only) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/handmade@2x.jpg");
+      background-size: 320px 383px;
+    }
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
+    background: url("../img/index/handmade-tablet.jpg");
+    background-color: bootstrap.$colorGrey;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/handmade-tablet@2x.jpg");
+      background-size: contain;
+    }
+
     &--section-wavy::after {
       content: "";
       position: absolute;
@@ -17,6 +34,18 @@
       height: 24px;
       background-image: url("../img/svg/zigzag-fill-desktop-icon.svg");
       z-index: 10;
+    }
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    background: url("../img/index/handmade-desktop.jpg");
+    background-color: bootstrap.$colorGrey;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/handmade-desktop@2x.jpg");
+      background-size: contain;
     }
   }
 }

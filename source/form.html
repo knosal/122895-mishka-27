@@ -12,7 +12,11 @@
   <header class="main-header">
     <div class="main-header__wrapper">
       <a class="main-header__link-logo" href="index.html">
-        <img class="main-header__logo-icon" src="img/svg/logo-mobile-icon.svg" width="86" height="35" alt="Логотип сайта 'Мишка'">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/svg/logo-desktop-icon.svg" width="149" height="72">
+          <source media="(min-width: 768px)" srcset="img/svg/logo-tablet-icon.svg" width="113" height="46">
+          <img src="img/svg/logo-mobile-icon.svg" srcset="img/svg/logo-mobile-icon.svg" width="86" height="35" alt="Логотип интернет-магазин игрушек: Мишка">
+        </picture>
       </a>
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
         <button class="main-navigation__toogle" type="button">
@@ -63,7 +67,6 @@
       </nav>
     </div>
   </header>
-
   <main class="main-container">
     <section class="order">
       <div class="order__wrapper">

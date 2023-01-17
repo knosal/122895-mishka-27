@@ -12,7 +12,11 @@
   <header class="main-header">
     <div class="main-header__wrapper">
       <a class="main-header__link-logo" href="index.html">
-        <img class="main-header__logo-icon" src="img/svg/logo-mobile-icon.svg" width="86" height="35" alt="Логотип сайта 'Мишка'">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/svg/logo-desktop-icon.svg" width="149" height="72">
+          <source media="(min-width: 768px)" srcset="img/svg/logo-tablet-icon.svg" width="113" height="46">
+          <img src="img/svg/logo-mobile-icon.svg" srcset="img/svg/logo-mobile-icon.svg" width="86" height="35" alt="Логотип интернет-магазин игрушек: Мишка.">
+        </picture>
       </a>
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
         <button class="main-navigation__toogle" type="button">
@@ -74,7 +78,11 @@
         <ul class="catalog__list">
           <li class="catalog__item product">
             <a class="product__link-image" href="#">
-              <img class="product__image" src="img/bunny-hop.jpg" width="260" height="195" alt="Игрушечный заяц">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/catalog/bunny-hop-desktop.jpg 1x, img/catalog/bunny-hop-desktop@2x.jpg 2x" width="316" height="462">
+                <source media="(min-width: 768px)" srcset="img/catalog/bunny-hop-tablet.jpg 1x, img/catalog/bunny-hop-tablet@2x.jpg 2x" width="334" height="334">
+                <img class="product__image" src="img/catalog/bunny-hop.jpg" srcset="img/catalog/bunny-hop@2x.jpg 2x" width="260" height="195" alt="Игрушечный заяц.">
+              </picture>
             </a>
             <div class="product__info-inner">
               <a class="product__link-title" href="#">
@@ -97,7 +105,11 @@
           </li>
           <li class="catalog__item product">
             <a class="product__link-image" href="#">
-              <img class="product__image" src="img/laundry-basket.jpg" width="260" height="195" alt="Корзинка для белья">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/catalog/laundry-basket-desktop.jpg 1x, img/catalog/laundry-basket-desktop@2x.jpg 2x" width="316" height="462">
+                <source media="(min-width: 768px)" srcset="img/catalog/laundry-basket-tablet.jpg 1x, img/catalog/laundry-basket-tablet@2x.jpg 2x" width="334" height="334">
+                <img class="product__image" src="img/catalog/laundry-basket.jpg" srcset="img/catalog/laundry-basket@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья.">
+              </picture>
             </a>
             <div class="product__info-inner">
               <a class="product__link-title" href="#">
@@ -120,7 +132,11 @@
           </li>
           <li class="catalog__item product">
             <a class="product__link-image" href="#">
-              <img class="product__image" src="img/toy-basket.jpg" width="260" height="195" alt="Большая корзинкадля игрушек">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/catalog/toy-basket-desktop.jpg 1x, img/catalog/toy-basket-desktop@2x.jpg 2x" width="316" height="462">
+                <source media="(min-width: 768px)" srcset="img/catalog/toy-basket-tablet.jpg 1x, img/catalog/toy-basket-tablet@2x.jpg 2x" width="334" height="334">
+                <img class="product__image" src="img/catalog/toy-basket.jpg" srcset="img/catalog/toy-basket@2x.jpg 2x" width="260" height="195" alt="Большая корзинка для игрушек.">
+              </picture>
             </a>
             <div class="product__info-inner">
               <a class="product__link-title" href="#">
@@ -156,8 +172,11 @@
           <button class="production__button button-primary">Сделать заказ</button>
         </div>
         <p class="production__video-inner">
-          <video class="production__video" width="260" height="150"
-            poster="img/video-screensaver.jpg"></video>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/catalog/video-basket-desktop.jpg" width="683" height="455">
+            <source media="(min-width: 768px)" srcset="img/catalog/video-basket-tablet.jpg" width="666" height="455">
+            <img class="production__video" src="img/catalog/video-basket.jpg" width="258" height="150" alt="Видеорилок про вязанную корзину.">
+          </picture>
           <svg class="production__video-play-icon" width="101" height="77" viewBox="0 0 101 77" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M97.0001 18.1C97.0001 18.1 96.1001 11.1 93.2001 7.99997C89.6001 3.99997 85.5001 3.89995 83.7001 3.69995C70.4001 2.69995 50.4001 2.69995 50.4001 2.69995H50.3001C50.3001 2.69995 30.3001 2.69995 17.0001 3.69995C15.1001 3.89995 11.1001 3.99997 7.50011 7.99997C4.70011 11.1 3.7001 18.1 3.7001 18.1C3.7001 18.1 2.80011 26.3 2.80011 34.5V42.2C2.80011 50.4 3.7001 58.6 3.7001 58.6C3.7001 58.6 4.60011 65.6 7.50011 68.7C11.1001 72.7 15.9001 72.6 18.0001 73C25.6001 73.8 50.4001 74 50.4001 74C50.4001 74 70.4001 74 83.7001 73C85.6001 72.8 89.6001 72.7 93.2001 68.7C96.0001 65.6 97.0001 58.6 97.0001 58.6C97.0001 58.6 97.9001 50.4 97.9001 42.2V34.5C97.9001 26.3 97.0001 18.1 97.0001 18.1Z"
                     fill="#63D1BB" />

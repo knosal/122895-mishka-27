@@ -38,6 +38,7 @@
 .featured__title {
   @include bootstrap.title(25px);
   margin-bottom: 18px;
+  z-index: 10;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: title;
@@ -51,6 +52,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.title(53px, 57px);
+    margin-top: 61px;
   }
 }
 
@@ -88,6 +90,10 @@
   margin-bottom: 41px;
   font-size: 15px;
   line-height: 20px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .featured__description-list-inner {
@@ -127,9 +133,14 @@
   }
 }
 
+.featured__image {
+  z-index: 1;
+}
+
 .featured__price-inner {
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: price;
+    margin-top: auto;
   }
 }
 

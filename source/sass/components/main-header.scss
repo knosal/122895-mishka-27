@@ -38,7 +38,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    left: 50%;
+    left: 47%;
     transform: translate(0, -50%);
   }
 
@@ -50,11 +50,6 @@
   &:active .main-header__logo-icon {
     opacity: 0.3;
   }
-}
-
-.main-header__logo-icon {
-  width: 86px;
-  height: 35px;
 }
 
 .main-header__delivery-promo {

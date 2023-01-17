@@ -19,7 +19,12 @@
 
 .product__link-image {
   background-color: bootstrap.$colorLightGrey;
+
+  & img {
+    width: 100%;
+  }
 }
+
 
 .product__info-inner {
   padding-top: 27.5px;

@@ -156,13 +156,11 @@
 
   &:hover,
   &:focus-within {
-    width: auto;
-    height: 77px * 1.2;
+    transform: translate(-50%, -50%) scale(1.2);
   }
 
   &:active {
     opacity: 0.3;
-    width: auto;
-    height: 77px * 0.8;
+    transform: translate(-50%, -50%) scale(0.8);
   }
 }

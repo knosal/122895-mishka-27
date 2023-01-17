@@ -99,12 +99,12 @@
   &:hover .product__icon,
   &:focus-within .product__icon {
     opacity: 1;
-    color: bootstrap.$colorGreen-primary;
+    fill: bootstrap.$colorGreen-primary;
   }
 
   &:active .product__icon {
     opacity: 0.3;
-    color: bootstrap.$colorGreen-primary;
+    fill: bootstrap.$colorGreen-primary;
   }
 }
 

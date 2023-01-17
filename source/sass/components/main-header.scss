@@ -42,12 +42,12 @@
     transform: translate(0, -50%);
   }
 
-  &:hover .main-header__logo-icon {
+  &:hover img {
     opacity: 0.6;
   }
 
-  &:focus-within .main-header__logo-icon,
-  &:active .main-header__logo-icon {
+  &:focus-within img,
+  &:active img {
     opacity: 0.3;
   }
 }

@@ -44,7 +44,15 @@
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-top: 133px;
+    @include bootstrap.title(43px, 50px);
+    padding-top: 155px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.title(53px, 57px);
+    padding-top: 258px;
   }
 }
 

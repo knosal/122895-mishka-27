@@ -46,7 +46,7 @@
 }
 
 //Заголовок
-@mixin title($f-size, $l-height: 30px) {
+@mixin title($f-size: 25px, $l-height: 30px) {
   margin: 0;
   font-weight: 700;
   font-style: normal;

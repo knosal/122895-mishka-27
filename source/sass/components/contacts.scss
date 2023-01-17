@@ -79,6 +79,7 @@
   margin-bottom: 28px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.title(43px, 50px);
     @include bootstrap.wrapper-tablet;
     align-items: center;
   }
@@ -86,6 +87,8 @@
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: title;
     margin: 34px 0;
+
+    @include bootstrap.title(53px, 57px);
   }
 }
 

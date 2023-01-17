@@ -60,6 +60,7 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    font-size: 20px;
     order: 2;
   }
 
@@ -85,7 +86,10 @@
   padding-right: 29px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    padding-top: 0;
+    padding-right: 17px;
     padding-bottom: 46px;
+    padding-left: 40px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -123,6 +127,7 @@
   margin: 0;
 
   @media (min-width: bootstrap.$tablet-width) {
+    font-size: 15px;
     order: 1;
   }
 
@@ -133,10 +138,13 @@
 
 .production__video {
   display: block;
+  width: 100%;
+  height: auto;
   background-color: bootstrap.$colorLightGrey;
 
   @media (min-width: bootstrap.$tablet-width) {
     order: 2;
+    height: 455px;
   }
 }
 

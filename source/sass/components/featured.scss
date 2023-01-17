@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: 292px 1fr;
     column-gap: 42px;
+    row-gap: 38px;
     grid-template-areas:
       "title title"
       "description product"
@@ -36,23 +37,28 @@
 
 .featured__title {
   @include bootstrap.title(25px);
-  margin-bottom: 41px;
+  margin-bottom: 18px;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: title;
+
+    @include bootstrap.title(43px);
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+    padding-right: 110px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.title(53px, 57px);
   }
 }
 
 .featured__subtitle {
-  position: absolute;
-  top: 34px;
   display: block;
 
   @media (min-width: bootstrap.$tablet-width) {
-    top: 0;
+    position: absolute;
     display: inline-block;
     right: 50px;
     width: 100px;
@@ -114,6 +120,10 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-row-start: 1;
+  }
+
+  & img {
+    background-color: bootstrap.$colorGrey;
   }
 }
 

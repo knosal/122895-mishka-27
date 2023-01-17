@@ -45,8 +45,16 @@
   margin-bottom: 14px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.title(43px, 50px);
     grid-area: title;
     margin-bottom: 38.5px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-area: title;
+
+    @include bootstrap.title(53px, 57px);
+    margin-bottom: 39px;
   }
 }
 

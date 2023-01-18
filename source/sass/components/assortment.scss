@@ -166,6 +166,7 @@
 
 .assortment__link {
   display: block;
+  max-width: 85%;
 
   @include bootstrap.link-reset;
   color: bootstrap.$colorWhite;

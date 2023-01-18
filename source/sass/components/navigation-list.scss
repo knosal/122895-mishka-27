@@ -40,6 +40,10 @@
   @media (min-width: bootstrap.$desktop-width) {
     &--site .navigation-list__item {
       min-width: 175px;
+
+      &:first-child {
+        border-right: 1px solid bootstrap.$colorLightGrey;
+      }
     }
 
     &--promotions {

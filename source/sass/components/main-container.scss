@@ -26,15 +26,21 @@
 }
 
 .main-container__advantages {
+  @include bootstrap.wrapper-mobile;
+  margin: 0;
   margin-bottom: 58px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.wrapper-tablet;
+    margin: 0;
     margin-bottom: 83px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.wrapper-desktop;
+    margin: 0;
     margin-bottom: 90px;
+    padding-left: 175px;
   }
 }
 

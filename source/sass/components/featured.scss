@@ -98,6 +98,7 @@
 
 .featured__description-list-inner {
   display: flex;
+  gap: 20px;
   margin-top: auto;
   padding: 14px 0;
   border-bottom: 1px solid bootstrap.$colorLightGrey;
@@ -153,6 +154,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  text-align: center;
   color: bootstrap.$colorDarkGrey;
 }
 

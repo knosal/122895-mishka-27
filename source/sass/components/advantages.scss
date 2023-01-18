@@ -8,13 +8,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    display: grid;
-    grid-template-columns: 175px max-content max-content;
-    grid-template-areas:
-      ". title title"
-      ". advantages advantages"
-      ". advantages advantages";
-    width: auto;
+    @include bootstrap.wrapper-desktop;
   }
 }
 

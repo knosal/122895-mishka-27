@@ -84,23 +84,27 @@
 
 .reviews__text {
   margin: 0;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 33px;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: review;
     margin-bottom: 41px;
+    font-size: 17px;
   }
 }
 
 .reviews__author-info {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 30px;
-  margin-top: 33px;
   margin-bottom: 30px;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: author;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
@@ -108,8 +112,6 @@
   display: block;
   margin: 0;
   font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
 }
 
 .reviews__control {

@@ -1,5 +1,9 @@
 @use "../abstracts/bootstrap.scss";
 
+.main-container {
+  flex-grow: 1;
+}
+
 .main-container__assortment {
   position: relative;
   margin-bottom: 31px;
@@ -28,7 +32,7 @@
 .main-container__advantages {
   @include bootstrap.wrapper-mobile;
   margin: 0;
-  margin-bottom: 58px;
+  margin-bottom: 53px;
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.wrapper-tablet;
@@ -38,7 +42,6 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.wrapper-desktop;
-    margin: 0;
     margin-bottom: 90px;
     padding-left: 175px;
   }

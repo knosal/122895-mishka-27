@@ -46,7 +46,6 @@
     @include bootstrap.title(43px);
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
     padding-right: 110px;
   }
 
@@ -58,6 +57,7 @@
 
 .featured__subtitle {
   display: block;
+  margin-top: 4px;
 
   @media (min-width: bootstrap.$tablet-width) {
     position: absolute;
@@ -83,6 +83,11 @@
   margin-bottom: 28px;
   font-size: 15px;
   line-height: 24px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .featured__description-list {
@@ -156,6 +161,10 @@
   line-height: 24px;
   text-align: center;
   color: bootstrap.$colorDarkGrey;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .featured__button {

@@ -54,7 +54,6 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     width: auto;
-    margin-top: 54px;
     margin-bottom: 50px;
   }
 
@@ -72,6 +71,8 @@
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.wrapper-tablet;
     margin-bottom: 13px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

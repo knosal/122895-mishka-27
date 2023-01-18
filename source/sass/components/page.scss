@@ -12,6 +12,8 @@
 }
 
 .page__body {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
   margin: 0;
   background-color: bootstrap.$colorWhite;

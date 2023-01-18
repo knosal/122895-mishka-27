@@ -9,6 +9,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.wrapper-desktop;
+    width: auto;
   }
 }
 
@@ -39,14 +40,12 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 100px;
-    row-gap: 57px;
+    grid-template-columns: max-content max-content;
+    column-gap: 85px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: advantages;
-    column-gap: 52px;
   }
 }
 
@@ -114,6 +113,8 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.title(20px, 22px);
+
     &--bill {
       order: 3;
     }

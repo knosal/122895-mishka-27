@@ -35,15 +35,6 @@
     opacity: 0.5;
   }
 
-  /*
-//Реализация меню-бургер без js
-  &:focus-within ~ .main-navigation__inner-popover,
-  &:active ~ .main-navigation__inner-popover {
-    display: block;
-    z-index: 5;
-  }
-*/
-
   @media (min-width: bootstrap.$tablet-width) {
     display: none;
   }
@@ -69,7 +60,7 @@
 
 .main-navigation--opened .main-navigation__toogle {
   position: absolute;
-  //transform: translate(0, -50%);
+
   &::before,
   &::after {
     content: "";
@@ -114,7 +105,6 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 80px 268px;
-    grid-template-rows: 89px 69px;
     grid-template-areas:
       "logo logo navu navu"
       "navs navs . promo";
@@ -128,6 +118,7 @@
       "navp promo promo promo";
 
     @include bootstrap.wrapper-desktop;
+    width: auto;
   }
 }
 

@@ -68,7 +68,7 @@
 .assortment__title {
   @include bootstrap.title(27px);
   margin: 0 30px;
-  padding-top: 93px;
+  padding-top: 72px;
   padding-bottom: 120px;
   text-align: center;
 
@@ -81,7 +81,6 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.title(53px, 57px);
-    padding-top: 258px;
   }
 }
 
@@ -138,8 +137,6 @@
   &::after {
     content: "";
     display: block;
-    width: 60px;
-    height: 60px;
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -150,10 +147,14 @@
 
   &--interior::after {
     background-image: url("../img/svg/interior-icon.svg");
+    width: 44px;
+    height: 60px;
   }
 
   &--lego::after {
     background-image: url("../img/svg/lego-icon.svg");
+    width: 60px;
+    height: 60px;
   }
 
   @media (min-width: bootstrap.$tablet-width) {

@@ -18,12 +18,16 @@
   &--promotions {
     display: none;
     order: 3;
+
+    & .navigation-list__link {
+      font-size: 15px;
+    }
   }
 
   @media (min-width: bootstrap.$tablet-width) {
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 33px;
+    gap: 37px;
 
     &--site {
       grid-area: navs;
@@ -63,13 +67,19 @@
       visibility: hidden;
     }
   }
+
+  &--card {
+    @media (min-width: bootstrap.$tablet-width) {
+      font-size: 17px;
+    }
+  }
 }
 
 .navigation-list__item {
   display: flex;
   align-items: center;
-  padding-top: 28px;
-  padding-bottom: 27px;
+  padding-top: 17px;
+  padding-bottom: 22px;
   padding-left: 75px;
   background-color: bootstrap.$colorWhite;
   box-shadow: inset 0 1px 0 bootstrap.$colorLightGrey;
@@ -103,8 +113,6 @@
   @include bootstrap.link-reset;
 
   @media (min-width: bootstrap.$tablet-width) {
-    font-size: 15px;
-
     &:not(:first-child) {
       padding-left: 30px;
     }
@@ -144,7 +152,7 @@
     }
 
     &--card {
-      left: -60px;
+      left: -53px;
     }
   }
 }

@@ -1,8 +1,6 @@
 @use "../abstracts/bootstrap.scss";
 
 .advantages__wrapper {
-  @include bootstrap.wrapper-mobile;
-
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.wrapper-tablet;
   }
@@ -41,11 +39,13 @@
   @media (min-width: bootstrap.$tablet-width) {
     display: grid;
     grid-template-columns: max-content max-content;
-    column-gap: 85px;
+    column-gap: 100px;
+    row-gap: 50px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: advantages;
+    column-gap: 117px;
   }
 }
 
@@ -57,8 +57,6 @@
   &::before {
     content: "";
     display: block;
-    width: 55px;
-    height: 55px;
     background-position: center center;
     background-repeat: no-repeat;
   }
@@ -68,8 +66,10 @@
   }
 
   &--flower::before {
+    width: 48px;
+    height: 38px;
     background-image: url("../img/svg/flower-icon.svg");
-    margin-bottom: 16px;
+    margin-bottom: 17px;
   }
 
   &--bill {
@@ -77,7 +77,10 @@
   }
 
   &--bill::before {
+    width: 47px;
+    height: 36px;
     background-image: url("../img/svg/bill-icon.svg");
+    margin-bottom: 24px;
   }
 
   &--heart {
@@ -85,7 +88,10 @@
   }
 
   &--heart::before {
+    width: 47px;
+    height: 38px;
     background-image: url("../img/svg/heart-icon.svg");
+    margin-bottom: 16px;
   }
 
   &--tangle {
@@ -93,7 +99,10 @@
   }
 
   &--tangle::before {
+    width: 42px;
+    height: 45px;
     background-image: url("../img/svg/tangle-icon.svg");
+    margin-bottom: 16px;
   }
 
   &--rocket {
@@ -101,7 +110,10 @@
   }
 
   &--rocket::before {
+    width: 49px;
+    height: 39px;
     background-image: url("../img/svg/rocket-icon.svg");
+    margin-bottom: 18px;
   }
 
   &--gift {
@@ -109,7 +121,10 @@
   }
 
   &--gift::before {
+    width: 40px;
+    height: 39px;
     background-image: url("../img/svg/gift-icon.svg");
+    margin-bottom: 20px;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -132,11 +147,11 @@
     }
 
     &--flower::before {
-      margin-bottom: 13px;
+      margin-bottom: 19px;
     }
 
     &--bill::before {
-      margin-bottom: 14px;
+      margin-bottom: 22px;
     }
 
     &--heart::before {
@@ -144,11 +159,11 @@
     }
 
     &--tangle::before {
-      margin-bottom: 23px;
+      margin-bottom: 13px;
     }
 
     &--rocket::before {
-      margin-bottom: 23px;
+      margin-bottom: 21px;
     }
 
     &--gift::before {

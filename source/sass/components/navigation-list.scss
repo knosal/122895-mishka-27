@@ -32,6 +32,10 @@
     &--site {
       grid-area: navs;
       order: 2;
+
+      & .navigation-list__link {
+        font-size: 15px;
+      }
     }
 
     &--user {
@@ -42,6 +46,12 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    &--site {
+      & .navigation-list__link {
+        font-size: 17px;
+      }
+    }
+
     &--site .navigation-list__item {
       min-width: 175px;
 

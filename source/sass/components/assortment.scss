@@ -16,7 +16,7 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    background: url("../img/index/handmade-tablet.jpg");
+    background-image: url("../img/index/handmade-tablet.jpg");
     background-color: bootstrap.$colorGrey;
     background-position: top center;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    background: url("../img/index/handmade-desktop.jpg");
+    background-image: url("../img/index/handmade-desktop.jpg");
     background-color: bootstrap.$colorGrey;
     background-position: top center;
     background-repeat: no-repeat;

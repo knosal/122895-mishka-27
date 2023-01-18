@@ -19,7 +19,12 @@
 
 .product__link-image {
   background-color: bootstrap.$colorLightGrey;
+
+  & img {
+    width: 100%;
+  }
 }
+
 
 .product__info-inner {
   padding-top: 27.5px;
@@ -51,6 +56,10 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 20px;
+  }
 }
 
 .product__description {
@@ -58,6 +67,10 @@
   padding-bottom: 17.5px;
   font-size: 13px;
   line-height: 30px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 15px;
+  }
 }
 
 .product__price-wrapper {
@@ -74,6 +87,10 @@
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .product__button-buy {
@@ -82,12 +99,12 @@
   &:hover .product__icon,
   &:focus-within .product__icon {
     opacity: 1;
-    color: bootstrap.$colorGreen-primary;
+    fill: bootstrap.$colorGreen-primary;
   }
 
   &:active .product__icon {
     opacity: 0.3;
-    color: bootstrap.$colorGreen-primary;
+    fill: bootstrap.$colorGreen-primary;
   }
 }
 

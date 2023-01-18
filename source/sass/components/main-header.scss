@@ -38,23 +38,18 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    left: 50%;
+    left: 44%;
     transform: translate(0, -50%);
   }
 
-  &:hover .main-header__logo-icon {
+  &:hover img {
     opacity: 0.6;
   }
 
-  &:focus-within .main-header__logo-icon,
-  &:active .main-header__logo-icon {
+  &:focus-within img,
+  &:active img {
     opacity: 0.3;
   }
-}
-
-.main-header__logo-icon {
-  width: 86px;
-  height: 35px;
 }
 
 .main-header__delivery-promo {

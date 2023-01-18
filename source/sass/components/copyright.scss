@@ -6,11 +6,11 @@
   gap: 25px;
 
   &:hover svg {
-    color: bootstrap.$colorGreen-hover;
+    fill: bootstrap.$colorGreen-hover;
   }
 
   &:active svg {
-    color: rgba(bootstrap.$colorGreen-hover, 0.3);
+    fill: rgba(bootstrap.$colorGreen-hover, 0.3);
   }
 }
 
@@ -27,5 +27,5 @@
 }
 
 .copyright__link > svg {
-  fill: currentColor;
+  fill: bootstrap.$colorGreen-primary;
 }

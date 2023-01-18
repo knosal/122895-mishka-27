@@ -166,6 +166,7 @@
   @media (min-width: bootstrap.$tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
 
     @include bootstrap.wrapper-tablet;
   }

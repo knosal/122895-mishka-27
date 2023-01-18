@@ -12,6 +12,7 @@
     display: grid;
     grid-template-columns: 292px 1fr;
     column-gap: 42px;
+    row-gap: 38px;
     grid-template-areas:
       "title title"
       "description product"
@@ -36,23 +37,30 @@
 
 .featured__title {
   @include bootstrap.title(25px);
-  margin-bottom: 41px;
+  margin-bottom: 18px;
+  z-index: 10;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: title;
+
+    @include bootstrap.title(43px);
     display: flex;
     align-items: center;
     margin-bottom: 50px;
+    padding-right: 110px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.title(53px, 57px);
+    margin-top: 61px;
   }
 }
 
 .featured__subtitle {
-  position: absolute;
-  top: 34px;
   display: block;
 
   @media (min-width: bootstrap.$tablet-width) {
-    top: 0;
+    position: absolute;
     display: inline-block;
     right: 50px;
     width: 100px;
@@ -82,10 +90,15 @@
   margin-bottom: 41px;
   font-size: 15px;
   line-height: 20px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .featured__description-list-inner {
   display: flex;
+  gap: 20px;
   margin-top: auto;
   padding: 14px 0;
   border-bottom: 1px solid bootstrap.$colorLightGrey;
@@ -115,11 +128,20 @@
   @media (min-width: bootstrap.$desktop-width) {
     grid-row-start: 1;
   }
+
+  & img {
+    background-color: bootstrap.$colorGrey;
+  }
+}
+
+.featured__image {
+  z-index: 1;
 }
 
 .featured__price-inner {
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: price;
+    margin-top: auto;
   }
 }
 
@@ -132,6 +154,7 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
+  text-align: center;
   color: bootstrap.$colorDarkGrey;
 }
 

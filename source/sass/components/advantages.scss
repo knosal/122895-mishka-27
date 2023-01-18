@@ -8,13 +8,6 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    display: grid;
-    grid-template-columns: 175px max-content max-content;
-    grid-template-areas:
-      ". title title"
-      ". advantages advantages"
-      ". advantages advantages";
-
     @include bootstrap.wrapper-desktop;
   }
 }
@@ -25,8 +18,16 @@
   @include bootstrap.title(25px);
   margin-bottom: 28px;
 
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.title(43px, 50px);
+    margin-bottom: 42px;
+  }
+
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: title;
+
+    @include bootstrap.title(53px, 57px);
+    margin-bottom: 39px;
   }
 }
 

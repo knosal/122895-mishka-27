@@ -4,11 +4,14 @@
   position: relative;
 
   @media (min-width: bootstrap.$tablet-width) {
-    padding-top: 82.5px;
-    padding-bottom: 47px;
-    background-image: url("../img/review.png");
+    background-image: url("../img/index/review.jpg");
     background-repeat: no-repeat;
     background-position: top left;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index/review@2x.jpg");
+      background-size: contain;
+    }
   }
 }
 
@@ -27,14 +30,14 @@
       ". control";
     column-gap: 20px;
     row-gap: 20px;
+    padding: 78px 0;
 
     @include bootstrap.wrapper-tablet;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     padding-left: 175px;
-
-    @include bootstrap.wrapper-desktop;
+    width: auto;
   }
 }
 
@@ -45,8 +48,16 @@
   margin-bottom: 14px;
 
   @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.title(43px, 50px);
     grid-area: title;
     margin-bottom: 38.5px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    grid-area: title;
+
+    @include bootstrap.title(53px, 57px);
+    margin-bottom: 39px;
   }
 }
 

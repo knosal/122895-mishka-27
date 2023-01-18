@@ -1,6 +1,7 @@
 @use "../abstracts/bootstrap.scss";
 
 .order__inner-title {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,9 +12,20 @@
   @media (min-width: bootstrap.$tablet-width) {
     min-height: 238px;
     margin-bottom: 54px;
+
+    &--section-wavy::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 24px;
+      background-image: url("../img/svg/zigzag-fill-desktop-icon.svg");
+      z-index: 10;
+    }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
+    min-height: 272px;
     margin-bottom: 99px;
   }
 }
@@ -23,6 +35,14 @@
   @include bootstrap.wrapper-mobile;
   padding: 73px 0;
   text-align: center;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    @include bootstrap.title(43px, 50px);
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    @include bootstrap.title(53px, 57px);
+  }
 }
 
 .order__form-wrapper {

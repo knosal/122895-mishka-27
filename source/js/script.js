@@ -41,3 +41,8 @@ featuredBuyButton.onclick = function () {
 modalCloseButton.onclick = function () {
   indexModal.classList.add("modal--close");
 };
+
+// -------- Карта
+let map = document.querySelector(".contacts__map-image");
+
+map.classList.add("contacts__map-image--js");

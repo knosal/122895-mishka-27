@@ -1,23 +1,27 @@
 @use "../abstracts/bootstrap.scss";
 
+.main-container {
+  flex-grow: 1;
+}
+
 .main-container__assortment {
   position: relative;
   margin-bottom: 31px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 39.5px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    margin-bottom: 54px;
+    margin-bottom: 67px;
   }
 }
 
 .main-container__featured {
-  margin-bottom: 39px;
+  margin-bottom: 30px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 59px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -27,8 +31,7 @@
 
 .main-container__advantages {
   @include bootstrap.wrapper-mobile;
-  margin: 0;
-  margin-bottom: 58px;
+  margin-bottom: 57px;
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.wrapper-tablet;
@@ -38,17 +41,16 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.wrapper-desktop;
-    margin: 0;
     margin-bottom: 90px;
     padding-left: 175px;
   }
 }
 
 .main-container__reviews {
-  margin-bottom: 38px;
+  margin-bottom: 36px;
 
   @media (min-width: bootstrap.$tablet-width) {
-    margin-bottom: 46px;
+    margin-bottom: 70px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

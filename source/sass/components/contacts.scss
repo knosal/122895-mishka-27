@@ -6,7 +6,7 @@
   @media (min-width: bootstrap.$desktop-width) {
     display: grid;
     grid-template-columns: 125px 361px 1fr;
-    column-gap: 50px;
+    column-gap: 17px;
     grid-template-areas:
       ". title map"
       ". description map"
@@ -24,9 +24,9 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     display: flex;
-    gap: 51px;
+    gap: 53px;
     margin: auto;
-    padding-top: 40px;
+    padding-top: 49px;
     padding-bottom: 49px;
 
     @include bootstrap.wrapper-tablet;
@@ -37,18 +37,18 @@
     gap: 33px;
     flex-direction: column;
     margin: 0;
-    margin-bottom: 74px;
+    margin-bottom: 54px;
     padding: 0;
+    padding-left: 30px;
   }
 }
 
 .contacts__address-inner {
   display: flex;
   justify-content: flex-start;
-  gap: 5px;
 
   &:first-of-type {
-    margin-bottom: 37px;
+    margin-bottom: 30px;
   }
 
   @include bootstrap.wrapper-mobile;
@@ -62,7 +62,7 @@
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: title;
     padding: 0;
-    width: auto;
+    width: 297px;
     height: auto;
 
     &:first-of-type {
@@ -87,7 +87,9 @@
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.title(53px, 57px);
     grid-area: title;
-    margin-top: 79px;
+    margin-top: 71px;
+    margin-bottom: 30px;
+    padding-left: 30px;
   }
 }
 
@@ -104,9 +106,7 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
-    right: 0;
-    width: 100px;
-    text-align: center;
+    right: 53px;
 
     &::after {
       display: inline-block;
@@ -114,7 +114,8 @@
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    left: 10px;
+    left: 63px;
+    top: 60px;
   }
 }
 
@@ -128,10 +129,20 @@
   &::after {
     content: ": ";
   }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__address-value {
   margin: 0;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .contacts__address-link {
@@ -173,12 +184,12 @@
 
 .contacts__feedback {
   @include bootstrap.wrapper-mobile;
-  margin-bottom: 39px;
 
   @media (min-width: bootstrap.$desktop-width) {
-    width: 230px;
+    width: 270px;
     margin: 0;
     margin-top: auto;
+    padding-left: 30px;
     grid-area: feedback;
   }
 }

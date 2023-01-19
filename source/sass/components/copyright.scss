@@ -3,7 +3,7 @@
 .copyright {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 16px;
 
   &:hover svg {
     fill: bootstrap.$colorGreen-hover;
@@ -22,8 +22,6 @@
 
 .copyright__link {
   display: flex;
-  align-items: center;
-  color: bootstrap.$colorBlack;
 }
 
 .copyright__link > svg {

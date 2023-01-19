@@ -6,14 +6,30 @@
 }
 
 .form__group {
-  margin-bottom: 30px;
+  margin-bottom: 21px;
 
   &--email {
     margin: 0;
   }
 
+  &--phone {
+    margin-bottom: 33px;
+  }
+
+  &--other {
+    margin-bottom: 7px;
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
     margin: 0;
+
+    &--radio {
+      margin-bottom: 5px;
+    }
+
+    &--checkbox {
+      margin-bottom: 7px;
+    }
 
     &:nth-child(even) {
       background-color: rgba(241, 241, 241, 1);
@@ -38,11 +54,11 @@
 
 .form__group-wrapper {
   display: grid;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-template-columns: 150px 1fr;
-    column-gap: 15px;
+    column-gap: 14px;
     padding-top: 50px;
     padding-bottom: 50px;
 
@@ -56,7 +72,7 @@
   @media (min-width: bootstrap.$desktop-width) {
     grid-template-columns: 100px 1fr;
     padding-left: 60px;
-    padding-right: 225px;
+    padding-right: 178px;
 
     @include bootstrap.wrapper-desktop;
   }
@@ -66,10 +82,12 @@
   margin: 0;
 
   &:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    font-size: 19px;
+
     &--name {
       display: flex;
       align-items: center;
@@ -115,7 +133,7 @@
   }
 
   &--checkbox {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 
   &--name {
@@ -138,21 +156,34 @@
 .form__list {
   display: grid;
   grid-template-columns: auto;
-  gap: 22px;
+
+  &--radio {
+    gap: 11px;
+  }
+
+  &--checkbox {
+    gap: 23px;
+  }
 
   @include bootstrap.ul-reset;
 
   @media (min-width: bootstrap.$tablet-width) {
+    &--radio {
+      gap: 35px;
+    }
+
     &--checkbox {
       grid-template-columns: 1fr 1fr;
-      column-gap: 20px;
+      column-gap: 15px;
+      row-gap: 40px;
+      padding-top: 3px;
     }
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     &--checkbox {
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 60px;
+      column-gap: 95px;
     }
   }
 }
@@ -175,7 +206,6 @@
     width: 700px;
     justify-content: space-between;
     gap: 10px;
-    padding-right: 50px;
   }
 }
 
@@ -192,6 +222,8 @@
     align-items: center;
     justify-content: flex-end;
     order: 2;
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 

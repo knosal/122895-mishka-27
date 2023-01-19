@@ -22,6 +22,16 @@
 
   & img {
     width: 100%;
+
+    @media (min-width: bootstrap.$tablet-width) {
+      min-width: 334px;
+      min-height: 334px;
+    }
+
+    @media (min-width: bootstrap.$desktop-width) {
+      min-width: auto;
+      min-height: auto;
+    }
   }
 }
 

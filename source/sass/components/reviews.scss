@@ -29,15 +29,16 @@
       "review review"
       ". control";
     column-gap: 20px;
-    row-gap: 20px;
-    padding: 78px 0;
+    padding-top: 78px;
+    padding-bottom: 105px;
 
     @include bootstrap.wrapper-tablet;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
-    padding-left: 175px;
     width: auto;
+    padding-bottom: 161px;
+    padding-left: 175px;
   }
 }
 
@@ -70,7 +71,7 @@
       "review review"
       "author control";
     column-gap: 20px;
-    row-gap: 20px;
+    row-gap: 21px;
   }
 
   &--second {
@@ -84,43 +85,52 @@
 
 .reviews__text {
   margin: 0;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 30px;
+  margin-bottom: 31px;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: review;
     margin-bottom: 41px;
+    font-size: 17px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    margin-bottom: 17px;
   }
 }
 
 .reviews__author-info {
   margin: 0;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 30px;
-  margin-top: 33px;
   margin-bottom: 30px;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: author;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
 .reviews__author-name {
   display: block;
-  margin: 0;
   font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    margin-bottom: 6px;
+  }
 }
 
 .reviews__control {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 38px;
+  margin-bottom: 34px;
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: control;
     align-items: center;
-    margin-top: -115px;
+    margin-top: -70px;
     padding: 0 19px;
   }
 }

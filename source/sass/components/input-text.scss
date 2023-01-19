@@ -30,6 +30,10 @@
     font-size: 17px;
     line-height: 18px;
     opacity: 0.3;
+
+    @media (min-width: bootstrap.$tablet-width) {
+      font-size: 19px;
+    }
   }
 
   &--mail {
@@ -55,4 +59,12 @@
   right: 0;
   color: rgba(bootstrap.$colorBlack, 0.2);
   fill: currentColor;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    right: 28px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    right: 0;
+  }
 }

@@ -31,17 +31,19 @@
 }
 
 .order__title {
-  @include bootstrap.title(25px);
+  @include bootstrap.title(27px);
   @include bootstrap.wrapper-mobile;
   padding: 73px 0;
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.title(43px, 50px);
+    padding-top: 87px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.title(53px, 57px);
+    padding-top: 60px;
   }
 }
 
@@ -54,12 +56,12 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     width: auto;
-    margin-top: 54px;
     margin-bottom: 50px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     margin-top: 0;
+    margin-bottom: 42px;
   }
 }
 
@@ -72,6 +74,8 @@
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.wrapper-tablet;
     margin-bottom: 13px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

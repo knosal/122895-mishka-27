@@ -26,12 +26,14 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     min-height: 255px;
+    margin-bottom: 127px;
   }
 }
 
 .catalog__title {
   @include bootstrap.title(27px);
-  padding: 73px 0;
+  padding-top: 83px;
+  padding-bottom: 73px;
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
@@ -40,6 +42,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.title(53px, 57px);
+    padding-top: 79px;
   }
 }
 

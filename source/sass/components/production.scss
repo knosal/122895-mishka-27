@@ -19,7 +19,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.wrapper-tablet;
-    margin-bottom: 64px;
+    margin-bottom: 61px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
@@ -30,7 +30,7 @@
       "video info";
 
     @include bootstrap.wrapper-desktop;
-    margin-bottom: 64px;
+    margin-bottom: 100px;
   }
 }
 
@@ -40,7 +40,7 @@
   position: relative;
 
   @include bootstrap.title(17px, 24px);
-  margin-top: 22px;
+  margin-top: 26px;
   margin-bottom: 24.5px;
   padding-left: 91px;
   order: 1;
@@ -50,7 +50,7 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    left: 34px;
+    left: 39px;
     display: block;
     width: 32px;
     height: 22px;
@@ -60,21 +60,24 @@
   }
 
   @media (min-width: bootstrap.$tablet-width) {
+    margin-top: 37px;
+    margin-bottom: 20px;
+    padding-left: 106px;
     font-size: 20px;
     order: 2;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: title;
-    max-width: 178;
     margin: 0;
-    margin-bottom: 28px;
+    margin-bottom: 23px;
     padding: 0;
-    padding-top: 96px;
+    padding-top: 94px;
     padding-left: 80px;
     padding-right: 57px;
 
     &--icon::before {
+      top: 40%;
       left: auto;
     }
   }
@@ -82,12 +85,13 @@
 
 .production__info-inner {
   order: 3;
-  padding: 34px;
+  margin-top: 5px;
+  padding: 33px;
   padding-right: 29px;
 
   @media (min-width: bootstrap.$tablet-width) {
     padding-top: 0;
-    padding-right: 17px;
+    padding-right: 42px;
     padding-bottom: 46px;
     padding-left: 40px;
   }
@@ -107,6 +111,11 @@
   font-size: 13px;
   line-height: 24px;
   order: 2;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    font-size: 15px;
+    line-height: 30px;
+  }
 
   @media (min-width: bootstrap.$desktop-width) {
     margin-bottom: 51px;

@@ -31,17 +31,19 @@
 }
 
 .order__title {
-  @include bootstrap.title(25px);
+  @include bootstrap.title(27px);
   @include bootstrap.wrapper-mobile;
   padding: 73px 0;
   text-align: center;
 
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.title(43px, 50px);
+    padding-top: 87px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     @include bootstrap.title(53px, 57px);
+    padding-top: 60px;
   }
 }
 
@@ -59,6 +61,7 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     margin-top: 0;
+    margin-bottom: 42px;
   }
 }
 

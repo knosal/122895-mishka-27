@@ -59,4 +59,12 @@
   right: 0;
   color: rgba(bootstrap.$colorBlack, 0.2);
   fill: currentColor;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    right: 28px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    right: 0;
+  }
 }

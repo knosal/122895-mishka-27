@@ -141,10 +141,6 @@
   @media (min-width: bootstrap.$desktop-width) {
     grid-row-start: 1;
   }
-
-  & img {
-    background-color: bootstrap.$colorGrey;
-  }
 }
 
 .featured__image {

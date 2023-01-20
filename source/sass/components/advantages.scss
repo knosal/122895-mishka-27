@@ -38,14 +38,14 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     display: grid;
-    grid-template-columns: max-content max-content;
-    column-gap: 100px;
+    grid-template-columns: 1fr 1fr;
     row-gap: 50px;
+    width: 650px;
   }
 
   @media (min-width: bootstrap.$desktop-width) {
     grid-area: advantages;
-    column-gap: 117px;
+    width: 672px;
   }
 }
 

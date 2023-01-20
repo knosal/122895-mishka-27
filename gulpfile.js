@@ -9,8 +9,8 @@ import terser from 'gulp-terser';   // минификация и оптимиз�
 import rename from 'gulp-rename';   // переименование файлов
 import squoosh from 'gulp-libsquoosh'; // Минимизируйте изображения
 import svgo from 'gulp-svgmin';       // минимизации файлов SVG
-//import sprite from 'gulp-svgstore';  // объединяет svg
-//import clean from 'del';          //
+import svgstore from 'gulp-svgstore';  // объединяет svg
+import {deleteAsync as del} from 'del';
 import browser from 'browser-sync'; //
 
 // Styles
@@ -63,21 +63,19 @@ const createWebp = () => {
 }
 
 // SVG
-const svg = () => {
+const svg =async () => {
     gulp.src(['source/img/**/*.svg', '!source/img/icon/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
-/*
-export const sprite = () => {
+const sprite = () => {
     return gulp.src('source/img/icon/*.svg')
         .pipe(svgo())
         .pipe(svgstore({inlineSvg: true }))
         .pipe(rename('sprite.svg'))
         .pipe(gulp.dest('build/img'));
 }
-*/
 
 // Copy
 const copy = (done) => {
@@ -92,12 +90,10 @@ const copy = (done) => {
   done();
 }
 
-/*
 // Delete
 const clean = () => {
   return del('build');
 };
-*/
 
 // Server
 const server = (done) => {
@@ -117,6 +113,7 @@ const reload = (done) => {
   browser.reload();
   done();
 }
+
 // Watcher (отслеживает файлы и запускает задачи)
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
@@ -126,30 +123,26 @@ const watcher = () => {
 
 // Build
 export const build = gulp.series(
-    //clean,
+    clean,
     copy,
     optimizeImages,
     gulp.parallel(
         styles,
         html,
         scripts,
-       // svg,
-      //  sprite,
         createWebp
     ),
 );
 
 // Default
 export default gulp.series(
-   // clean,
+    clean,
     copy,
     copyImages,
     gulp.parallel(
         styles,
         html,
         scripts,
-      //  svg,
-       // sprite,
         createWebp
     ),
     gulp.series(

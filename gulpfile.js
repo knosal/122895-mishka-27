@@ -7,10 +7,12 @@ import csso from 'postcss-csso';    // минимизатор CSS
 import htmlmin from 'gulp-htmlmin'; // минимизатор HTML
 import terser from 'gulp-terser';   // минификация и оптимизация javascript
 import rename from 'gulp-rename';   // переименование файлов
-import browser from 'browser-sync'; //
 import squoosh from 'gulp-libsquoosh'; // Минимизируйте изображения
-// Styles
+import svgo from 'gulp-svgmin';       // минимизации файлов SVG
+import sprite from 'gulp-svgstore';  // объединяет svg
+import browser from 'browser-sync'; //
 
+// Styles
 export const styles = () => {
   return gulp.src('source/sass/style.scss', { sourcemaps: true })
     .pipe(plumber())
@@ -42,13 +44,37 @@ export const scripts = () => {
 export const optimizeImages = () => {
   return gulp.src('source/img//*.{png,jpg}')
       .pipe(squoosh())
-      .pipe(gulp.dest('build/img'))
+      .pipe(gulp.dest('build/img'));
 }
 
 export const copyImages = () => {
   return gulp.src('source/img/**/*.{png,jpg}')
       .pipe(gulp.dest('build/img'))
 }
+
+// WebP
+export const createWebp = () => {
+  return gulp.src('source/img/**/*.{png,jpg}')
+    .pipe(squoosh({
+      webp: {}
+    }))
+    .pipe(gulp.dest('build/img'))
+}
+
+// SVG
+export const svg = () => {
+    gulp.src(['source/img/**/*.svg', '!source/img/icon/*.svg'])
+    .pipe(svgo())
+    .pipe(gulp.dest('build/img'));
+}
+/*
+export const sprite = () => {
+    return gulp.src('source/img/icon/*.svg')
+        .pipe(svgo())
+        .pipe(svgstore({inlineSvg: true }))
+        .pipe(rename('sprite.svg'))
+        .pipe(gulp.dest('build/img'));
+}*/
 
 // Copy
 export const copy = (done) => {

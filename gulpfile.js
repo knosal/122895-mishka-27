@@ -9,9 +9,9 @@ import terser from 'gulp-terser';   // минификация и оптимиз�
 import rename from 'gulp-rename';   // переименование файлов
 import squoosh from 'gulp-libsquoosh'; // Минимизируйте изображения
 import svgo from 'gulp-svgmin';       // минимизации файлов SVG
-import svgstore from 'gulp-svgstore';  // объединяет svg
+import svgstore  from 'gulp-svgstore';  // объединяет svg
 import {deleteAsync as del} from 'del';
-import browser from 'browser-sync'; //
+import browser from 'browser-sync'; // ??
 
 // Styles
 export const styles = () => {
@@ -38,7 +38,8 @@ const html = () => {
 const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('build/js'))
+    .pipe(browser.stream());
 }
 
 // Images
@@ -64,7 +65,10 @@ const createWebp = () => {
 
 // SVG
 const svg =async () => {
-    gulp.src(['source/img/**/*.svg', '!source/img/icon/*.svg'])
+    gulp.src([
+            'source/img/**/*.svg',
+            '!source/img/icon/*.svg'
+        ])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
@@ -74,7 +78,7 @@ const sprite = () => {
         .pipe(svgo())
         .pipe(svgstore({inlineSvg: true }))
         .pipe(rename('sprite.svg'))
-        .pipe(gulp.dest('build/img'));
+        .pipe(gulp.dest('build/img/icon'));
 }
 
 // Copy
@@ -99,7 +103,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -130,7 +134,9 @@ export const build = gulp.series(
         styles,
         html,
         scripts,
-        createWebp
+        createWebp,
+        svg,
+        sprite
     ),
 );
 
@@ -143,7 +149,9 @@ export default gulp.series(
         styles,
         html,
         scripts,
-        createWebp
+        createWebp,
+        svg,
+        sprite
     ),
     gulp.series(
         server,

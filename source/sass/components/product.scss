@@ -35,7 +35,6 @@
   }
 }
 
-
 .product__info-inner {
   padding-top: 27.5px;
   padding-right: 28px;
@@ -109,12 +108,12 @@
   &:hover .product__icon,
   &:focus-within .product__icon {
     opacity: 1;
-    fill: bootstrap.$colorGreen-primary;
+    color: bootstrap.$colorGreen-primary;
   }
 
   &:active .product__icon {
     opacity: 0.3;
-    fill: bootstrap.$colorGreen-primary;
+    color: bootstrap.$colorGreen-primary;
   }
 }
 

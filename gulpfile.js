@@ -9,9 +9,10 @@ import terser from 'gulp-terser';   // минификация и оптимиз�
 import rename from 'gulp-rename';   // переименование файлов
 import squoosh from 'gulp-libsquoosh'; // Минимизируйте изображения
 import svgo from 'gulp-svgmin';       // минимизации файлов SVG
-import svgstore  from 'gulp-svgstore';  // объединяет svg
+import svgstore from 'gulp-svgstore';  // объединяет svg
 import {deleteAsync as del} from 'del';
 import browser from 'browser-sync'; // ??
+import fileInclude from "gulp-file-include"
 
 // Styles
 export const styles = () => {
@@ -30,6 +31,7 @@ export const styles = () => {
 // Html
 const html = () => {
   return gulp.src('source/*.html')
+    .pipe(fileInclude())
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
@@ -73,7 +75,7 @@ const svg =async () => {
     .pipe(gulp.dest('build/img'));
 }
 
-const sprite = () => {
+const sprites = () => {
     return gulp.src('source/img/icon/*.svg')
         .pipe(svgo())
         .pipe(svgstore({inlineSvg: true }))
@@ -84,7 +86,7 @@ const sprite = () => {
 // Copy
 const copy = (done) => {
   gulp.src([
-          'source/fonts/*.{woff2}',
+          'source/fonts/*.{woff2,woff}',
           'source/*.ico',
           'source/manifest.webmanifest',
       ], {
@@ -136,7 +138,7 @@ export const build = gulp.series(
         scripts,
         createWebp,
         svg,
-        sprite
+        sprites
     ),
 );
 
@@ -151,7 +153,7 @@ export default gulp.series(
         scripts,
         createWebp,
         svg,
-        sprite
+        sprites
     ),
     gulp.series(
         server,

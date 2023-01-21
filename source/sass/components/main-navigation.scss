@@ -8,7 +8,7 @@
       display: none;
     }
 
-    &--nojs .main-navigation__list {
+    &--nojs .main-navigation__list:nth-child(-n+2) {
       display: block;
     }
   }

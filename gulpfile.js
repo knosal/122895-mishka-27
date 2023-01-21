@@ -10,9 +10,9 @@ import rename from 'gulp-rename';   // переименование файлов
 import squoosh from 'gulp-libsquoosh'; // Минимизируйте изображения
 import svgo from 'gulp-svgmin';       // минимизации файлов SVG
 import svgstore from 'gulp-svgstore';  // объединяет svg
-import {deleteAsync as del} from 'del';
+import {deleteAsync as del} from 'del'; //
 import browser from 'browser-sync'; // ??
-import fileInclude from "gulp-file-include"
+import fileInclude from "gulp-file-include" // Сборка файлов через @include
 
 // Styles
 export const styles = () => {

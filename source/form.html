@@ -98,15 +98,15 @@
                 <h3 class="form__legend form__legend--name form__legend--line">ФИО</h3>
                 <div class="form__group-fields">
                   <p class="form__group-inner form__group-inner--name">
-                    <label class="form__item-title" for="name">Имя:</label>
+                    <label class="form__item-label" for="name">Имя:</label>
                     <input class="input-text" type="text" id="name" placeholder="Введите ваше имя*" required>
                   </p>
                   <p class="form__group-inner form__group-inner--name">
-                    <label class="form__item-title" for="surname">Фамилия:</label>
+                    <label class="form__item-label" for="surname">Фамилия:</label>
                     <input class="input-text" type="text" id="surname" placeholder="Укажите фамилию*" required>
                   </p>
                   <p class="form__group-inner form__group-inner--name">
-                    <label class="form__item-title" for="patronymic">Отчество:</label>
+                    <label class="form__item-label" for="patronymic">Отчество:</label>
                     <input class="input-text" type="text" id="patronymic" placeholder="Отчество, если желаете">
                   </p>
                 </div>
@@ -118,10 +118,9 @@
                 <div class="form__group form__group--phone">
                   <h3 class="form__legend form__legend--line">Тел</h3>
                   <p class="form__group-inner">
-                    <label class="form__item-title">
-                      <input class="input-text input-text--phone" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
-                        required>
-                        <svg class="input-text__icon" width="25" height="24">
+                    <label class="form__item-label">
+                      <input class="form__item-input form__item-input--phone" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                        <svg class="form__item-icon" width="25" height="24">
                           <use xlink:href="img/icon/sprite.svg#input-phone-icon"></use>
                         </svg>
                     </label>
@@ -131,10 +130,9 @@
                 <div class="form__group form__group--email">
                   <h3 class="form__legend form__legend--line">e-mail</h3>
                   <p class="form__group-inner">
-                    <label class="form__item-title">
-                      <input class="input-text input-text--mail" type="email" placeholder="Ваш Email*"
-                        required>
-                        <svg class="input-text__icon" width="32" height="21">
+                    <label class="form__item-label">
+                      <input class="form__item-input form__item-input--mail" type="email" placeholder="Ваш Email*" required>
+                        <svg class="form__item-icon" width="32" height="21">
                           <use xlink:href="img/icon/sprite.svg#input-mail-icon"></use>
                         </svg>
                     </label>
@@ -147,7 +145,7 @@
               <div class="form__group-wrapper">
                 <h3 class="form__legend form__legend--other form__legend--line">Доп</h3>
                 <p class="form__group-inner">
-                <label class="form__item-title">
+                <label class="form__item-label">
                   <textarea class="input-text input-text--textarea" name="comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
                 </label>
                 </p>

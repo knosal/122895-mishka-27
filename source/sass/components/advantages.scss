@@ -17,6 +17,10 @@
   @include bootstrap.title(25px);
   margin-bottom: 28px;
 
+  &::after {
+    content: ":";
+  }
+
   @media (min-width: bootstrap.$tablet-width) {
     @include bootstrap.title(43px, 50px);
     margin-bottom: 42px;

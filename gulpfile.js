@@ -1,7 +1,7 @@
 import gulp from 'gulp'; // Gulp для автоматизации
 import plumber from 'gulp-plumber'; // перехват ошибок, и после устранения ошибки сборка восстановит работоспособность
 import sass from 'gulp-dart-sass';  // для использования препроцессора SASS
-import postcss from 'gulp-postcss'; //
+import postcss from 'gulp-postcss'; // библиотека для работы других плагинов
 import autoprefixer from 'autoprefixer'; // Автопрефиксы
 import csso from 'postcss-csso';    // минимизатор CSS
 import htmlmin from 'gulp-htmlmin'; // минимизатор HTML
@@ -10,7 +10,7 @@ import rename from 'gulp-rename';   // переименование файлов
 import squoosh from 'gulp-libsquoosh'; // Минимизируйте изображения
 import svgo from 'gulp-svgmin';       // минимизации файлов SVG
 import svgstore from 'gulp-svgstore';  // объединяет svg
-import {deleteAsync as del} from 'del'; //
+import {deleteAsync as del} from 'del'; // для чистки сборки
 import browser from 'browser-sync'; // ??
 import fileInclude from "gulp-file-include" // Сборка файлов через @include
 

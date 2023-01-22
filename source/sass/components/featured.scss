@@ -136,6 +136,7 @@
 
   @media (min-width: bootstrap.$tablet-width) {
     grid-area: product;
+    justify-content: end;
   }
 
   @media (min-width: bootstrap.$desktop-width) {

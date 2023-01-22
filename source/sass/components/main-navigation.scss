@@ -91,8 +91,10 @@
 }
 
 .main-navigation--nojs .main-navigation__inner-popover {
-  position: static;
-  min-height: 0;
+  @media (max-width: bootstrap.$mobile-width-only) {
+    position: static;
+    min-height: 0;
+  }
 }
 
 .main-navigation__inner-popover {

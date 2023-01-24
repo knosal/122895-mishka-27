@@ -93,17 +93,86 @@
       align-items: center;
     }
 
-    &--name > .form__item-title {
+    &--name > .form__item-label {
       padding-right: 25px;
     }
   }
 }
 
-.form__item-title {
+.form__item-label {
   position: relative;
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
+}
+
+.form__item-input {
+  width: 100%;
+  padding: 17px 0;
+  border: none;
+  border-bottom: 2px solid bootstrap.$colorBlack;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: transparent;
+
+  &:hover,
+  &:focus-within {
+    outline: none;
+    border-color: bootstrap.$colorGreen-line;
+  }
+
+  &:hover ~ .form__item-icon,
+  &:focus-within ~ .form__item-icon {
+    color: rgba(bootstrap.$colorGreen-hover, 1);
+  }
+
+  &:active {
+    outline: none;
+    border-color: bootstrap.$colorGreen-line;
+  }
+
+  &::placeholder {
+    font-family: bootstrap.$open-sans;
+    font-size: 17px;
+    line-height: 18px;
+    opacity: 0.3;
+
+    @media (min-width: bootstrap.$tablet-width) {
+      font-size: 19px;
+    }
+  }
+
+  &--mail {
+    position: relative;
+  }
+
+  &--textarea {
+    appearance: none;
+    border: 2px solid bootstrap.$colorBlack;
+    padding: 17px;
+    padding-bottom: 89px;
+    resize: none;
+  }
+
+  @media (min-width: bootstrap.$tablet-width) {
+    padding-left: 17px;
+  }
+}
+
+.form__item-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(bootstrap.$colorBlack, 0.2);
+  fill: currentColor;
+
+  @media (min-width: bootstrap.$tablet-width) {
+    right: 28px;
+  }
+
+  @media (min-width: bootstrap.$desktop-width) {
+    right: 0;
+  }
 }
 
 .form__legend {

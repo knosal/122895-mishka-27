@@ -1,73 +1,11 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Интернет-магазин игрушек: Мишка</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="preload" href="fonts/opensans.woff2" as="font">
-  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-  <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/favicons/apple.png">
-  <link rel="manifest" href="manifest.webmanifest">
-</head>
+@@include("head.html",{"title":"Интернет-магазин игрушек: Мишка"})
 
 <body class="page__body">
-  <header class="main-header">
-    <div class="main-header__wrapper">
-      <a class="main-header__link-logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/svg/logo-desktop-icon.svg" width="149" height="72">
-          <source media="(min-width: 768px)" srcset="img/svg/logo-tablet-icon.svg" width="113" height="46">
-          <img src="img/svg/logo-mobile-icon.svg" srcset="img/svg/logo-mobile-icon.svg" width="86" height="35" alt="Логотип интернет-магазин игрушек: Мишка">
-        </picture>
-      </a>
-      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
-        <button class="main-navigation__toogle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <div class="main-navigation__inner-popover">
-          <ul class="main-navigation__list navigation-list navigation-list--site">
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <ul class="main-navigation__list navigation-list navigation-list--user">
-            <li class="navigation-list__item navigation-list__item--search">
-              <a class="navigation-list__link" href="#">
-                <svg class="navigation-list__icon navigation-list__icon--search" width="18" height="18">
-                  <use xlink:href="img/icon/sprite.svg#icon-search"></use>
-                </svg>
-                <span class="navigation-list__icon-text navigation-list__icon-text--search">Поиск по сайту</span>
-              </a>
-            </li>
-            <li class="navigation-list__item navigation-list__item--card">
-              <a class="navigation-list__link" href="#">
-                <svg class="navigation-list__icon navigation-list__icon--card" width="21" height="18">
-                  <use xlink:href="img/icon/sprite.svg#icon-card"></use>
-                </svg>
-                <span class="navigation-list__icon-text navigation-list__icon-text--card">Корзина: пока пуста</span>
-              </a>
-            </li>
-          </ul>
-          <ul class="main-navigation__list navigation-list navigation-list--promotions">
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="#">Новые поступления</a>
-            </li>
-            <li class="navigation-list__item">
-              <a class="navigation-list__link" href="#">Распродажа</a>
-            </li>
-          </ul>
-          <span class="main-header__delivery-promo">Бесплатная доставка по России</span>
-        </div>
-      </nav>
-    </div>
-  </header>
+
+  @@include("header.html",{})
 
   <main class="main-container">
     <h1 class="visually-hidden">Магазин игрушен ручной работы "Мишка"</h1>
@@ -91,10 +29,7 @@
           <span class="featured__subtitle subtitle">Товар недели</span>
         </h3>
         <div class="featured__description-inner">
-          <p class="featured__description-text">
-            Экологически чистая пряжа, ручная работа. Доступны в шести
-            расцветках и трёх размерах.
-          </p>
+          <p class="featured__description-text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
           <dl class="featured__description-list">
             <div class="featured__description-list-inner">
               <dt class="featured__table-title">Цвет</dt>
@@ -114,11 +49,10 @@
           <picture>
             <source type="image/webp" media="(min-width: 1150px)" srcset="img/index/knitted-baskets-desktop.webp 1x, img/index/knitted-baskets-desktop@2x.webp 2x" width="525" height="636">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/index/knitted-baskets-tablet.webp 1x, img/index/knitted-baskets-tablet@2x.webp 2x" width="334" height="404">
-            <source type="image/webp" srcset="img/index/knitted-baskets.webp 1x, img/index/knitted-baskets@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/index/knitted-baskets-mobile.webp 1x, img/index/knitted-baskets-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/index/knitted-baskets-desktop.jpg 1x, img/index/knitted-baskets-desktop@2x.jpg 2x" width="525" height="636">
             <source media="(min-width: 768px)" srcset="img/index/knitted-baskets-tablet.jpg 1x, img/index/knitted-baskets-tablet@2x.jpg 2x" width="334" height="404">
-            <img class="featured__image" src="img/index/knitted-baskets.jpg" srcset="img/index/knitted-baskets@2x.jpg 2x" width="260" height="315" alt="Вязанные корзинки ручной работы">
+            <img class="featured__image" src="img/index/knitted-baskets-mobile.jpg" srcset="img/index/knitted-baskets-mobile@2x.jpg 2x" width="260" height="315" loading="lazy" alt="Вязанные корзинки ручной работы">
           </picture>
         </div>
         <div class="featured__price-inner">
@@ -130,29 +64,16 @@
 
     <section class="main-container__advantages advantages">
       <div class="advantages__wrapper">
-        <h2 class="advantages__title">Коротко о нас:</h2>
+        <h2 class="advantages__title">Коротко о нас</h2>
         <ul class="advantages__list">
-          <li class="advantages__item advantages__item--flower">
-            Экологически <br> чистые материалы
-          </li>
-          <li class="advantages__item advantages__item--bill">
-            Скандинавский стиль <br> по российской цене
-          </li>
-          <li class="advantages__item advantages__item--heart">
-            Увеличивает лайки <br> на фотографиях
-          </li>
-          <li class="advantages__item advantages__item--tangle">
-            Связано вручную <br> с любовью и умилением
-          </li>
-          <li class="advantages__item advantages__item--rocket">
-            Поддержка отечественного <br> производителя
-          </li>
-          <li class="advantages__item advantages__item--gift">
-            Поставляется <br> в подарочной упаковке
-          </li>
+          <li class="advantages__item advantages__item--flower">Экологически <br> чистые материалы</li>
+          <li class="advantages__item advantages__item--bill">Скандинавский стиль <br> по российской цене</li>
+          <li class="advantages__item advantages__item--heart">Увеличивает лайки <br> на фотографиях</li>
+          <li class="advantages__item advantages__item--tangle">Связано вручную <br> с любовью и умилением</li>
+          <li class="advantages__item advantages__item--rocket">Поддержка отечественного <br> производителя</li>
+          <li class="advantages__item advantages__item--gift">Поставляется <br> в подарочной упаковке</li>
         </ul>
       </div>
-
     </section>
 
     <section class="main-container__reviews reviews section-wavy">
@@ -197,14 +118,12 @@
           </p>
         </div>
         <div class="reviews__control">
-          <button class="reviews__arrow reviews__arrow-icon" type="button" aria-label="Кнопка Предыдущий отзыв" tabindex="0">
-            <span class="visually-hidden">Предыдущий отзыв</span>
+          <button class="reviews__arrow reviews__arrow-icon" type="button" aria-label="Предыдущий отзыв">
             <svg class="" width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black" />
             </svg>
           </button>
-          <button class="reviews__arrow" type="button" aria-label="Кнопка Слудующий отзыв" tabindex="0">
-            <span class="visually-hidden">Слудующий отзыв</span>
+          <button class="reviews__arrow" type="button" aria-label="Следующий отзыв">
             <svg class="reviews__arrow-icon" width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black" />
             </svg>
@@ -223,7 +142,7 @@
           <div class="contacts__address-inner">
             <dt class="contacts__address-title">e-mail</dt>
             <dd class="contacts__address-value">
-              <a class="contacts__address-link" href="malto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              <a class="contacts__address-link" href="malto:info@teddybearshop.ru.ru">info@teddybearshop.ru.ru</a>
             </dd>
           </div>
           <div class="contacts__address-inner">
@@ -233,18 +152,18 @@
         </dl>
         <div class="contacts__map map">
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/index/map-desktop.webp 1x, img/index/map-desktop@2x.webp 2x" width="525" height="636">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/index/map-tablet.webp 1x, img/index/map-tablet@2x.webp 2x" width="334" height="404">
+            <source type="image/webp" srcset="img/index/map-mobile.webp 1x, img/index/map-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/index/map-desktop.jpg 1x, img/index/map-desktop@2x.jpg 2x" width="527" height="457">
             <source media="(min-width: 768px)" srcset="img/index/map-tablet.jpg 1x, img/index/map-tablet@2x.jpg 2x" width="768" height="457">
-            <img class="contacts__map-image" src="img/index/map-mobile.jpg" srcset="img/index/map-mobile@2x.jpg 2x" width="320" height="454" alt="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург.">
+            <img class="contacts__map-image" src="img/index/map-mobile.jpg" srcset="img/index/map-mobile@2x.jpg 2x" width="320" height="454" loading="lazy" alt="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург.">
           </picture>
-          <iframe
-              class="map__iframe"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8356051389692!2d30.317491999999998!3d59.9680504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sen!2sru!4v1639009892658!5m2!1sen!2sru"
-              width="527"
-              height="454"
-              allowfullscreen
-              title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"
-            ></iframe>
+          <iframe class="map__iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8356051389692!2d30.317491999999998!3d59.9680504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sen!2sru!4v1639009892658!5m2!1sen!2sru"
+            width="527" height="454" allowfullscreen
+            title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург">
+          </iframe>
         </div>
         <div class="contacts__feedback">
           <a class="contacts__feedback-button button-primary" href="#">Напишите нам</a>
@@ -253,88 +172,9 @@
     </section>
   </main>
 
-  <footer class="main-footer">
-    <div class="main-footer__wrapper">
-      <a class="main-footer__link-logo" href="index.html">
-        <svg class="main-footer__logo-icon" width="102" height="34">
-          <use xlink:href="img/icon/sprite.svg#icon-logo-footer"></use>
-        </svg>
-      </a>
-      <section class="main-footer__social socials">
-        <h2 class="visually-hidden">Социальные сети</h2>
-        <ul class="main-footer__social-list socials__list">
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <svg width="28" height="23" viewBox="0 0 28 23">
-                <use xlink:href="img/icon/sprite.svg#icon-social-vkontakte"></use>
-              </svg>
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <svg width="28" height="23" viewBox="0 0 28 23">
-                <use xlink:href="img/icon/sprite.svg#icon-social-youtube"></use>
-              </svg>
-              <span class="visually-hidden">YouTube</span>
-            </a>
-          </li>
-          <li class="socials__item">
-            <a class="socials__link" href="#">
-              <svg width="28" height="23" viewBox="0 0 28 23">
-                <use xlink:href="img/icon/sprite.svg#icon-social-telegram"></use>
-              </svg>
-              <span class="visually-hidden">Telegram</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <section class="main-footer__copyright copyright">
-        <h2 class="visually-hidden">Доступные ссылки</h2>
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="38" height="38">
-            <use xlink:href="img/icon/sprite.svg#icon-htmlacademy"></use>
-          </svg>
-        </a>
-      </section>
-    </div>
-  </footer>
+  @@include("footer.html",{})
 
-  <div class="modal modal--close">
-    <h2 class="visually-hidden">Корзина</h2>
-    <div class="modal__body">
-      <div class="modal__content">
-        <span class="modal__title">Добавить<br> в корзину</span>
-        <form class="modal__form" action="#" method="get">
-          <fieldset class="modal__form-group">
-            <legend class="modal__form-legend">Выберите размер:</legend>
-            <ul class="modal__form-list size-range-list">
-              <li class="size-range-list__item">
-                <label class="size-range-list__title">
-                  <input class="size-range-list__input" type="radio" name="размер" checked>
-                  <span class="size-range-list__text">S</span>
-                </label>
-              </li>
-              <li class="size-range-list__item">
-                <label class="size-range-list__title">
-                  <input class="size-range-list__input" type="radio" name="размер">
-                  <span class="size-range-list__text">M</span>
-                </label>
-              </li>
-              <li class="size-range-list__item">
-                <label class="size-range-list__title">
-                  <input class="size-range-list__input" type="radio" name="размер">
-                  <span class="size-range-list__text">L</span>
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <button class="modal__button button-primary button-primary--green" type="submit">Добавить</button>
-        </form>
-      </div>
-    </div>
-  </div>
+  @@include("modal.html",{})
 
   <script src="js/script.js"></script>
 </body>

@@ -39,7 +39,10 @@
 
   @media (min-width: bootstrap.$desktop-width) {
     left: 43%;
-    transform: translate(0, -50%);
+  }
+
+  @media (min-width: 1200px) {
+    left: 47%;
   }
 
   &:hover img {

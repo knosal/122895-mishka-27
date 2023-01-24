@@ -5,17 +5,16 @@
 }
 
 .map iframe {
-  border: none;
   display: block;
-  width: 100%;
   max-height: 457px;
+  width: 100%;
+  border: none;
 }
 
 .map__image {
-  //display: none;
   position: absolute;
-  width: 100%;
   max-height: 457px;
+  width: 100%;
 }
 
 .map__mark {

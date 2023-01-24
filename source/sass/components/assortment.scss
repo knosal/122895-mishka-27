@@ -2,7 +2,7 @@
 
 .assortment {
   min-height: 373px;
-  background-image: url("../img/index/handmade.jpg");
+  background-image: url("../img/index/handmade-mobile.jpg");
   background-color: bootstrap.$colorGrey;
   background-position: top center;
   background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 
   @media (max-width: bootstrap.$mobile-width-only) {
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/index/handmade@2x.jpg");
+      background-image: url("../img/index/handmade-mobile@2x.jpg");
       background-size: 320px 383px;
     }
   }
